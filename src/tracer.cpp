@@ -42,6 +42,12 @@ SEXP r_strictr_tracer_create(SEXP r_cache_dir) {
 
     instrumentr_tracer_set_callback(tracer, callback);
 
+    callback = instrumentr_callback_create_from_c_function(
+        (void*) (tracing_entry_callback),
+        INSTRUMENTR_EVENT_TRACING_INITIALIZATION);
+
+    instrumentr_tracer_set_callback(tracer, callback);
+
     instrumentr_object_release(callback);
 
     instrumentr_object_set_data(tracer,
