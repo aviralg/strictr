@@ -1,0 +1,93 @@
+/* -*- C++ -*- */
+%option outfile="Lexer_autogen.cpp"
+%option header-file="Lexer_autogen.h"
+%option yyclass="parser::Lexer"
+%option debug
+%option nodefault
+%option noyywrap
+%option c++
+
+%{
+
+    #include <string>
+    #include "Lexer.h"
+    #include "ParsingContext.h"
+    using namespace parser;
+
+    /* Code run each time a pattern is matched. */
+    #define YY_USER_ACTION  yylloc->columns(yyleng);
+
+    #define HANDLE_TOKEN(token_name)                             \
+        yylval->build<std::string>(yytext);                      \
+        return parser::Parser::token::token_name;
+
+    #define HANDLE_QUOTED_IDENTIFIER()                           \
+        yylval->build<std::string>(extract_identifier());        \
+        return parser::Parser::token::TOKEN_QUOTED_IDENTIFIER;
+
+    #define HANDLE_NUMBER()                                      \
+        yylval->build<int>(std::stoi(yytext));                   \
+        return parser::Parser::token::TOKEN_NUMBER;
+%}
+
+STRICTSIG           strictsig
+PACKAGE             package
+BLANK               [ \t\r]
+VARARG              \.\.\.
+IDENTIFIER          [a-zA-Z.][a-zA-Z0-9._]*
+NUMBER              [1-9][0-9]*
+VERSION             [0-9]+[.][0-9]+[.][0-9]
+NON_HEX             [^0-9A-Fa-f]
+NON_OCT             [^0-7]
+%x quoted_identifier
+%x comment
+
+%%
+
+%{
+    /* Code run each time yylex is called. */
+    yylloc -> step();
+%}
+
+{BLANK}+                    { yylloc -> step(); }
+\n+                         { yylloc -> lines(yyleng); yylloc -> step(); }
+"#"                         { BEGIN(comment); }
+<comment>{
+    \n                      { BEGIN(INITIAL); yylloc -> lines(yyleng); yylloc -> step(); }
+    .                       { yylloc -> step(); }
+}
+"<"                         { HANDLE_TOKEN(TOKEN_LANGLEBRACKET) }
+">"                         { HANDLE_TOKEN(TOKEN_RANGLEBRACKET) }
+";"                         { HANDLE_TOKEN(TOKEN_SEMICOLON) }
+{STRICTSIG}                 { HANDLE_TOKEN(TOKEN_STRICTSIG) }
+{PACKAGE}                   { HANDLE_TOKEN(TOKEN_PACKAGE) }
+{NUMBER}                    { HANDLE_NUMBER() }
+{VERSION}                   { HANDLE_TOKEN(TOKEN_VERSION) }
+{IDENTIFIER}                { HANDLE_TOKEN(TOKEN_IDENTIFIER) }
+"`"                         { BEGIN(quoted_identifier); }
+<quoted_identifier>{
+    `                           { BEGIN(INITIAL); HANDLE_QUOTED_IDENTIFIER() }
+    \\0{NON_OCT}                { throw parser::Parser::syntax_error(*yylloc, "null character not allowed: " + std::string(yytext)); }
+    \\00{NON_OCT}               { throw parser::Parser::syntax_error(*yylloc, "null character not allowed: " + std::string(yytext)); }
+    \\000                       { throw parser::Parser::syntax_error(*yylloc, "null character not allowed: " + std::string(yytext)); }
+
+    \\x0{NON_HEX}               { throw parser::Parser::syntax_error(*yylloc, "null character not allowed: " + std::string(yytext)); }
+    \\x00                       { throw parser::Parser::syntax_error(*yylloc, "null character not allowed: " + std::string(yytext)); }
+    \\x{NON_HEX}                { throw parser::Parser::syntax_error(*yylloc, "\\x used without hex digits: " + std::string(yytext)); }
+
+    \\u                         { throw parser::Parser::syntax_error(*yylloc, "\\uxxxx sequences not supported inside backticks: " + std::string(yytext)); }
+    \\U                         { throw parser::Parser::syntax_error(*yylloc, "\\Uxxxxxxxx sequences not supported inside backticks: " + std::string(yytext)); }
+    \\`                         { get_identifier().append("\\`");  }
+    [^`]                        { get_identifier().append(yytext); }
+}
+
+.                           {
+                                throw parser::Parser::syntax_error(*yylloc, "invalid character: " + std::string(yytext));
+                            }
+<<EOF>>                     return parser::Parser::token::TOKEN_EOF;
+%%
+
+/* REFERENCE: https://coldfix.eu/2015/05/16/bison-c++11/ */
+parser::Lexer::Lexer(ParsingContext& parsing_context): yyFlexLexer(parsing_context.get_input_stream(), std::cout), parsing_context_(parsing_context) {
+}
+

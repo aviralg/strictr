@@ -1,0 +1,112 @@
+/* -*- C++ -*- */
+%output  "Parser_autogen.cpp"
+%defines "Parser_autogen.h"
+
+%skeleton "lalr1.cc"
+
+%define api.parser.class {Parser}
+%define api.namespace {parser}
+
+/* assert correct cleanup of semantic value objects */
+%define parse.assert
+
+%define parse.trace
+
+/* increase usefulness of error messages */
+%define parse.error verbose
+%parse-param { parser::Lexer& lexer} { parser::ParsingContext& context }
+
+/* call yylex with a location */
+%locations
+
+%define api.value.type variant
+/* %define api.token.constructor */
+%define api.token.prefix {TOKEN_}
+
+%token EOF                              0                    "end of file";
+%token <std::string>                    LANGLEBRACKET        "<";
+%token <std::string>                    RANGLEBRACKET        ">";
+%token <std::string>                    SEMICOLON            ";";
+%token <std::string>                    PACKAGE              "package";
+%token <std::string>                    STRICTSIG            "strictsig";
+%token <std::string>                    IDENTIFIER;
+%token <std::string>                    VERSION;
+%token <std::string>                    QUOTED_IDENTIFIER;
+%token <int>                            NUMBER
+%nterm <std::string>                    identifier
+%nterm <std::vector<int>>               paramseq
+%nterm <std::vector<int>>               params
+%nterm <PackageStrictnessSignature>     header
+%nterm <PackageStrictnessSignature>     packdecl
+%nterm <FunctionStrictnessSignature>    decl
+%nterm <std::vector<FunctionStrictnessSignature>>    decllist
+
+%start start;
+
+%initial-action {
+    /* filename for locations here
+       https://www.gnu.org/software/bison/manual/html_node/Initial-Action-Decl.html
+       location stores pointer to a string allocated elsewhere and does not delete it.
+       it has been disabled for now since TopLevelNode stores the filename anyways and
+       properly deallocates it.
+    */
+
+    /* @$.initialize(context.get_input_stream_name()); */
+}
+
+%code requires {
+namespace parser {
+   class Lexer;
+   class ParsingContext;
+}
+#include "PackageStrictnessSignature.h"
+#include "FunctionStrictnessSignature.h"
+}
+
+%code {
+    #include "ParsingContext.h"
+    #include "Lexer.h"
+    #undef yylex
+    #define yylex lexer.yylex
+}
+%%
+
+identifier:  STRICTSIG                         { $$ = $1; }
+          |  IDENTIFIER                        { $$ = $1; }
+          |  QUOTED_IDENTIFIER                 { $$ = $1; }
+          ;
+
+paramseq:    NUMBER                            { $$ = std::vector<int>({$1});    }
+        |    paramseq "," NUMBER               { $$ = $1; $$.push_back($3);      }
+        ;
+
+params:      "<" paramseq ">"                  { $$ = $2; }
+      |      "<" ">"                           { $$ = std::vector<int>(); }
+      ;
+
+decl:        "strict" identifier params ";"    { $$ = FunctionStrictnessSignature($2, $3); }
+    ;
+
+decllist:                                      { $$ = std::vector<FunctionStrictnessSignature>(); }
+        |    decllist decl                     { $$ = $1; $$.push_back($2); }
+        ;
+
+header:      "package" IDENTIFIER VERSION ";"       { $$ = PackageStrictnessSignature($2, $3); }
+      ;
+
+packdecl:     header decllist                   { $$ = $1; $$.add_signatures($2); }
+        ;
+
+packdecllist: packdecl                   { context.get_cache().add_signature($1); }
+            | packdecllist packdecl      { context.get_cache().add_signature($2); }
+            ;
+
+start:        EOF                            { }
+     |        packdecllist EOF               { }
+     ;
+%%
+
+void parser::Parser::error(const location_type& location, const std::string& message) {
+    Rf_error("%s at %d:%d-%d:%d", message.c_str(), location.begin.line, location.begin.column, location.end.line,
+    location.end.column);
+}

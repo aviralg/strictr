@@ -1,0 +1,3 @@
+package stringr 1.4.0;
+
+strictsig str_length <1>;
