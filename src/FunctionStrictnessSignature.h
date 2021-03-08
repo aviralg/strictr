@@ -24,8 +24,6 @@ class FunctionStrictnessSignature {
     }
 
     void apply(SEXP r_closure) {
-        Rprintf("Applying signature for function '%s'\n", name_.c_str());
-
         SEXP r_formals = FORMALS(r_closure);
         std::vector<SEXP> r_names;
 

@@ -6,7 +6,7 @@
 #include "Lexer.h"
 #include "Parser_autogen.h"
 #include "ParsingContext.h"
-#include "StrictnessSignatureCache.h"
+#include "parser.h"
 
 //#include "parser/Unparser.hpp"
 // std::ostream& unparse_(const tastr::ast::Node& node,
@@ -52,11 +52,11 @@
 //    unparse_(node, output_stream, show_ast, style_output);
 //}
 
-StrictnessSignatureCache parse_(std::istream& input_stream,
-                                const std::string& input_stream_name,
-                                bool debug_lexer,
-                                bool debug_parser) {
-    parser::ParsingContext context(input_stream, input_stream_name);
+PackageStrictnessSignature parse_(const std::string& package_name,
+                                  std::istream& input_stream,
+                                  bool debug_lexer,
+                                  bool debug_parser) {
+    parser::ParsingContext context(input_stream, package_name);
     parser::Lexer lexer(context);
     lexer.set_debug_level(debug_lexer);
     parser::Parser parser(lexer, context);
@@ -65,21 +65,24 @@ StrictnessSignatureCache parse_(std::istream& input_stream,
     return context.get_cache();
 }
 
-StrictnessSignatureCache parse_stdin(bool debug_lexer, bool debug_parser) {
-    std::string input_stream_name("<stdin>");
-    return parse_(std::cin, input_stream_name, debug_lexer, debug_parser);
+PackageStrictnessSignature parse_stdin(const std::string& package_name,
+                                       bool debug_lexer,
+                                       bool debug_parser) {
+    return parse_(package_name, std::cin, debug_lexer, debug_parser);
 }
 
-StrictnessSignatureCache
-parse_string(const std::string& string, bool debug_lexer, bool debug_parser) {
+PackageStrictnessSignature parse_string(const std::string& package_name,
+                                        const std::string& string,
+                                        bool debug_lexer,
+                                        bool debug_parser) {
     std::istringstream input_stream(string);
-    std::string input_stream_name("<string>");
-    return parse_(input_stream, input_stream_name, debug_lexer, debug_parser);
+    return parse_(package_name, input_stream, debug_lexer, debug_parser);
 }
 
-StrictnessSignatureCache
-parse_file(const std::string& filepath, bool debug_lexer, bool debug_parser) {
+PackageStrictnessSignature parse_file(const std::string& package_name,
+                                      const std::string& filepath,
+                                      bool debug_lexer,
+                                      bool debug_parser) {
     std::ifstream input_stream(filepath);
-    std::string input_stream_name(filepath);
-    return parse_(input_stream, input_stream_name, debug_lexer, debug_parser);
+    return parse_(package_name, input_stream, debug_lexer, debug_parser);
 }

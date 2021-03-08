@@ -44,7 +44,7 @@
 #ifndef YY_YY_PARSER_AUTOGEN_H_INCLUDED
 # define YY_YY_PARSER_AUTOGEN_H_INCLUDED
 // //                    "%code requires" blocks.
-#line 57 "Parser.yxx" // lalr1.cc:401
+#line 54 "Parser.yxx" // lalr1.cc:401
 
 namespace parser {
    class Lexer;
@@ -375,30 +375,23 @@ namespace parser {
       // decl
       char dummy1[sizeof (FunctionStrictnessSignature)];
 
-      // header
-      // packdecl
-      char dummy2[sizeof (PackageStrictnessSignature)];
-
       // NUMBER
-      char dummy3[sizeof (int)];
+      char dummy2[sizeof (int)];
 
       // "<"
       // ">"
       // ";"
+      // ","
       // "package"
-      // "strictsig"
+      // "strict"
       // IDENTIFIER
-      // VERSION
       // QUOTED_IDENTIFIER
       // identifier
-      char dummy4[sizeof (std::string)];
-
-      // decllist
-      char dummy5[sizeof (std::vector<FunctionStrictnessSignature>)];
+      char dummy3[sizeof (std::string)];
 
       // paramseq
       // params
-      char dummy6[sizeof (std::vector<int>)];
+      char dummy4[sizeof (std::vector<int>)];
     };
 
     /// The size of the largest semantic type.
@@ -450,10 +443,10 @@ namespace parser {
         TOKEN_LANGLEBRACKET = 258,
         TOKEN_RANGLEBRACKET = 259,
         TOKEN_SEMICOLON = 260,
-        TOKEN_PACKAGE = 261,
-        TOKEN_STRICTSIG = 262,
-        TOKEN_IDENTIFIER = 263,
-        TOKEN_VERSION = 264,
+        TOKEN_COMMA = 261,
+        TOKEN_PACKAGE = 262,
+        TOKEN_STRICT = 263,
+        TOKEN_IDENTIFIER = 264,
         TOKEN_QUOTED_IDENTIFIER = 265,
         TOKEN_NUMBER = 266
       };
@@ -523,19 +516,6 @@ namespace parser {
       {}
 #endif
 #if 201103L <= YY_CPLUSPLUS
-      basic_symbol (typename Base::kind_type t, PackageStrictnessSignature&& v, location_type&& l)
-        : Base (t)
-        , value (std::move (v))
-        , location (std::move (l))
-      {}
-#else
-      basic_symbol (typename Base::kind_type t, const PackageStrictnessSignature& v, const location_type& l)
-        : Base (t)
-        , value (v)
-        , location (l)
-      {}
-#endif
-#if 201103L <= YY_CPLUSPLUS
       basic_symbol (typename Base::kind_type t, int&& v, location_type&& l)
         : Base (t)
         , value (std::move (v))
@@ -556,19 +536,6 @@ namespace parser {
       {}
 #else
       basic_symbol (typename Base::kind_type t, const std::string& v, const location_type& l)
-        : Base (t)
-        , value (v)
-        , location (l)
-      {}
-#endif
-#if 201103L <= YY_CPLUSPLUS
-      basic_symbol (typename Base::kind_type t, std::vector<FunctionStrictnessSignature>&& v, location_type&& l)
-        : Base (t)
-        , value (std::move (v))
-        , location (std::move (l))
-      {}
-#else
-      basic_symbol (typename Base::kind_type t, const std::vector<FunctionStrictnessSignature>& v, const location_type& l)
         : Base (t)
         , value (v)
         , location (l)
@@ -610,13 +577,8 @@ namespace parser {
         // Type destructor.
 switch (yytype)
     {
-      case 19: // decl
+      case 16: // decl
         value.template destroy< FunctionStrictnessSignature > ();
-        break;
-
-      case 17: // header
-      case 18: // packdecl
-        value.template destroy< PackageStrictnessSignature > ();
         break;
 
       case 11: // NUMBER
@@ -626,21 +588,17 @@ switch (yytype)
       case 3: // "<"
       case 4: // ">"
       case 5: // ";"
-      case 6: // "package"
-      case 7: // "strictsig"
-      case 8: // IDENTIFIER
-      case 9: // VERSION
+      case 6: // ","
+      case 7: // "package"
+      case 8: // "strict"
+      case 9: // IDENTIFIER
       case 10: // QUOTED_IDENTIFIER
-      case 14: // identifier
+      case 13: // identifier
         value.template destroy< std::string > ();
         break;
 
-      case 20: // decllist
-        value.template destroy< std::vector<FunctionStrictnessSignature> > ();
-        break;
-
-      case 15: // paramseq
-      case 16: // params
+      case 14: // paramseq
+      case 15: // params
         value.template destroy< std::vector<int> > ();
         break;
 
@@ -723,13 +681,13 @@ switch (yytype)
       symbol_type (int tok, location_type l)
         : super_type(token_type (tok), std::move (l))
       {
-        YYASSERT (tok == token::TOKEN_EOF || tok == 267);
+        YYASSERT (tok == token::TOKEN_EOF);
       }
 #else
       symbol_type (int tok, const location_type& l)
         : super_type(token_type (tok), l)
       {
-        YYASSERT (tok == token::TOKEN_EOF || tok == 267);
+        YYASSERT (tok == token::TOKEN_EOF);
       }
 #endif
 #if 201103L <= YY_CPLUSPLUS
@@ -749,13 +707,13 @@ switch (yytype)
       symbol_type (int tok, std::string v, location_type l)
         : super_type(token_type (tok), std::move (v), std::move (l))
       {
-        YYASSERT (tok == token::TOKEN_LANGLEBRACKET || tok == token::TOKEN_RANGLEBRACKET || tok == token::TOKEN_SEMICOLON || tok == token::TOKEN_PACKAGE || tok == token::TOKEN_STRICTSIG || tok == token::TOKEN_IDENTIFIER || tok == token::TOKEN_VERSION || tok == token::TOKEN_QUOTED_IDENTIFIER);
+        YYASSERT (tok == token::TOKEN_LANGLEBRACKET || tok == token::TOKEN_RANGLEBRACKET || tok == token::TOKEN_SEMICOLON || tok == token::TOKEN_COMMA || tok == token::TOKEN_PACKAGE || tok == token::TOKEN_STRICT || tok == token::TOKEN_IDENTIFIER || tok == token::TOKEN_QUOTED_IDENTIFIER);
       }
 #else
       symbol_type (int tok, const std::string& v, const location_type& l)
         : super_type(token_type (tok), v, l)
       {
-        YYASSERT (tok == token::TOKEN_LANGLEBRACKET || tok == token::TOKEN_RANGLEBRACKET || tok == token::TOKEN_SEMICOLON || tok == token::TOKEN_PACKAGE || tok == token::TOKEN_STRICTSIG || tok == token::TOKEN_IDENTIFIER || tok == token::TOKEN_VERSION || tok == token::TOKEN_QUOTED_IDENTIFIER);
+        YYASSERT (tok == token::TOKEN_LANGLEBRACKET || tok == token::TOKEN_RANGLEBRACKET || tok == token::TOKEN_SEMICOLON || tok == token::TOKEN_COMMA || tok == token::TOKEN_PACKAGE || tok == token::TOKEN_STRICT || tok == token::TOKEN_IDENTIFIER || tok == token::TOKEN_QUOTED_IDENTIFIER);
       }
 #endif
     };
@@ -858,6 +816,21 @@ switch (yytype)
 #if 201103L <= YY_CPLUSPLUS
       static
       symbol_type
+      make_COMMA (std::string v, location_type l)
+      {
+        return symbol_type (token::TOKEN_COMMA, std::move (v), std::move (l));
+      }
+#else
+      static
+      symbol_type
+      make_COMMA (const std::string& v, const location_type& l)
+      {
+        return symbol_type (token::TOKEN_COMMA, v, l);
+      }
+#endif
+#if 201103L <= YY_CPLUSPLUS
+      static
+      symbol_type
       make_PACKAGE (std::string v, location_type l)
       {
         return symbol_type (token::TOKEN_PACKAGE, std::move (v), std::move (l));
@@ -873,16 +846,16 @@ switch (yytype)
 #if 201103L <= YY_CPLUSPLUS
       static
       symbol_type
-      make_STRICTSIG (std::string v, location_type l)
+      make_STRICT (std::string v, location_type l)
       {
-        return symbol_type (token::TOKEN_STRICTSIG, std::move (v), std::move (l));
+        return symbol_type (token::TOKEN_STRICT, std::move (v), std::move (l));
       }
 #else
       static
       symbol_type
-      make_STRICTSIG (const std::string& v, const location_type& l)
+      make_STRICT (const std::string& v, const location_type& l)
       {
-        return symbol_type (token::TOKEN_STRICTSIG, v, l);
+        return symbol_type (token::TOKEN_STRICT, v, l);
       }
 #endif
 #if 201103L <= YY_CPLUSPLUS
@@ -898,21 +871,6 @@ switch (yytype)
       make_IDENTIFIER (const std::string& v, const location_type& l)
       {
         return symbol_type (token::TOKEN_IDENTIFIER, v, l);
-      }
-#endif
-#if 201103L <= YY_CPLUSPLUS
-      static
-      symbol_type
-      make_VERSION (std::string v, location_type l)
-      {
-        return symbol_type (token::TOKEN_VERSION, std::move (v), std::move (l));
-      }
-#else
-      static
-      symbol_type
-      make_VERSION (const std::string& v, const location_type& l)
-      {
-        return symbol_type (token::TOKEN_VERSION, v, l);
       }
 #endif
 #if 201103L <= YY_CPLUSPLUS
@@ -1251,12 +1209,12 @@ switch (yytype)
     enum
     {
       yyeof_ = 0,
-      yylast_ = 20,     ///< Last index in yytable_.
-      yynnts_ = 10,  ///< Number of nonterminal symbols.
-      yyfinal_ = 11, ///< Termination state number.
+      yylast_ = 15,     ///< Last index in yytable_.
+      yynnts_ = 7,  ///< Number of nonterminal symbols.
+      yyfinal_ = 6, ///< Termination state number.
       yyterror_ = 1,
       yyerrcode_ = 256,
-      yyntokens_ = 13  ///< Number of tokens.
+      yyntokens_ = 12  ///< Number of tokens.
     };
 
 
@@ -1268,7 +1226,7 @@ switch (yytype)
 
 #line 8 "Parser.yxx" // lalr1.cc:401
 } // parser
-#line 1272 "Parser_autogen.h" // lalr1.cc:401
+#line 1230 "Parser_autogen.h" // lalr1.cc:401
 
 
 

@@ -16,7 +16,7 @@
       <rule number="1" usefulness="useful">
         <lhs>identifier</lhs>
         <rhs>
-          <symbol>&quot;strictsig&quot;</symbol>
+          <symbol>&quot;strict&quot;</symbol>
         </rhs>
       </rule>
       <rule number="2" usefulness="useful">
@@ -63,7 +63,7 @@
       <rule number="8" usefulness="useful">
         <lhs>decl</lhs>
         <rhs>
-          <symbol>&quot;strictsig&quot;</symbol>
+          <symbol>&quot;strict&quot;</symbol>
           <symbol>identifier</symbol>
           <symbol>params</symbol>
           <symbol>&quot;;&quot;</symbol>
@@ -83,44 +83,9 @@
         </rhs>
       </rule>
       <rule number="11" usefulness="useful">
-        <lhs>header</lhs>
+        <lhs>start</lhs>
         <rhs>
-          <symbol>&quot;package&quot;</symbol>
-          <symbol>IDENTIFIER</symbol>
-          <symbol>VERSION</symbol>
-          <symbol>&quot;;&quot;</symbol>
-        </rhs>
-      </rule>
-      <rule number="12" usefulness="useful">
-        <lhs>packdecl</lhs>
-        <rhs>
-          <symbol>header</symbol>
           <symbol>decllist</symbol>
-        </rhs>
-      </rule>
-      <rule number="13" usefulness="useful">
-        <lhs>packdecllist</lhs>
-        <rhs>
-          <symbol>packdecl</symbol>
-        </rhs>
-      </rule>
-      <rule number="14" usefulness="useful">
-        <lhs>packdecllist</lhs>
-        <rhs>
-          <symbol>packdecllist</symbol>
-          <symbol>packdecl</symbol>
-        </rhs>
-      </rule>
-      <rule number="15" usefulness="useful">
-        <lhs>start</lhs>
-        <rhs>
-          <symbol>&quot;end of file&quot;</symbol>
-        </rhs>
-      </rule>
-      <rule number="16" usefulness="useful">
-        <lhs>start</lhs>
-        <rhs>
-          <symbol>packdecllist</symbol>
           <symbol>&quot;end of file&quot;</symbol>
         </rhs>
       </rule>
@@ -131,25 +96,21 @@
       <terminal symbol-number="3" token-number="258" name="&quot;&lt;&quot;" usefulness="useful"/>
       <terminal symbol-number="4" token-number="259" name="&quot;&gt;&quot;" usefulness="useful"/>
       <terminal symbol-number="5" token-number="260" name="&quot;;&quot;" usefulness="useful"/>
-      <terminal symbol-number="6" token-number="261" name="&quot;package&quot;" usefulness="useful"/>
-      <terminal symbol-number="7" token-number="262" name="&quot;strictsig&quot;" usefulness="useful"/>
-      <terminal symbol-number="8" token-number="263" name="IDENTIFIER" usefulness="useful"/>
-      <terminal symbol-number="9" token-number="264" name="VERSION" usefulness="useful"/>
+      <terminal symbol-number="6" token-number="261" name="&quot;,&quot;" usefulness="useful"/>
+      <terminal symbol-number="7" token-number="262" name="&quot;package&quot;" usefulness="unused-in-grammar"/>
+      <terminal symbol-number="8" token-number="263" name="&quot;strict&quot;" usefulness="useful"/>
+      <terminal symbol-number="9" token-number="264" name="IDENTIFIER" usefulness="useful"/>
       <terminal symbol-number="10" token-number="265" name="QUOTED_IDENTIFIER" usefulness="useful"/>
       <terminal symbol-number="11" token-number="266" name="NUMBER" usefulness="useful"/>
-      <terminal symbol-number="12" token-number="267" name="&quot;,&quot;" usefulness="useful"/>
     </terminals>
     <nonterminals>
-      <nonterminal symbol-number="13" name="$accept" usefulness="useful"/>
-      <nonterminal symbol-number="14" name="identifier" usefulness="useful"/>
-      <nonterminal symbol-number="15" name="paramseq" usefulness="useful"/>
-      <nonterminal symbol-number="16" name="params" usefulness="useful"/>
-      <nonterminal symbol-number="17" name="header" usefulness="useful"/>
-      <nonterminal symbol-number="18" name="packdecl" usefulness="useful"/>
-      <nonterminal symbol-number="19" name="decl" usefulness="useful"/>
-      <nonterminal symbol-number="20" name="decllist" usefulness="useful"/>
-      <nonterminal symbol-number="21" name="packdecllist" usefulness="useful"/>
-      <nonterminal symbol-number="22" name="start" usefulness="useful"/>
+      <nonterminal symbol-number="12" name="$accept" usefulness="useful"/>
+      <nonterminal symbol-number="13" name="identifier" usefulness="useful"/>
+      <nonterminal symbol-number="14" name="paramseq" usefulness="useful"/>
+      <nonterminal symbol-number="15" name="params" usefulness="useful"/>
+      <nonterminal symbol-number="16" name="decl" usefulness="useful"/>
+      <nonterminal symbol-number="17" name="decllist" usefulness="useful"/>
+      <nonterminal symbol-number="18" name="start" usefulness="useful"/>
     </nonterminals>
   </grammar>
 
@@ -158,65 +119,14 @@
     <state number="0">
       <itemset>
         <item rule-number="0" point="0"/>
-        <item rule-number="11" point="0"/>
-        <item rule-number="12" point="0"/>
-        <item rule-number="13" point="0"/>
-        <item rule-number="14" point="0"/>
-        <item rule-number="15" point="0"/>
-        <item rule-number="16" point="0"/>
-      </itemset>
-      <actions>
-        <transitions>
-          <transition type="shift" symbol="&quot;end of file&quot;" state="1"/>
-          <transition type="shift" symbol="&quot;package&quot;" state="2"/>
-          <transition type="goto" symbol="header" state="3"/>
-          <transition type="goto" symbol="packdecl" state="4"/>
-          <transition type="goto" symbol="packdecllist" state="5"/>
-          <transition type="goto" symbol="start" state="6"/>
-        </transitions>
-        <errors/>
-        <reductions/>
-      </actions>
-      <solved-conflicts/>
-    </state>
-
-    <state number="1">
-      <itemset>
-        <item rule-number="15" point="1"/>
-      </itemset>
-      <actions>
-        <transitions/>
-        <errors/>
-        <reductions>
-          <reduction symbol="$default" rule="15" enabled="true"/>
-        </reductions>
-      </actions>
-      <solved-conflicts/>
-    </state>
-
-    <state number="2">
-      <itemset>
-        <item rule-number="11" point="1"/>
-      </itemset>
-      <actions>
-        <transitions>
-          <transition type="shift" symbol="IDENTIFIER" state="7"/>
-        </transitions>
-        <errors/>
-        <reductions/>
-      </actions>
-      <solved-conflicts/>
-    </state>
-
-    <state number="3">
-      <itemset>
         <item rule-number="9" point="0"/>
         <item rule-number="10" point="0"/>
-        <item rule-number="12" point="1"/>
+        <item rule-number="11" point="0"/>
       </itemset>
       <actions>
         <transitions>
-          <transition type="goto" symbol="decllist" state="8"/>
+          <transition type="goto" symbol="decllist" state="1"/>
+          <transition type="goto" symbol="start" state="2"/>
         </transitions>
         <errors/>
         <reductions>
@@ -226,33 +136,17 @@
       <solved-conflicts/>
     </state>
 
-    <state number="4">
+    <state number="1">
       <itemset>
-        <item rule-number="13" point="1"/>
-      </itemset>
-      <actions>
-        <transitions/>
-        <errors/>
-        <reductions>
-          <reduction symbol="$default" rule="13" enabled="true"/>
-        </reductions>
-      </actions>
-      <solved-conflicts/>
-    </state>
-
-    <state number="5">
-      <itemset>
-        <item rule-number="11" point="0"/>
-        <item rule-number="12" point="0"/>
-        <item rule-number="14" point="1"/>
-        <item rule-number="16" point="1"/>
+        <item rule-number="8" point="0"/>
+        <item rule-number="10" point="1"/>
+        <item rule-number="11" point="1"/>
       </itemset>
       <actions>
         <transitions>
-          <transition type="shift" symbol="&quot;end of file&quot;" state="9"/>
-          <transition type="shift" symbol="&quot;package&quot;" state="2"/>
-          <transition type="goto" symbol="header" state="3"/>
-          <transition type="goto" symbol="packdecl" state="10"/>
+          <transition type="shift" symbol="&quot;end of file&quot;" state="3"/>
+          <transition type="shift" symbol="&quot;strict&quot;" state="4"/>
+          <transition type="goto" symbol="decl" state="5"/>
         </transitions>
         <errors/>
         <reductions/>
@@ -260,13 +154,13 @@
       <solved-conflicts/>
     </state>
 
-    <state number="6">
+    <state number="2">
       <itemset>
         <item rule-number="0" point="1"/>
       </itemset>
       <actions>
         <transitions>
-          <transition type="shift" symbol="&quot;end of file&quot;" state="11"/>
+          <transition type="shift" symbol="&quot;end of file&quot;" state="6"/>
         </transitions>
         <errors/>
         <reductions/>
@@ -274,101 +168,21 @@
       <solved-conflicts/>
     </state>
 
-    <state number="7">
+    <state number="3">
       <itemset>
         <item rule-number="11" point="2"/>
       </itemset>
       <actions>
-        <transitions>
-          <transition type="shift" symbol="VERSION" state="12"/>
-        </transitions>
-        <errors/>
-        <reductions/>
-      </actions>
-      <solved-conflicts/>
-    </state>
-
-    <state number="8">
-      <itemset>
-        <item rule-number="8" point="0"/>
-        <item rule-number="10" point="1"/>
-        <item rule-number="12" point="2">
-          <lookaheads>
-            <symbol>&quot;end of file&quot;</symbol>
-            <symbol>&quot;package&quot;</symbol>
-          </lookaheads>
-        </item>
-      </itemset>
-      <actions>
-        <transitions>
-          <transition type="shift" symbol="&quot;strictsig&quot;" state="13"/>
-          <transition type="goto" symbol="decl" state="14"/>
-        </transitions>
-        <errors/>
-        <reductions>
-          <reduction symbol="$default" rule="12" enabled="true"/>
-        </reductions>
-      </actions>
-      <solved-conflicts/>
-    </state>
-
-    <state number="9">
-      <itemset>
-        <item rule-number="16" point="2"/>
-      </itemset>
-      <actions>
         <transitions/>
         <errors/>
         <reductions>
-          <reduction symbol="$default" rule="16" enabled="true"/>
+          <reduction symbol="$default" rule="11" enabled="true"/>
         </reductions>
       </actions>
       <solved-conflicts/>
     </state>
 
-    <state number="10">
-      <itemset>
-        <item rule-number="14" point="2"/>
-      </itemset>
-      <actions>
-        <transitions/>
-        <errors/>
-        <reductions>
-          <reduction symbol="$default" rule="14" enabled="true"/>
-        </reductions>
-      </actions>
-      <solved-conflicts/>
-    </state>
-
-    <state number="11">
-      <itemset>
-        <item rule-number="0" point="2"/>
-      </itemset>
-      <actions>
-        <transitions/>
-        <errors/>
-        <reductions>
-          <reduction symbol="$default" rule="accept" enabled="true"/>
-        </reductions>
-      </actions>
-      <solved-conflicts/>
-    </state>
-
-    <state number="12">
-      <itemset>
-        <item rule-number="11" point="3"/>
-      </itemset>
-      <actions>
-        <transitions>
-          <transition type="shift" symbol="&quot;;&quot;" state="15"/>
-        </transitions>
-        <errors/>
-        <reductions/>
-      </actions>
-      <solved-conflicts/>
-    </state>
-
-    <state number="13">
+    <state number="4">
       <itemset>
         <item rule-number="1" point="0"/>
         <item rule-number="2" point="0"/>
@@ -377,10 +191,10 @@
       </itemset>
       <actions>
         <transitions>
-          <transition type="shift" symbol="&quot;strictsig&quot;" state="16"/>
-          <transition type="shift" symbol="IDENTIFIER" state="17"/>
-          <transition type="shift" symbol="QUOTED_IDENTIFIER" state="18"/>
-          <transition type="goto" symbol="identifier" state="19"/>
+          <transition type="shift" symbol="&quot;strict&quot;" state="7"/>
+          <transition type="shift" symbol="IDENTIFIER" state="8"/>
+          <transition type="shift" symbol="QUOTED_IDENTIFIER" state="9"/>
+          <transition type="goto" symbol="identifier" state="10"/>
         </transitions>
         <errors/>
         <reductions/>
@@ -388,7 +202,7 @@
       <solved-conflicts/>
     </state>
 
-    <state number="14">
+    <state number="5">
       <itemset>
         <item rule-number="10" point="2"/>
       </itemset>
@@ -402,21 +216,21 @@
       <solved-conflicts/>
     </state>
 
-    <state number="15">
+    <state number="6">
       <itemset>
-        <item rule-number="11" point="4"/>
+        <item rule-number="0" point="2"/>
       </itemset>
       <actions>
         <transitions/>
         <errors/>
         <reductions>
-          <reduction symbol="$default" rule="11" enabled="true"/>
+          <reduction symbol="$default" rule="accept" enabled="true"/>
         </reductions>
       </actions>
       <solved-conflicts/>
     </state>
 
-    <state number="16">
+    <state number="7">
       <itemset>
         <item rule-number="1" point="1"/>
       </itemset>
@@ -430,7 +244,7 @@
       <solved-conflicts/>
     </state>
 
-    <state number="17">
+    <state number="8">
       <itemset>
         <item rule-number="2" point="1"/>
       </itemset>
@@ -444,7 +258,7 @@
       <solved-conflicts/>
     </state>
 
-    <state number="18">
+    <state number="9">
       <itemset>
         <item rule-number="3" point="1"/>
       </itemset>
@@ -458,7 +272,7 @@
       <solved-conflicts/>
     </state>
 
-    <state number="19">
+    <state number="10">
       <itemset>
         <item rule-number="6" point="0"/>
         <item rule-number="7" point="0"/>
@@ -466,8 +280,8 @@
       </itemset>
       <actions>
         <transitions>
-          <transition type="shift" symbol="&quot;&lt;&quot;" state="20"/>
-          <transition type="goto" symbol="params" state="21"/>
+          <transition type="shift" symbol="&quot;&lt;&quot;" state="11"/>
+          <transition type="goto" symbol="params" state="12"/>
         </transitions>
         <errors/>
         <reductions/>
@@ -475,7 +289,7 @@
       <solved-conflicts/>
     </state>
 
-    <state number="20">
+    <state number="11">
       <itemset>
         <item rule-number="4" point="0"/>
         <item rule-number="5" point="0"/>
@@ -484,9 +298,9 @@
       </itemset>
       <actions>
         <transitions>
-          <transition type="shift" symbol="&quot;&gt;&quot;" state="22"/>
-          <transition type="shift" symbol="NUMBER" state="23"/>
-          <transition type="goto" symbol="paramseq" state="24"/>
+          <transition type="shift" symbol="&quot;&gt;&quot;" state="13"/>
+          <transition type="shift" symbol="NUMBER" state="14"/>
+          <transition type="goto" symbol="paramseq" state="15"/>
         </transitions>
         <errors/>
         <reductions/>
@@ -494,13 +308,13 @@
       <solved-conflicts/>
     </state>
 
-    <state number="21">
+    <state number="12">
       <itemset>
         <item rule-number="8" point="3"/>
       </itemset>
       <actions>
         <transitions>
-          <transition type="shift" symbol="&quot;;&quot;" state="25"/>
+          <transition type="shift" symbol="&quot;;&quot;" state="16"/>
         </transitions>
         <errors/>
         <reductions/>
@@ -508,7 +322,7 @@
       <solved-conflicts/>
     </state>
 
-    <state number="22">
+    <state number="13">
       <itemset>
         <item rule-number="7" point="2"/>
       </itemset>
@@ -522,7 +336,7 @@
       <solved-conflicts/>
     </state>
 
-    <state number="23">
+    <state number="14">
       <itemset>
         <item rule-number="4" point="1"/>
       </itemset>
@@ -536,15 +350,15 @@
       <solved-conflicts/>
     </state>
 
-    <state number="24">
+    <state number="15">
       <itemset>
         <item rule-number="5" point="1"/>
         <item rule-number="6" point="2"/>
       </itemset>
       <actions>
         <transitions>
-          <transition type="shift" symbol="&quot;&gt;&quot;" state="26"/>
-          <transition type="shift" symbol="&quot;,&quot;" state="27"/>
+          <transition type="shift" symbol="&quot;&gt;&quot;" state="17"/>
+          <transition type="shift" symbol="&quot;,&quot;" state="18"/>
         </transitions>
         <errors/>
         <reductions/>
@@ -552,7 +366,7 @@
       <solved-conflicts/>
     </state>
 
-    <state number="25">
+    <state number="16">
       <itemset>
         <item rule-number="8" point="4"/>
       </itemset>
@@ -566,7 +380,7 @@
       <solved-conflicts/>
     </state>
 
-    <state number="26">
+    <state number="17">
       <itemset>
         <item rule-number="6" point="3"/>
       </itemset>
@@ -580,13 +394,13 @@
       <solved-conflicts/>
     </state>
 
-    <state number="27">
+    <state number="18">
       <itemset>
         <item rule-number="5" point="2"/>
       </itemset>
       <actions>
         <transitions>
-          <transition type="shift" symbol="NUMBER" state="28"/>
+          <transition type="shift" symbol="NUMBER" state="19"/>
         </transitions>
         <errors/>
         <reductions/>
@@ -594,7 +408,7 @@
       <solved-conflicts/>
     </state>
 
-    <state number="28">
+    <state number="19">
       <itemset>
         <item rule-number="5" point="3"/>
       </itemset>

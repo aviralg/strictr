@@ -27,12 +27,3 @@ trace_file <- function(file,
     trace_expr(code, quote = FALSE)
 }
 
-#' @export
-test_fun <- function() {
-    f
-    g
-    y
-    {
-        logic
-    }
-}

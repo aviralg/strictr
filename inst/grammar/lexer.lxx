@@ -30,15 +30,14 @@
         return parser::Parser::token::TOKEN_NUMBER;
 %}
 
-STRICTSIG           strictsig
-PACKAGE             package
 BLANK               [ \t\r]
 VARARG              \.\.\.
 IDENTIFIER          [a-zA-Z.][a-zA-Z0-9._]*
 NUMBER              [1-9][0-9]*
-VERSION             [0-9]+[.][0-9]+[.][0-9]
 NON_HEX             [^0-9A-Fa-f]
 NON_OCT             [^0-7]
+STRICT              strict
+
 %x quoted_identifier
 %x comment
 
@@ -59,10 +58,9 @@ NON_OCT             [^0-7]
 "<"                         { HANDLE_TOKEN(TOKEN_LANGLEBRACKET) }
 ">"                         { HANDLE_TOKEN(TOKEN_RANGLEBRACKET) }
 ";"                         { HANDLE_TOKEN(TOKEN_SEMICOLON) }
-{STRICTSIG}                 { HANDLE_TOKEN(TOKEN_STRICTSIG) }
-{PACKAGE}                   { HANDLE_TOKEN(TOKEN_PACKAGE) }
+","                         { HANDLE_TOKEN(TOKEN_COMMA) }
+{STRICT}                    { HANDLE_TOKEN(TOKEN_STRICT) }
 {NUMBER}                    { HANDLE_NUMBER() }
-{VERSION}                   { HANDLE_TOKEN(TOKEN_VERSION) }
 {IDENTIFIER}                { HANDLE_TOKEN(TOKEN_IDENTIFIER) }
 "`"                         { BEGIN(quoted_identifier); }
 <quoted_identifier>{

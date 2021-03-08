@@ -1,3 +1,2 @@
-package stringr 1.4.0;
-
-strictsig str_length <1>;
+strict str_length <1>;
+strict str_count <1,2>;

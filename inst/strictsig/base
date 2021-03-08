@@ -1,3 +1,1 @@
-package base 4.0.2;
-
-strictsig is.null <1>;
+strict is.null <1>;

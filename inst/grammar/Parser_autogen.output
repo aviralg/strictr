@@ -1,8 +1,13 @@
+Terminals unused in grammar
+
+   "package"
+
+
 Grammar
 
     0 $accept: start "end of file"
 
-    1 identifier: "strictsig"
+    1 identifier: "strict"
     2           | IDENTIFIER
     3           | QUOTED_IDENTIFIER
 
@@ -12,289 +17,200 @@ Grammar
     6 params: "<" paramseq ">"
     7       | "<" ">"
 
-    8 decl: "strictsig" identifier params ";"
+    8 decl: "strict" identifier params ";"
 
     9 decllist: %empty
    10         | decllist decl
 
-   11 header: "package" IDENTIFIER VERSION ";"
-
-   12 packdecl: header decllist
-
-   13 packdecllist: packdecl
-   14             | packdecllist packdecl
-
-   15 start: "end of file"
-   16      | packdecllist "end of file"
+   11 start: decllist "end of file"
 
 
 Terminals, with rules where they appear
 
-"end of file" (0) 0 15 16
+"end of file" (0) 0 11
 error (256)
 "<" <std::string> (258) 6 7
 ">" <std::string> (259) 6 7
-";" <std::string> (260) 8 11
-"package" <std::string> (261) 11
-"strictsig" <std::string> (262) 1 8
-IDENTIFIER <std::string> (263) 2 11
-VERSION <std::string> (264) 11
+";" <std::string> (260) 8
+"," <std::string> (261) 5
+"package" <std::string> (262)
+"strict" <std::string> (263) 1 8
+IDENTIFIER <std::string> (264) 2
 QUOTED_IDENTIFIER <std::string> (265) 3
 NUMBER <int> (266) 4 5
-"," (267) 5
 
 
 Nonterminals, with rules where they appear
 
-$accept (13)
+$accept (12)
     on left: 0
-identifier <std::string> (14)
+identifier <std::string> (13)
     on left: 1 2 3, on right: 8
-paramseq <std::vector<int>> (15)
+paramseq <std::vector<int>> (14)
     on left: 4 5, on right: 5 6
-params <std::vector<int>> (16)
+params <std::vector<int>> (15)
     on left: 6 7, on right: 8
-header <PackageStrictnessSignature> (17)
-    on left: 11, on right: 12
-packdecl <PackageStrictnessSignature> (18)
-    on left: 12, on right: 13 14
-decl <FunctionStrictnessSignature> (19)
+decl <FunctionStrictnessSignature> (16)
     on left: 8, on right: 10
-decllist <std::vector<FunctionStrictnessSignature>> (20)
-    on left: 9 10, on right: 10 12
-packdecllist (21)
-    on left: 13 14, on right: 14 16
-start (22)
-    on left: 15 16, on right: 0
+decllist (17)
+    on left: 9 10, on right: 10 11
+start (18)
+    on left: 11, on right: 0
 
 
 State 0
 
     0 $accept: . start "end of file"
 
-    "end of file"  shift, and go to state 1
-    "package"      shift, and go to state 2
+    $default  reduce using rule 9 (decllist)
 
-    header        go to state 3
-    packdecl      go to state 4
-    packdecllist  go to state 5
-    start         go to state 6
+    decllist  go to state 1
+    start     go to state 2
 
 
 State 1
 
-   15 start: "end of file" .
+   10 decllist: decllist . decl
+   11 start: decllist . "end of file"
 
-    $default  reduce using rule 15 (start)
+    "end of file"  shift, and go to state 3
+    "strict"       shift, and go to state 4
+
+    decl  go to state 5
 
 
 State 2
 
-   11 header: "package" . IDENTIFIER VERSION ";"
+    0 $accept: start . "end of file"
 
-    IDENTIFIER  shift, and go to state 7
+    "end of file"  shift, and go to state 6
 
 
 State 3
 
-   12 packdecl: header . decllist
+   11 start: decllist "end of file" .
 
-    $default  reduce using rule 9 (decllist)
-
-    decllist  go to state 8
+    $default  reduce using rule 11 (start)
 
 
 State 4
 
-   13 packdecllist: packdecl .
+    8 decl: "strict" . identifier params ";"
 
-    $default  reduce using rule 13 (packdecllist)
+    "strict"           shift, and go to state 7
+    IDENTIFIER         shift, and go to state 8
+    QUOTED_IDENTIFIER  shift, and go to state 9
+
+    identifier  go to state 10
 
 
 State 5
-
-   14 packdecllist: packdecllist . packdecl
-   16 start: packdecllist . "end of file"
-
-    "end of file"  shift, and go to state 9
-    "package"      shift, and go to state 2
-
-    header    go to state 3
-    packdecl  go to state 10
-
-
-State 6
-
-    0 $accept: start . "end of file"
-
-    "end of file"  shift, and go to state 11
-
-
-State 7
-
-   11 header: "package" IDENTIFIER . VERSION ";"
-
-    VERSION  shift, and go to state 12
-
-
-State 8
-
-   10 decllist: decllist . decl
-   12 packdecl: header decllist .
-
-    "strictsig"  shift, and go to state 13
-
-    $default  reduce using rule 12 (packdecl)
-
-    decl  go to state 14
-
-
-State 9
-
-   16 start: packdecllist "end of file" .
-
-    $default  reduce using rule 16 (start)
-
-
-State 10
-
-   14 packdecllist: packdecllist packdecl .
-
-    $default  reduce using rule 14 (packdecllist)
-
-
-State 11
-
-    0 $accept: start "end of file" .
-
-    $default  accept
-
-
-State 12
-
-   11 header: "package" IDENTIFIER VERSION . ";"
-
-    ";"  shift, and go to state 15
-
-
-State 13
-
-    8 decl: "strictsig" . identifier params ";"
-
-    "strictsig"        shift, and go to state 16
-    IDENTIFIER         shift, and go to state 17
-    QUOTED_IDENTIFIER  shift, and go to state 18
-
-    identifier  go to state 19
-
-
-State 14
 
    10 decllist: decllist decl .
 
     $default  reduce using rule 10 (decllist)
 
 
-State 15
+State 6
 
-   11 header: "package" IDENTIFIER VERSION ";" .
+    0 $accept: start "end of file" .
 
-    $default  reduce using rule 11 (header)
+    $default  accept
 
 
-State 16
+State 7
 
-    1 identifier: "strictsig" .
+    1 identifier: "strict" .
 
     $default  reduce using rule 1 (identifier)
 
 
-State 17
+State 8
 
     2 identifier: IDENTIFIER .
 
     $default  reduce using rule 2 (identifier)
 
 
-State 18
+State 9
 
     3 identifier: QUOTED_IDENTIFIER .
 
     $default  reduce using rule 3 (identifier)
 
 
-State 19
+State 10
 
-    8 decl: "strictsig" identifier . params ";"
+    8 decl: "strict" identifier . params ";"
 
-    "<"  shift, and go to state 20
+    "<"  shift, and go to state 11
 
-    params  go to state 21
+    params  go to state 12
 
 
-State 20
+State 11
 
     6 params: "<" . paramseq ">"
     7       | "<" . ">"
 
-    ">"     shift, and go to state 22
-    NUMBER  shift, and go to state 23
+    ">"     shift, and go to state 13
+    NUMBER  shift, and go to state 14
 
-    paramseq  go to state 24
-
-
-State 21
-
-    8 decl: "strictsig" identifier params . ";"
-
-    ";"  shift, and go to state 25
+    paramseq  go to state 15
 
 
-State 22
+State 12
+
+    8 decl: "strict" identifier params . ";"
+
+    ";"  shift, and go to state 16
+
+
+State 13
 
     7 params: "<" ">" .
 
     $default  reduce using rule 7 (params)
 
 
-State 23
+State 14
 
     4 paramseq: NUMBER .
 
     $default  reduce using rule 4 (paramseq)
 
 
-State 24
+State 15
 
     5 paramseq: paramseq . "," NUMBER
     6 params: "<" paramseq . ">"
 
-    ">"  shift, and go to state 26
-    ","  shift, and go to state 27
+    ">"  shift, and go to state 17
+    ","  shift, and go to state 18
 
 
-State 25
+State 16
 
-    8 decl: "strictsig" identifier params ";" .
+    8 decl: "strict" identifier params ";" .
 
     $default  reduce using rule 8 (decl)
 
 
-State 26
+State 17
 
     6 params: "<" paramseq ">" .
 
     $default  reduce using rule 6 (params)
 
 
-State 27
+State 18
 
     5 paramseq: paramseq "," . NUMBER
 
-    NUMBER  shift, and go to state 28
+    NUMBER  shift, and go to state 19
 
 
-State 28
+State 19
 
     5 paramseq: paramseq "," NUMBER .
 

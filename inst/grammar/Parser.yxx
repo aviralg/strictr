@@ -27,19 +27,16 @@
 %token <std::string>                    LANGLEBRACKET        "<";
 %token <std::string>                    RANGLEBRACKET        ">";
 %token <std::string>                    SEMICOLON            ";";
+%token <std::string>                    COMMA                ",";
 %token <std::string>                    PACKAGE              "package";
-%token <std::string>                    STRICTSIG            "strictsig";
+%token <std::string>                    STRICT               "strict";
 %token <std::string>                    IDENTIFIER;
-%token <std::string>                    VERSION;
 %token <std::string>                    QUOTED_IDENTIFIER;
 %token <int>                            NUMBER
 %nterm <std::string>                    identifier
 %nterm <std::vector<int>>               paramseq
 %nterm <std::vector<int>>               params
-%nterm <PackageStrictnessSignature>     header
-%nterm <PackageStrictnessSignature>     packdecl
 %nterm <FunctionStrictnessSignature>    decl
-%nterm <std::vector<FunctionStrictnessSignature>>    decllist
 
 %start start;
 
@@ -69,15 +66,16 @@ namespace parser {
     #undef yylex
     #define yylex lexer.yylex
 }
+
 %%
 
-identifier:  STRICTSIG                         { $$ = $1; }
+identifier:  STRICT                            { $$ = $1; }
           |  IDENTIFIER                        { $$ = $1; }
           |  QUOTED_IDENTIFIER                 { $$ = $1; }
           ;
 
-paramseq:    NUMBER                            { $$ = std::vector<int>({$1});    }
-        |    paramseq "," NUMBER               { $$ = $1; $$.push_back($3);      }
+paramseq:    NUMBER                            { $$ = std::vector<int>({$1}); }
+        |    paramseq "," NUMBER               { $$ = $1; $$.push_back($3); }
         ;
 
 params:      "<" paramseq ">"                  { $$ = $2; }
@@ -87,26 +85,19 @@ params:      "<" paramseq ">"                  { $$ = $2; }
 decl:        "strict" identifier params ";"    { $$ = FunctionStrictnessSignature($2, $3); }
     ;
 
-decllist:                                      { $$ = std::vector<FunctionStrictnessSignature>(); }
-        |    decllist decl                     { $$ = $1; $$.push_back($2); }
+decllist:                                      { }
+        |    decllist decl                     { context.get_cache().add_signature($2); }
         ;
 
-header:      "package" IDENTIFIER VERSION ";"       { $$ = PackageStrictnessSignature($2, $3); }
-      ;
-
-packdecl:     header decllist                   { $$ = $1; $$.add_signatures($2); }
-        ;
-
-packdecllist: packdecl                   { context.get_cache().add_signature($1); }
-            | packdecllist packdecl      { context.get_cache().add_signature($2); }
-            ;
-
-start:        EOF                            { }
-     |        packdecllist EOF               { }
+start:       decllist EOF                      { }
      ;
 %%
 
 void parser::Parser::error(const location_type& location, const std::string& message) {
-    Rf_error("%s at %d:%d-%d:%d", message.c_str(), location.begin.line, location.begin.column, location.end.line,
-    location.end.column);
+    Rf_error("%s at %d:%d-%d:%d",
+             message.c_str(),
+             location.begin.line,
+             location.begin.column,
+             location.end.line,
+             location.end.column);
 }
