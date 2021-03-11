@@ -28,7 +28,7 @@ class FunctionStrictnessSignature {
         std::vector<SEXP> r_names;
 
         for (const int parameter: signature_) {
-            r_names.push_back(get_parameter_name(parameter, r_formals));
+            r_names.push_back(get_parameter_name_(parameter, r_formals));
         }
 
         SEXP r_body = BODY(r_closure);
@@ -36,18 +36,19 @@ class FunctionStrictnessSignature {
         SEXP r_new_body = PROTECT(LCONS(r_body, R_NilValue));
 
         for (int i = r_names.size() - 1; i >= 0; --i) {
-            r_new_body = PROTECT(LCONS(r_names[i], r_new_body));
+            SEXP r_force_expr = PROTECT(build_force_expr_(r_names[i]));
+            r_new_body = PROTECT(LCONS(r_force_expr, r_new_body));
         }
 
         r_new_body = PROTECT(LCONS(Rf_install("{"), r_new_body));
 
         SET_BODY(r_closure, r_new_body);
 
-        UNPROTECT(2 + r_names.size());
+        UNPROTECT(2 + 2 * r_names.size());
     }
 
   private:
-    SEXP get_parameter_name(int position, SEXP r_formals) {
+    SEXP get_parameter_name_(int position, SEXP r_formals) {
         int index;
         SEXP r_formal;
         for (index = 1, r_formal = r_formals;
@@ -66,6 +67,17 @@ class FunctionStrictnessSignature {
         }
 
         Rf_error("argument number %d does not exist", position);
+    }
+
+    SEXP build_force_expr_(SEXP r_name) {
+        SEXP r_missing = PROTECT(Rf_lang2(Rf_install("missing"), r_name));
+        SEXP r_negate = PROTECT(Rf_lang2(Rf_install("!"), r_missing));
+
+        SEXP r_result = Rf_lang3(Rf_install("if"), r_negate, r_name);
+
+        UNPROTECT(2);
+
+        return r_result;
     }
 
     std::string name_;
