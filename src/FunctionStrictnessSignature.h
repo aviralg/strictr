@@ -36,7 +36,8 @@ class FunctionStrictnessSignature {
         SEXP r_new_body = PROTECT(LCONS(r_body, R_NilValue));
 
         for (int i = r_names.size() - 1; i >= 0; --i) {
-            SEXP r_force_expr = PROTECT(build_force_expr_(r_names[i]));
+            SEXP r_name = r_names[i];
+            SEXP r_force_expr = PROTECT(build_force_expr_(r_name));
             r_new_body = PROTECT(LCONS(r_force_expr, r_new_body));
         }
 
@@ -69,13 +70,23 @@ class FunctionStrictnessSignature {
         Rf_error("argument number %d does not exist", position);
     }
 
+    bool is_vararg_(SEXP r_name) {
+        return !strcmp("...", CHAR(PRINTNAME(r_name)));
+    }
+
     SEXP build_force_expr_(SEXP r_name) {
         SEXP r_missing = PROTECT(Rf_lang2(Rf_install("missing"), r_name));
         SEXP r_negate = PROTECT(Rf_lang2(Rf_install("!"), r_missing));
+        SEXP r_force = r_name;
+        bool vararg = is_vararg_(r_name);
 
-        SEXP r_result = Rf_lang3(Rf_install("if"), r_negate, r_name);
+        if (vararg) {
+            r_force = PROTECT(Rf_lang2(Rf_install("list"), r_name));
+        }
 
-        UNPROTECT(2);
+        SEXP r_result = Rf_lang3(Rf_install("if"), r_negate, r_force);
+
+        UNPROTECT(2 + vararg);
 
         return r_result;
     }
