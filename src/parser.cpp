@@ -52,37 +52,35 @@
 //    unparse_(node, output_stream, show_ast, style_output);
 //}
 
-PackageStrictnessSignature parse_(const std::string& package_name,
-                                  std::istream& input_stream,
-                                  bool debug_lexer,
-                                  bool debug_parser) {
-    parser::ParsingContext context(input_stream, package_name);
+Package* parse_(Package* package,
+                std::istream& input_stream,
+                bool debug_lexer,
+                bool debug_parser) {
+    parser::ParsingContext context(input_stream, package);
     parser::Lexer lexer(context);
     lexer.set_debug_level(debug_lexer);
     parser::Parser parser(lexer, context);
     parser.set_debug_level(debug_parser);
     parser.parse();
-    return context.get_cache();
+    return context.get_package();
 }
 
-PackageStrictnessSignature parse_stdin(const std::string& package_name,
-                                       bool debug_lexer,
-                                       bool debug_parser) {
-    return parse_(package_name, std::cin, debug_lexer, debug_parser);
+Package* parse_stdin(Package* package, bool debug_lexer, bool debug_parser) {
+    return parse_(package, std::cin, debug_lexer, debug_parser);
 }
 
-PackageStrictnessSignature parse_string(const std::string& package_name,
-                                        const std::string& string,
-                                        bool debug_lexer,
-                                        bool debug_parser) {
+Package* parse_string(Package* package,
+                      const std::string& string,
+                      bool debug_lexer,
+                      bool debug_parser) {
     std::istringstream input_stream(string);
-    return parse_(package_name, input_stream, debug_lexer, debug_parser);
+    return parse_(package, input_stream, debug_lexer, debug_parser);
 }
 
-PackageStrictnessSignature parse_file(const std::string& package_name,
-                                      const std::string& filepath,
-                                      bool debug_lexer,
-                                      bool debug_parser) {
+Package* parse_file(Package* package,
+                    const std::string& filepath,
+                    bool debug_lexer,
+                    bool debug_parser) {
     std::ifstream input_stream(filepath);
-    return parse_(package_name, input_stream, debug_lexer, debug_parser);
+    return parse_(package, input_stream, debug_lexer, debug_parser);
 }

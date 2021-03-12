@@ -34,9 +34,10 @@
 %token <std::string>                    QUOTED_IDENTIFIER;
 %token <int>                            NUMBER
 %nterm <std::string>                    identifier
+%nterm <std::vector<std::string>>       identifierlist
 %nterm <std::vector<int>>               paramseq
 %nterm <std::vector<int>>               params
-%nterm <FunctionStrictnessSignature>    decl
+%nterm <Function>    decl
 
 %start start;
 
@@ -56,8 +57,8 @@ namespace parser {
    class Lexer;
    class ParsingContext;
 }
-#include "PackageStrictnessSignature.h"
-#include "FunctionStrictnessSignature.h"
+#include "Package.h"
+#include "Function.h"
 }
 
 %code {
@@ -69,27 +70,31 @@ namespace parser {
 
 %%
 
-identifier:  STRICT                            { $$ = $1; }
-          |  IDENTIFIER                        { $$ = $1; }
-          |  QUOTED_IDENTIFIER                 { $$ = $1; }
+identifier:  STRICT                             { $$ = $1; }
+          |  IDENTIFIER                         { $$ = $1; }
+          |  QUOTED_IDENTIFIER                  { $$ = $1; }
           ;
 
-paramseq:    NUMBER                            { $$ = std::vector<int>({$1}); }
-        |    paramseq "," NUMBER               { $$ = $1; $$.push_back($3); }
+identifierlist: identifier                      { $$ = std::vector<std::string>({$1}); }
+              | identifierlist identifier       { $$ = $1; $$.push_back($2);           }
+
+
+paramseq:    NUMBER                             { $$ = std::vector<int>({$1}); }
+        |    paramseq "," NUMBER                { $$ = $1; $$.push_back($3); }
         ;
 
-params:      "<" paramseq ">"                  { $$ = $2; }
-      |      "<" ">"                           { $$ = std::vector<int>(); }
+params:      "<" paramseq ">"                   { $$ = $2; }
+      |      "<" ">"                            { $$ = std::vector<int>(); }
       ;
 
-decl:        "strict" identifier params ";"    { $$ = FunctionStrictnessSignature($2, $3); }
+decl:        "strict" identifierlist params ";" { context.get_package() -> add_function($2, $3); }
     ;
 
-decllist:                                      { }
-        |    decllist decl                     { context.get_cache().add_signature($2); }
+decllist:                                       { }
+        |    decllist decl                      { }
         ;
 
-start:       decllist EOF                      { }
+start:       decllist EOF                       { }
      ;
 %%
 

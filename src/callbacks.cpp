@@ -6,15 +6,19 @@
 #include "utilities.h"
 #include "parser.h"
 
-void handle_package(TracingState* tracing_state, const std::string& package_name) {
+void handle_package(TracingState* tracing_state,
+                    const std::string& package_name) {
     std::string sig_file = tracing_state->get_cache_file(package_name);
 
     if (file_exists(sig_file)) {
         Rprintf("Reading strictness signature file '%s' for package '%s'\n",
                 sig_file.c_str(),
                 package_name.c_str());
-        PackageStrictnessSignature cache = parse_file(package_name, sig_file);
-        cache.apply();
+        Package* package = new Package(package_name);
+        parse_file(package, sig_file);
+        package->apply();
+        delete package;
+
     } else {
         Rprintf(
             "Ignoring package '%s', missing strictness signature file '%s'\n",
@@ -39,7 +43,6 @@ void tracing_entry_callback(instrumentr_tracer_t tracer,
                             instrumentr_callback_t callback,
                             instrumentr_state_t state,
                             instrumentr_application_t application) {
-
     TracingState* tracing_state = strictr_tracer_get_tracing_state(tracer);
 
     SEXP package_names = R_lsInternal(R_NamespaceRegistry, TRUE);

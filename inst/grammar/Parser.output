@@ -54,13 +54,13 @@ paramseq <std::vector<int>> (15)
     on left: 4 5, on right: 5 6
 params <std::vector<int>> (16)
     on left: 6 7, on right: 8
-header <PackageStrictnessSignature> (17)
+header <Package> (17)
     on left: 11, on right: 12
-packdecl <PackageStrictnessSignature> (18)
+packdecl <Package> (18)
     on left: 12, on right: 13 14
-decl <FunctionStrictnessSignature> (19)
+decl <Function> (19)
     on left: 8, on right: 10
-decllist <std::vector<FunctionStrictnessSignature>> (20)
+decllist <std::vector<Function>> (20)
     on left: 9 10, on right: 10 12
 packdecllist (21)
     on left: 13 14, on right: 14 16

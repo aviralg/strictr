@@ -1,1 +1,3 @@
 strict paste <1,2,3>;
+strict loadNamespace runHook <1,2,3,4>;
+strict loadNamespace sealNamespace namespaceIsSealed <1>;

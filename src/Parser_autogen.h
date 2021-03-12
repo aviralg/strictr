@@ -44,14 +44,14 @@
 #ifndef YY_YY_PARSER_AUTOGEN_H_INCLUDED
 # define YY_YY_PARSER_AUTOGEN_H_INCLUDED
 // //                    "%code requires" blocks.
-#line 54 "Parser.yxx" // lalr1.cc:401
+#line 55 "Parser.yxx" // lalr1.cc:401
 
 namespace parser {
    class Lexer;
    class ParsingContext;
 }
-#include "PackageStrictnessSignature.h"
-#include "FunctionStrictnessSignature.h"
+#include "Package.h"
+#include "Function.h"
 
 #line 57 "Parser_autogen.h" // lalr1.cc:401
 
@@ -373,7 +373,7 @@ namespace parser {
     union union_type
     {
       // decl
-      char dummy1[sizeof (FunctionStrictnessSignature)];
+      char dummy1[sizeof (Function)];
 
       // NUMBER
       char dummy2[sizeof (int)];
@@ -392,6 +392,9 @@ namespace parser {
       // paramseq
       // params
       char dummy4[sizeof (std::vector<int>)];
+
+      // identifierlist
+      char dummy5[sizeof (std::vector<std::string>)];
     };
 
     /// The size of the largest semantic type.
@@ -503,13 +506,13 @@ namespace parser {
       {}
 #endif
 #if 201103L <= YY_CPLUSPLUS
-      basic_symbol (typename Base::kind_type t, FunctionStrictnessSignature&& v, location_type&& l)
+      basic_symbol (typename Base::kind_type t, Function&& v, location_type&& l)
         : Base (t)
         , value (std::move (v))
         , location (std::move (l))
       {}
 #else
-      basic_symbol (typename Base::kind_type t, const FunctionStrictnessSignature& v, const location_type& l)
+      basic_symbol (typename Base::kind_type t, const Function& v, const location_type& l)
         : Base (t)
         , value (v)
         , location (l)
@@ -554,6 +557,19 @@ namespace parser {
         , location (l)
       {}
 #endif
+#if 201103L <= YY_CPLUSPLUS
+      basic_symbol (typename Base::kind_type t, std::vector<std::string>&& v, location_type&& l)
+        : Base (t)
+        , value (std::move (v))
+        , location (std::move (l))
+      {}
+#else
+      basic_symbol (typename Base::kind_type t, const std::vector<std::string>& v, const location_type& l)
+        : Base (t)
+        , value (v)
+        , location (l)
+      {}
+#endif
 
       /// Destroy the symbol.
       ~basic_symbol ()
@@ -577,8 +593,8 @@ namespace parser {
         // Type destructor.
 switch (yytype)
     {
-      case 16: // decl
-        value.template destroy< FunctionStrictnessSignature > ();
+      case 17: // decl
+        value.template destroy< Function > ();
         break;
 
       case 11: // NUMBER
@@ -597,9 +613,13 @@ switch (yytype)
         value.template destroy< std::string > ();
         break;
 
-      case 14: // paramseq
-      case 15: // params
+      case 15: // paramseq
+      case 16: // params
         value.template destroy< std::vector<int> > ();
+        break;
+
+      case 14: // identifierlist
+        value.template destroy< std::vector<std::string> > ();
         break;
 
       default:
@@ -1209,8 +1229,8 @@ switch (yytype)
     enum
     {
       yyeof_ = 0,
-      yylast_ = 15,     ///< Last index in yytable_.
-      yynnts_ = 7,  ///< Number of nonterminal symbols.
+      yylast_ = 17,     ///< Last index in yytable_.
+      yynnts_ = 8,  ///< Number of nonterminal symbols.
       yyfinal_ = 6, ///< Termination state number.
       yyterror_ = 1,
       yyerrcode_ = 256,
@@ -1226,7 +1246,7 @@ switch (yytype)
 
 #line 8 "Parser.yxx" // lalr1.cc:401
 } // parser
-#line 1230 "Parser_autogen.h" // lalr1.cc:401
+#line 1250 "Parser_autogen.h" // lalr1.cc:401
 
 
 

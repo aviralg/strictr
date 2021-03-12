@@ -1,7 +1,7 @@
 #ifndef STRICTR_PARSING_CONTEXT_H
 #define STRICTR_PARSING_CONTEXT_H
 
-#include "PackageStrictnessSignature.h"
+#include "Package.h"
 
 #include <iostream>
 #include <string>
@@ -11,8 +11,8 @@ namespace parser {
 class ParsingContext {
   public:
     explicit ParsingContext(std::istream& input_stream,
-                            const std::string& package_name)
-        : input_stream_(input_stream), pack_sig_(package_name) {
+                            Package* package)
+        : input_stream_(input_stream), package_(package) {
     }
 
     ~ParsingContext() {
@@ -22,13 +22,13 @@ class ParsingContext {
         return input_stream_;
     }
 
-    PackageStrictnessSignature& get_cache() {
-        return pack_sig_;
+    Package* get_package() {
+        return package_;
     }
 
   private:
     std::istream& input_stream_;
-    PackageStrictnessSignature pack_sig_;
+    Package* package_;
 };
 } // namespace parser
 

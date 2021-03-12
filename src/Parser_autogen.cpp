@@ -41,7 +41,7 @@
 
 
 // Unqualified %code blocks.
-#line 63 "Parser.yxx" // lalr1.cc:435
+#line 64 "Parser.yxx" // lalr1.cc:435
 
     #include "ParsingContext.h"
     #include "Lexer.h"
@@ -217,8 +217,8 @@ namespace parser {
   {
     switch (this->type_get ())
     {
-      case 16: // decl
-        value.move< FunctionStrictnessSignature > (std::move (that.value));
+      case 17: // decl
+        value.move< Function > (std::move (that.value));
         break;
 
       case 11: // NUMBER
@@ -237,9 +237,13 @@ namespace parser {
         value.move< std::string > (std::move (that.value));
         break;
 
-      case 14: // paramseq
-      case 15: // params
+      case 15: // paramseq
+      case 16: // params
         value.move< std::vector<int> > (std::move (that.value));
+        break;
+
+      case 14: // identifierlist
+        value.move< std::vector<std::string> > (std::move (that.value));
         break;
 
       default:
@@ -257,8 +261,8 @@ namespace parser {
   {
     switch (this->type_get ())
     {
-      case 16: // decl
-        value.copy< FunctionStrictnessSignature > (YY_MOVE (that.value));
+      case 17: // decl
+        value.copy< Function > (YY_MOVE (that.value));
         break;
 
       case 11: // NUMBER
@@ -277,9 +281,13 @@ namespace parser {
         value.copy< std::string > (YY_MOVE (that.value));
         break;
 
-      case 14: // paramseq
-      case 15: // params
+      case 15: // paramseq
+      case 16: // params
         value.copy< std::vector<int> > (YY_MOVE (that.value));
+        break;
+
+      case 14: // identifierlist
+        value.copy< std::vector<std::string> > (YY_MOVE (that.value));
         break;
 
       default:
@@ -304,8 +312,8 @@ namespace parser {
     super_type::move (s);
     switch (this->type_get ())
     {
-      case 16: // decl
-        value.move< FunctionStrictnessSignature > (YY_MOVE (s.value));
+      case 17: // decl
+        value.move< Function > (YY_MOVE (s.value));
         break;
 
       case 11: // NUMBER
@@ -324,9 +332,13 @@ namespace parser {
         value.move< std::string > (YY_MOVE (s.value));
         break;
 
-      case 14: // paramseq
-      case 15: // params
+      case 15: // paramseq
+      case 16: // params
         value.move< std::vector<int> > (YY_MOVE (s.value));
+        break;
+
+      case 14: // identifierlist
+        value.move< std::vector<std::string> > (YY_MOVE (s.value));
         break;
 
       default:
@@ -420,8 +432,8 @@ namespace parser {
   {
     switch (that.type_get ())
     {
-      case 16: // decl
-        value.YY_MOVE_OR_COPY< FunctionStrictnessSignature > (YY_MOVE (that.value));
+      case 17: // decl
+        value.YY_MOVE_OR_COPY< Function > (YY_MOVE (that.value));
         break;
 
       case 11: // NUMBER
@@ -440,9 +452,13 @@ namespace parser {
         value.YY_MOVE_OR_COPY< std::string > (YY_MOVE (that.value));
         break;
 
-      case 14: // paramseq
-      case 15: // params
+      case 15: // paramseq
+      case 16: // params
         value.YY_MOVE_OR_COPY< std::vector<int> > (YY_MOVE (that.value));
+        break;
+
+      case 14: // identifierlist
+        value.YY_MOVE_OR_COPY< std::vector<std::string> > (YY_MOVE (that.value));
         break;
 
       default:
@@ -460,8 +476,8 @@ namespace parser {
   {
     switch (that.type_get ())
     {
-      case 16: // decl
-        value.move< FunctionStrictnessSignature > (YY_MOVE (that.value));
+      case 17: // decl
+        value.move< Function > (YY_MOVE (that.value));
         break;
 
       case 11: // NUMBER
@@ -480,9 +496,13 @@ namespace parser {
         value.move< std::string > (YY_MOVE (that.value));
         break;
 
-      case 14: // paramseq
-      case 15: // params
+      case 15: // paramseq
+      case 16: // params
         value.move< std::vector<int> > (YY_MOVE (that.value));
+        break;
+
+      case 14: // identifierlist
+        value.move< std::vector<std::string> > (YY_MOVE (that.value));
         break;
 
       default:
@@ -500,8 +520,8 @@ namespace parser {
     state = that.state;
     switch (that.type_get ())
     {
-      case 16: // decl
-        value.move< FunctionStrictnessSignature > (that.value);
+      case 17: // decl
+        value.move< Function > (that.value);
         break;
 
       case 11: // NUMBER
@@ -520,9 +540,13 @@ namespace parser {
         value.move< std::string > (that.value);
         break;
 
-      case 14: // paramseq
-      case 15: // params
+      case 15: // paramseq
+      case 16: // params
         value.move< std::vector<int> > (that.value);
+        break;
+
+      case 14: // identifierlist
+        value.move< std::vector<std::string> > (that.value);
         break;
 
       default:
@@ -676,7 +700,7 @@ namespace parser {
 
 
     // User initialization code.
-#line 43 "Parser.yxx" // lalr1.cc:788
+#line 44 "Parser.yxx" // lalr1.cc:788
 {
     /* filename for locations here
        https://www.gnu.org/software/bison/manual/html_node/Initial-Action-Decl.html
@@ -688,7 +712,7 @@ namespace parser {
     /* @$.initialize(context.get_input_stream_name()); */
 }
 
-#line 692 "Parser_autogen.cpp" // lalr1.cc:788
+#line 716 "Parser_autogen.cpp" // lalr1.cc:788
 
     /* Initialize the stack.  The initial state will be set in
        yynewstate, since the latter expects the semantical and the
@@ -788,8 +812,8 @@ namespace parser {
          when using variants.  */
       switch (yyr1_[yyn])
     {
-      case 16: // decl
-        yylhs.value.emplace< FunctionStrictnessSignature > ();
+      case 17: // decl
+        yylhs.value.emplace< Function > ();
         break;
 
       case 11: // NUMBER
@@ -808,9 +832,13 @@ namespace parser {
         yylhs.value.emplace< std::string > ();
         break;
 
-      case 14: // paramseq
-      case 15: // params
+      case 15: // paramseq
+      case 16: // params
         yylhs.value.emplace< std::vector<int> > ();
+        break;
+
+      case 14: // identifierlist
+        yylhs.value.emplace< std::vector<std::string> > ();
         break;
 
       default:
@@ -834,73 +862,85 @@ namespace parser {
           switch (yyn)
             {
   case 2:
-#line 72 "Parser.yxx" // lalr1.cc:919
+#line 73 "Parser.yxx" // lalr1.cc:919
     { yylhs.value.as < std::string > () = yystack_[0].value.as < std::string > (); }
-#line 840 "Parser_autogen.cpp" // lalr1.cc:919
+#line 868 "Parser_autogen.cpp" // lalr1.cc:919
     break;
 
   case 3:
-#line 73 "Parser.yxx" // lalr1.cc:919
+#line 74 "Parser.yxx" // lalr1.cc:919
     { yylhs.value.as < std::string > () = yystack_[0].value.as < std::string > (); }
-#line 846 "Parser_autogen.cpp" // lalr1.cc:919
+#line 874 "Parser_autogen.cpp" // lalr1.cc:919
     break;
 
   case 4:
-#line 74 "Parser.yxx" // lalr1.cc:919
+#line 75 "Parser.yxx" // lalr1.cc:919
     { yylhs.value.as < std::string > () = yystack_[0].value.as < std::string > (); }
-#line 852 "Parser_autogen.cpp" // lalr1.cc:919
+#line 880 "Parser_autogen.cpp" // lalr1.cc:919
     break;
 
   case 5:
-#line 77 "Parser.yxx" // lalr1.cc:919
-    { yylhs.value.as < std::vector<int> > () = std::vector<int>({yystack_[0].value.as < int > ()}); }
-#line 858 "Parser_autogen.cpp" // lalr1.cc:919
+#line 78 "Parser.yxx" // lalr1.cc:919
+    { yylhs.value.as < std::vector<std::string> > () = std::vector<std::string>({yystack_[0].value.as < std::string > ()}); }
+#line 886 "Parser_autogen.cpp" // lalr1.cc:919
     break;
 
   case 6:
-#line 78 "Parser.yxx" // lalr1.cc:919
-    { yylhs.value.as < std::vector<int> > () = yystack_[2].value.as < std::vector<int> > (); yylhs.value.as < std::vector<int> > ().push_back(yystack_[0].value.as < int > ()); }
-#line 864 "Parser_autogen.cpp" // lalr1.cc:919
+#line 79 "Parser.yxx" // lalr1.cc:919
+    { yylhs.value.as < std::vector<std::string> > () = yystack_[1].value.as < std::vector<std::string> > (); yylhs.value.as < std::vector<std::string> > ().push_back(yystack_[0].value.as < std::string > ());           }
+#line 892 "Parser_autogen.cpp" // lalr1.cc:919
     break;
 
   case 7:
-#line 81 "Parser.yxx" // lalr1.cc:919
-    { yylhs.value.as < std::vector<int> > () = yystack_[1].value.as < std::vector<int> > (); }
-#line 870 "Parser_autogen.cpp" // lalr1.cc:919
+#line 82 "Parser.yxx" // lalr1.cc:919
+    { yylhs.value.as < std::vector<int> > () = std::vector<int>({yystack_[0].value.as < int > ()}); }
+#line 898 "Parser_autogen.cpp" // lalr1.cc:919
     break;
 
   case 8:
-#line 82 "Parser.yxx" // lalr1.cc:919
-    { yylhs.value.as < std::vector<int> > () = std::vector<int>(); }
-#line 876 "Parser_autogen.cpp" // lalr1.cc:919
+#line 83 "Parser.yxx" // lalr1.cc:919
+    { yylhs.value.as < std::vector<int> > () = yystack_[2].value.as < std::vector<int> > (); yylhs.value.as < std::vector<int> > ().push_back(yystack_[0].value.as < int > ()); }
+#line 904 "Parser_autogen.cpp" // lalr1.cc:919
     break;
 
   case 9:
-#line 85 "Parser.yxx" // lalr1.cc:919
-    { yylhs.value.as < FunctionStrictnessSignature > () = FunctionStrictnessSignature(yystack_[2].value.as < std::string > (), yystack_[1].value.as < std::vector<int> > ()); }
-#line 882 "Parser_autogen.cpp" // lalr1.cc:919
+#line 86 "Parser.yxx" // lalr1.cc:919
+    { yylhs.value.as < std::vector<int> > () = yystack_[1].value.as < std::vector<int> > (); }
+#line 910 "Parser_autogen.cpp" // lalr1.cc:919
     break;
 
   case 10:
-#line 88 "Parser.yxx" // lalr1.cc:919
-    { }
-#line 888 "Parser_autogen.cpp" // lalr1.cc:919
+#line 87 "Parser.yxx" // lalr1.cc:919
+    { yylhs.value.as < std::vector<int> > () = std::vector<int>(); }
+#line 916 "Parser_autogen.cpp" // lalr1.cc:919
     break;
 
   case 11:
-#line 89 "Parser.yxx" // lalr1.cc:919
-    { context.get_cache().add_signature(yystack_[0].value.as < FunctionStrictnessSignature > ()); }
-#line 894 "Parser_autogen.cpp" // lalr1.cc:919
+#line 90 "Parser.yxx" // lalr1.cc:919
+    { context.get_package() -> add_function(yystack_[2].value.as < std::vector<std::string> > (), yystack_[1].value.as < std::vector<int> > ()); }
+#line 922 "Parser_autogen.cpp" // lalr1.cc:919
     break;
 
   case 12:
-#line 92 "Parser.yxx" // lalr1.cc:919
+#line 93 "Parser.yxx" // lalr1.cc:919
     { }
-#line 900 "Parser_autogen.cpp" // lalr1.cc:919
+#line 928 "Parser_autogen.cpp" // lalr1.cc:919
+    break;
+
+  case 13:
+#line 94 "Parser.yxx" // lalr1.cc:919
+    { }
+#line 934 "Parser_autogen.cpp" // lalr1.cc:919
+    break;
+
+  case 14:
+#line 97 "Parser.yxx" // lalr1.cc:919
+    { }
+#line 940 "Parser_autogen.cpp" // lalr1.cc:919
     break;
 
 
-#line 904 "Parser_autogen.cpp" // lalr1.cc:919
+#line 944 "Parser_autogen.cpp" // lalr1.cc:919
             default:
               break;
             }
@@ -1170,69 +1210,72 @@ namespace parser {
   }
 
 
-  const signed char Parser::yypact_ninf_ = -6;
+  const signed char Parser::yypact_ninf_ = -8;
 
   const signed char Parser::yytable_ninf_ = -1;
 
   const signed char
   Parser::yypact_[] =
   {
-      -6,     0,     1,    -6,    -5,    -6,    -6,    -6,    -6,    -6,
-       3,    -2,     2,    -6,    -6,     6,    -6,    -6,     4,    -6
+      -8,     0,     5,    -8,    -7,    -8,    -8,    -8,    -8,    -8,
+      -8,     1,     2,    -8,    10,    -8,    -8,     8,    -8,    -8,
+      -4,    -8
   };
 
   const unsigned char
   Parser::yydefact_[] =
   {
-      10,     0,     0,    12,     0,    11,     1,     2,     3,     4,
-       0,     0,     0,     8,     5,     0,     9,     7,     0,     6
+      12,     0,     0,    14,     0,    13,     1,     2,     3,     4,
+       5,     0,     0,     6,     0,    10,     7,     0,    11,     9,
+       0,     8
   };
 
   const signed char
   Parser::yypgoto_[] =
   {
-      -6,    -6,    -6,    -6,    -6,    -6,    -6
+      -8,     6,    -8,    -8,    -8,    -8,    -8,    -8
   };
 
   const signed char
   Parser::yydefgoto_[] =
   {
-      -1,    10,    15,    12,     5,     1,     2
+      -1,    10,    11,    17,    14,     5,     1,     2
   };
 
   const unsigned char
   Parser::yytable_[] =
   {
-       3,     6,    13,     7,     8,     9,    11,    16,     4,    14,
-      17,     0,    18,     0,     0,    19
+       3,     7,     8,     9,    12,     6,    15,    21,     4,     7,
+       8,     9,    19,    16,    20,    18,     0,    13
   };
 
   const signed char
   Parser::yycheck_[] =
   {
-       0,     0,     4,     8,     9,    10,     3,     5,     8,    11,
-       4,    -1,     6,    -1,    -1,    11
+       0,     8,     9,    10,     3,     0,     4,    11,     8,     8,
+       9,    10,     4,    11,     6,     5,    -1,    11
   };
 
   const unsigned char
   Parser::yystos_[] =
   {
-       0,    17,    18,     0,     8,    16,     0,     8,     9,    10,
-      13,     3,    15,     4,    11,    14,     5,     4,     6,    11
+       0,    18,    19,     0,     8,    17,     0,     8,     9,    10,
+      13,    14,     3,    13,    16,     4,    11,    15,     5,     4,
+       6,    11
   };
 
   const unsigned char
   Parser::yyr1_[] =
   {
        0,    12,    13,    13,    13,    14,    14,    15,    15,    16,
-      17,    17,    18
+      16,    17,    18,    18,    19
   };
 
   const unsigned char
   Parser::yyr2_[] =
   {
-       0,     2,     1,     1,     1,     1,     3,     3,     2,     4,
-       0,     2,     2
+       0,     2,     1,     1,     1,     1,     2,     1,     3,     3,
+       2,     4,     0,     2,     2
   };
 
 
@@ -1244,16 +1287,16 @@ namespace parser {
   {
   "\"end of file\"", "error", "$undefined", "\"<\"", "\">\"", "\";\"",
   "\",\"", "\"package\"", "\"strict\"", "IDENTIFIER", "QUOTED_IDENTIFIER",
-  "NUMBER", "$accept", "identifier", "paramseq", "params", "decl",
-  "decllist", "start", YY_NULLPTR
+  "NUMBER", "$accept", "identifier", "identifierlist", "paramseq",
+  "params", "decl", "decllist", "start", YY_NULLPTR
   };
 
 #if YYDEBUG
   const unsigned char
   Parser::yyrline_[] =
   {
-       0,    72,    72,    73,    74,    77,    78,    81,    82,    85,
-      88,    89,    92
+       0,    73,    73,    74,    75,    78,    79,    82,    83,    86,
+      87,    90,    93,    94,    97
   };
 
   // Print the state stack on the debug stream.
@@ -1335,8 +1378,8 @@ namespace parser {
 
 #line 8 "Parser.yxx" // lalr1.cc:1242
 } // parser
-#line 1339 "Parser_autogen.cpp" // lalr1.cc:1242
-#line 94 "Parser.yxx" // lalr1.cc:1243
+#line 1382 "Parser_autogen.cpp" // lalr1.cc:1242
+#line 99 "Parser.yxx" // lalr1.cc:1243
 
 
 void parser::Parser::error(const location_type& location, const std::string& message) {
