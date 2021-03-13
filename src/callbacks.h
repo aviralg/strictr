@@ -14,4 +14,9 @@ void tracing_entry_callback(instrumentr_tracer_t tracer,
                             instrumentr_state_t state,
                             instrumentr_application_t application);
 
+void tracing_exit_callback(instrumentr_tracer_t tracer,
+                           instrumentr_callback_t callback,
+                           instrumentr_state_t state,
+                           instrumentr_application_t application);
+
 #endif /* STRICTR_CALLBACKS_H  */

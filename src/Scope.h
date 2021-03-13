@@ -25,6 +25,7 @@ class Scope {
 
   protected:
     std::string name_;
+    bool applied_;
     std::unordered_map<std::string, Function*> functions_;
 
     Function* get_or_create_function_(const std::string& function_name,

@@ -14,7 +14,8 @@ class Function: public Scope {
         signature_ = signature;
     }
 
-    Function(const std::string& name): Scope(name), has_sig_(false) {
+    Function(const std::string& name)
+        : Scope(name), has_sig_(false), applied_(false) {
     }
 
     Function(): Function("unknown") {
@@ -47,26 +48,41 @@ class Function: public Scope {
         int size = functions_.size();
         int index = 0;
 
+        applied_ = true;
+
         for (auto& iter: functions_) {
             Function* inner_function = iter.second;
             SEXP r_inner_expr =
                 find_function_(r_body, inner_function->get_name());
 
-            if (r_inner_expr == NULL) {
-                Rf_error("cannot find function '%s' in body of function '%s'",
-                         inner_function->get_name().c_str(),
-                         name_.c_str());
+            if (r_inner_expr != NULL) {
+                inner_function->apply(
+                    r_inner_expr, level + 1, index == size - 1);
             }
 
-            inner_function->apply(r_inner_expr, level + 1, index == size - 1);
-
             ++index;
+        }
+    }
+
+    void get_status(int level,
+                    const std::string& parent_name,
+                    std::vector<int>& levels,
+                    std::vector<std::string>& names,
+                    std::vector<int>& applied) {
+        const std::string name = parent_name + name_;
+        levels.push_back(level);
+        names.push_back(name);
+        applied.push_back(applied_);
+
+        for (auto& iter: functions_) {
+            iter.second->get_status(level + 1, name + "::", levels, names, applied);
         }
     }
 
   private:
     bool has_sig_;
     std::vector<int> signature_;
+    bool applied_;
 
     SEXP get_parameter_name_(int position, SEXP r_formals) {
         int index;
@@ -190,8 +206,7 @@ class Function: public Scope {
 
         std::string prefix = last ? "┗━━█" : "┣━━█";
 
-        Rprintf(
-            "%s%s %s\n", connectors.c_str(), prefix.c_str(), name_.c_str());
+        Rprintf("%s%s %s\n", connectors.c_str(), prefix.c_str(), name_.c_str());
     }
 };
 

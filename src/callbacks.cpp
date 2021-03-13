@@ -17,8 +17,8 @@ void handle_package(TracingState* tracing_state,
         Package* package = new Package(package_name);
         parse_file(package, sig_file);
         package->apply();
+        tracing_state->update_status(package);
         delete package;
-
     } else {
         Rprintf(
             "Ignoring package '%s', missing strictness signature file '%s'\n",
@@ -32,7 +32,7 @@ void package_load_callback(instrumentr_tracer_t tracer,
                            instrumentr_state_t state,
                            instrumentr_application_t application,
                            instrumentr_package_t package) {
-    TracingState* tracing_state = strictr_tracer_get_tracing_state(tracer);
+    TracingState* tracing_state = strictr_tracer_get_tracing_state(state);
 
     std::string package_name = instrumentr_package_get_name(package);
 
@@ -43,7 +43,7 @@ void tracing_entry_callback(instrumentr_tracer_t tracer,
                             instrumentr_callback_t callback,
                             instrumentr_state_t state,
                             instrumentr_application_t application) {
-    TracingState* tracing_state = strictr_tracer_get_tracing_state(tracer);
+    TracingState* tracing_state = strictr_tracer_get_tracing_state(state);
 
     SEXP package_names = R_lsInternal(R_NamespaceRegistry, TRUE);
 
@@ -52,4 +52,16 @@ void tracing_entry_callback(instrumentr_tracer_t tracer,
 
         handle_package(tracing_state, package_name);
     }
+}
+
+void tracing_exit_callback(instrumentr_tracer_t tracer,
+                           instrumentr_callback_t callback,
+                           instrumentr_state_t state,
+                           instrumentr_application_t application) {
+    TracingState* tracing_state = strictr_tracer_get_tracing_state(state);
+
+    instrumentr_state_insert(
+        state, "application", tracing_state->get_status(), 1);
+
+    strictr_tracer_remove_tracing_state(state);
 }

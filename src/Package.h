@@ -55,6 +55,23 @@ class Package: public Scope {
         }
     }
 
+    void get_status(std::vector<std::string>& packages,
+                    std::vector<int>& levels,
+                    std::vector<std::string>& names,
+                    std::vector<int>& applied) {
+        int old_size = levels.size();
+
+        for (auto& iter: functions_) {
+            iter.second->get_status(0, "", levels, names, applied);
+        }
+
+        int new_size = levels.size();
+
+        for (int i = old_size; i < new_size; ++i) {
+            packages.push_back(name_);
+        }
+    }
+
   private:
     SEXP get_namespace_() {
         SEXP r_namespace =

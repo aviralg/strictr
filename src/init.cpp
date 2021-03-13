@@ -11,8 +11,8 @@ extern "C" {
 
 static const R_CallMethodDef callMethods[] = {
     {"strictr_tracer_create", (DL_FUNC) &r_strictr_tracer_create, 1},
-    {"strictr_tracer_get_tracing_state", (DL_FUNC) &r_strictr_tracer_get_tracing_state, 1},
-    {NULL, NULL, 0}};
+     {NULL, NULL, 0}
+};
 
 void R_init_strictr(DllInfo* dll) {
     R_registerRoutines(dll, NULL, callMethods, NULL, NULL);
