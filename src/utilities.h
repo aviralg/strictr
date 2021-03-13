@@ -10,7 +10,7 @@ std::string read_file(const std::string& filepath);
 
 bool file_exists(const std::string& filepath);
 
-extern const std::string LAZR_NA_STRING;
+extern const std::string STRICTR_NA_STRING;
 
 std::string get_type_as_string(SEXP r_object);
 
