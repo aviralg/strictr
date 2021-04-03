@@ -33,8 +33,8 @@ class Function: public Scope {
         signature_ = signature;
     }
 
-    void apply(SEXP r_expr, int level, bool last) {
-        print_message(level, last);
+    void apply(FILE* log_file, SEXP r_expr, int level, bool last) {
+        print_message(log_file, level, last);
 
         SEXP r_body = R_NilValue;
         if (TYPEOF(r_expr) == CLOSXP) {
@@ -57,7 +57,7 @@ class Function: public Scope {
 
             if (r_inner_expr != NULL) {
                 inner_function->apply(
-                    r_inner_expr, level + 1, index == size - 1);
+                    log_file, r_inner_expr, level + 1, index == size - 1);
             }
 
             ++index;
@@ -75,7 +75,8 @@ class Function: public Scope {
         applied.push_back(applied_);
 
         for (auto& iter: functions_) {
-            iter.second->get_status(level + 1, name + "::", levels, names, applied);
+            iter.second->get_status(
+                level + 1, name + "::", levels, names, applied);
         }
     }
 
@@ -195,7 +196,7 @@ class Function: public Scope {
         return r_new_body;
     }
 
-    void print_message(int level, int last) {
+    void print_message(FILE* log_file, int level, int last) {
         std::string connectors;
         std::string space(2, ' ');
 
@@ -206,7 +207,11 @@ class Function: public Scope {
 
         std::string prefix = last ? "┗━━█" : "┣━━█";
 
-        Rprintf("%s%s %s\n", connectors.c_str(), prefix.c_str(), name_.c_str());
+        fprintf(log_file,
+                "%s%s %s\n",
+                connectors.c_str(),
+                prefix.c_str(),
+                name_.c_str());
     }
 };
 

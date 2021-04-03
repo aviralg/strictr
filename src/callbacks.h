@@ -1,22 +1,12 @@
 #ifndef STRICTR_CALLBACKS_H
 #define STRICTR_CALLBACKS_H
 
-#include <instrumentr/instrumentr.h>
+#include "Rincludes.h"
 
-void package_load_callback(instrumentr_tracer_t tracer,
-                           instrumentr_callback_t callback,
-                           instrumentr_state_t state,
-                           instrumentr_application_t application,
-                           instrumentr_environment_t environment);
-
-void tracing_entry_callback(instrumentr_tracer_t tracer,
-                            instrumentr_callback_t callback,
-                            instrumentr_state_t state,
-                            instrumentr_application_t application);
-
-void tracing_exit_callback(instrumentr_tracer_t tracer,
-                           instrumentr_callback_t callback,
-                           instrumentr_state_t state,
-                           instrumentr_application_t application);
+extern "C" {
+SEXP r_strictr_initialize_strictr(SEXP r_log_filepath, SEXP r_cache_dir);
+SEXP r_strictr_finalize_strictr();
+SEXP r_strictr_package_load_callback(SEXP r_pkgname, SEXP r_lib);
+}
 
 #endif /* STRICTR_CALLBACKS_H  */

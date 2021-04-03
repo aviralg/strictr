@@ -13,10 +13,10 @@ class Package: public Scope {
     Package(): Package("unknown") {
     }
 
-    void apply() {
+    void apply(FILE* log_file) {
         std::string prefix = "█";
 
-        Rprintf("%s %s\n", prefix.c_str(), name_.c_str());
+        fprintf(log_file, "%s %s\n", prefix.c_str(), name_.c_str());
 
         SEXP r_namespace = get_namespace_();
 
@@ -49,7 +49,7 @@ class Package: public Scope {
                     name_.c_str());
             }
 
-            function->apply(r_closure, 0, index == size - 1);
+            function->apply(log_file, r_closure, 0, index == size - 1);
 
             ++index;
         }
