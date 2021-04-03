@@ -14,7 +14,7 @@ SRCDIR = src
 
 .PHONY: all build check document test grammar
 
-all: document build check
+all: document build check install
 
 build: document
 	$(R) CMD build .
