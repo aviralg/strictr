@@ -31,10 +31,14 @@ void package_load_callback(instrumentr_tracer_t tracer,
                            instrumentr_callback_t callback,
                            instrumentr_state_t state,
                            instrumentr_application_t application,
-                           instrumentr_package_t package) {
+                           instrumentr_environment_t environment) {
     TracingState* tracing_state = strictr_tracer_get_tracing_state(state);
 
-    std::string package_name = instrumentr_package_get_name(package);
+    const char* package_name = instrumentr_environment_get_name(environment);
+
+    if (package_name == nullptr) {
+        Rf_error("unexpected null pointer for environment name");
+    }
 
     handle_package(tracing_state, package_name);
 }

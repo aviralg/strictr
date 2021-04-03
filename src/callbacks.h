@@ -7,7 +7,7 @@ void package_load_callback(instrumentr_tracer_t tracer,
                            instrumentr_callback_t callback,
                            instrumentr_state_t state,
                            instrumentr_application_t application,
-                           instrumentr_package_t package);
+                           instrumentr_environment_t environment);
 
 void tracing_entry_callback(instrumentr_tracer_t tracer,
                             instrumentr_callback_t callback,
