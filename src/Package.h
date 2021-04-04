@@ -44,14 +44,15 @@ class Package: public Scope {
                 r_closure = Rf_eval(r_closure, R_GlobalEnv);
             }
 
-            if (TYPEOF(r_closure) != CLOSXP) {
-                Rf_error(
-                    "'%s' not bound to a closure in namespace of package '%s'",
-                    fun_name.c_str(),
-                    name_.c_str());
+            if (TYPEOF(r_closure) == CLOSXP) {
+                function->apply(log_file, r_closure, 0, index == size - 1);
+            } else {
+                // NOTE: ignore functions not found
+                //Rf_error(
+                //    "'%s' not bound to a closure in namespace of package '%s'",
+                //    fun_name.c_str(),
+                //    name_.c_str());
             }
-
-            function->apply(log_file, r_closure, 0, index == size - 1);
 
             ++index;
         }
