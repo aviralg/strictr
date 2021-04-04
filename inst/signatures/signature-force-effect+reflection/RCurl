@@ -1,15 +1,10 @@
 strict `asCurlErrorCode` <1>;
 strict `basicTextGatherer` <1,2,3,4>;
-strict `basicTextGatherer` `update` <1>;
-strict `basicTextGatherer` `val` <1>;
 strict `curlEscape` <1>;
 strict `curlOptions` <2>;
 strict `curlPerform` <2,4>;
 strict `curlSetOpt` <2,3,4,5,6>;
 strict `dynCurlReader` <1,2,3,4,5,6,7,8,9>;
-strict `dynCurlReader` `encode` <1>;
-strict `dynCurlReader` `update` <1>;
-strict `dynCurlReader` `val` <1>;
 strict `findHTTPHeaderEncoding` <1>;
 strict `getContentType` <1,2>;
 strict `getCurlHandle` <2,3,4>;

@@ -9,7 +9,6 @@ strict `as_list.xml_node` <1>;
 strict `as_list.xml_nodeset` <1>;
 strict `as_xml_document` <1>;
 strict `as_xml_document.list` <1>;
-strict `as_xml_document.list` `add_node` <1,2>;
 strict `as_xml_document.xml_node` <1>;
 strict `as_xml_document.xml_nodeset` <1,2>;
 strict `check_path` <1>;

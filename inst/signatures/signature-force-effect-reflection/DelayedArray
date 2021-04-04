@@ -2,7 +2,6 @@ strict `ArrayViewport` <1,2>;
 strict `.backward_compat` <1,2>;
 strict `.block_grid` <1,2,3,4>;
 strict `BLOCK_write_to_sink` <1,2,3>;
-strict `BLOCK_write_to_sink` `FUN` <1,2,3,4,5>;
 strict `.check_chunkdim` <1,2>;
 strict `.check_DelayedArray_internals` <1>;
 strict `.check_realization_sink_constructor` <1>;

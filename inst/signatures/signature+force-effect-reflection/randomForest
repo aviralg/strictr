@@ -1,6 +1,4 @@
 strict `combine` <>;
-strict `combine` `pad0` <1,2>;
-strict `combine` `padm0` <1,2>;
 strict `importance` <1>;
 strict `importance.randomForest` <1,2,4>;
 strict `.onAttach` <2>;

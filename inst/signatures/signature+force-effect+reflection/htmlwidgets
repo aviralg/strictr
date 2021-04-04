@@ -7,7 +7,6 @@ strict `JSEvals` <1>;
 strict `.onLoad` <>;
 strict `registerMethods` <1>;
 strict `shinyRenderWidget` <1,2,3,4,5>;
-strict `shinyRenderWidget` `renderWidget` <1>;
 strict `shouldEval` <1>;
 strict `sizingPolicy` <1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17>;
 strict `system.file` <2,3,4>;

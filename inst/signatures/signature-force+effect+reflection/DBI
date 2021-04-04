@@ -15,6 +15,5 @@ strict `sqlAppendTableTemplate` <1,2,5,7>;
 strict `sqlColumnToRownames` <1,2>;
 strict `sqlCommentSpec` <1,2,3>;
 strict `sqlParseVariablesImpl` <1,2,3>;
-strict `sqlParseVariablesImpl` `str_to_vec` <1>;
 strict `sqlQuoteSpec` <1,2,3,4>;
 strict `sqlRownamesToColumn` <2>;

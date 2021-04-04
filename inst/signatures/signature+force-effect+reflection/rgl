@@ -1,8 +1,6 @@
 strict `checkrglFont` <1>;
 strict `.onAttach` <>;
 strict `.onLoad` <1,2>;
-strict `.onLoad` `getDir` <1>;
-strict `.onLoad` `getDynlib` <1>;
 strict `rglFonts` <>;
 strict `rgl.init` <1,2,3>;
 strict `setGraphicsDelay` <1,2>;

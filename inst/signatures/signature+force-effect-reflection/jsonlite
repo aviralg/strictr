@@ -48,7 +48,6 @@ strict `simplify` <1>;
 strict `simplifyDataFrame` <1>;
 strict `stop` <>;
 strict `stream_in` <1,2,3,4>;
-strict `stream_in` `cb` <1>;
 strict `stream_out` <1,2,3,4,5>;
 strict `stream_out_page` <1,2,3>;
 strict `toJSON` <2,3,4>;

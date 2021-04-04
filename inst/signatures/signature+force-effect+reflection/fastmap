@@ -1,11 +1,2 @@
 strict `fastmap` <1>;
-strict `fastmap` `as_list` <1>;
-strict `fastmap` `get` <1>;
-strict `fastmap` `has` <1>;
-strict `fastmap` `has_one` <1>;
-strict `fastmap` `keys` <1>;
-strict `fastmap` `mget` <1>;
-strict `fastmap` `remove` <1>;
-strict `fastmap` `remove_one` <1>;
-strict `fastmap` `set` <1,2>;
 strict `is.key_missing` <1>;

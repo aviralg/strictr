@@ -59,4 +59,3 @@ strict `sanitizeColData` <1>;
 strict `sanitizeRowRanges` <1>;
 strict `sparseTest` <1,2,3,4>;
 strict `trimmedCellVariance` <1,2>;
-strict `trimmedCellVariance` `trimfn` <1>;

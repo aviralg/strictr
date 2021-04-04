@@ -1,7 +1,6 @@
 strict `check_mnsl` <1>;
 strict `complement` <1>;
 strict `fix_mnsl` <1>;
-strict `fix_mnsl` `max.chroma` <1>;
 strict `hvc2mnsl` <1,2,3>;
 strict `in_gamut` <1>;
 strict `mnsl` <1>;

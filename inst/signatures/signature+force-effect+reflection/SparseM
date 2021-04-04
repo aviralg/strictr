@@ -3,5 +3,3 @@ strict `is.matrix.coo` <1>;
 strict `is.matrix.csc` <1>;
 strict `is.matrix.csr` <1>;
 strict `read.matrix.hb` <1>;
-strict `read.matrix.hb` `readmany` <1,3,4,5>;
-strict `read.matrix.hb` `readone` <1,3,4>;

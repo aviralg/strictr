@@ -2,8 +2,6 @@ strict `.asSpatialPolygonsShapes` <1,4>;
 strict `getinfo.shape` <1>;
 strict `.Map2PolyDF` <1,2,4,5,6>;
 strict `.mixedorder` <1>;
-strict `.mixedorder` `nonnumeric` <1>;
-strict `.mixedorder` `numeric` <1>;
 strict `.mixedsort` <1>;
 strict `.nParts.shpI` <1>;
 strict `.onAttach` <1,2>;

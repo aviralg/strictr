@@ -8,7 +8,6 @@ strict `as.sql.character` <1>;
 strict `as.sql.ident` <1>;
 strict `as.sql.sql` <1>;
 strict `build_sql` <2,3>;
-strict `build_sql` `escape_expr` <1>;
 strict `cache_computation` <1,2>;
 strict `carry_over` <1,2>;
 strict `c_character` <>;

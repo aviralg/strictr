@@ -10,7 +10,6 @@ strict `as.col_spec.data.frame` <1>;
 strict `as.col_spec.list` <1>;
 strict `as.col_spec.NULL` <1>;
 strict `change_decimal_separator` <1,2>;
-strict `change_decimal_separator` `format_seps` <1,2>;
 strict `check_callback_fun` <1,2,3>;
 strict `check_encoding` <1>;
 strict `check_guess_max` <1,2>;

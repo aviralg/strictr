@@ -3,7 +3,6 @@ strict `.DNAString_to_twoBit` <1,2>;
 strict `FastaFile` <1>;
 strict `fastaSeqnames` <1>;
 strict `FileForFormat` <1,2>;
-strict `FileForFormat` `signatureClasses` <1>;
 strict `firstTableName` <1>;
 strict `getTableNames` <1>;
 strict `htmlParse` <1>;

@@ -1,4 +1,1 @@
 strict `mle` <1,3,5>;
-strict `mle` `f` <1>;
-strict `mle` `l2v` <1,2>;
-strict `mle` `v2l` <1>;

@@ -1,5 +1,4 @@
 strict `are_exponents_implicit` <1>;
-strict `are_exponents_implicit` `has` <1,2>;
 strict `.as.units` <1,2>;
 strict `as_units` <1>;
 strict `as_units.call` <2>;

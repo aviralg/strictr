@@ -17,7 +17,6 @@ strict `.format_chrominfo` <1,2>;
 strict `.getSimpleTableNames` <1,2>;
 strict `.getTableColMapping` <1>;
 strict `.getTableNames` <1,2>;
-strict `.getTableNames` `getTabNames` <1,2>;
 strict `get_TxDb_seqinfo0` <1>;
 strict `.isActiveSeq` <1>;
 strict `.join_genes_and_Rdf` <1,2>;

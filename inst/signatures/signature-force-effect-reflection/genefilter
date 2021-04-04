@@ -1,4 +1,3 @@
 strict `filtered_p` <1,2,3,4,5>;
 strict `.onLoad` <1,2>;
 strict `rowVars` <1>;
-strict `rowVars` `sqr` <1>;

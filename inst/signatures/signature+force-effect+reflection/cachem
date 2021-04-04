@@ -1,6 +1,2 @@
 strict `cache_mem` <1,2,3,4,6>;
-strict `cache_mem` `get` <1>;
-strict `cache_mem` `log_` <>;
-strict `cache_mem` `set` <1,2>;
-strict `cache_mem` `update_atime_` <1>;
 strict `validate_key` <1>;

@@ -13,7 +13,6 @@ strict `normalizeStaticPaths` <1>;
 strict `rawToBase64` <1>;
 strict `registerServer` <1>;
 strict `rookCall` <1,2,3,4>;
-strict `rookCall` `prepare_response` <1>;
 strict `service` <1>;
 strict `startServer` <1,2,3,4>;
 strict `staticPath` <1,2,3,4,5,6>;

@@ -22,7 +22,6 @@ strict `minutes` <1>;
 strict `new_hms` <1>;
 strict `.onLoad` <>;
 strict `reduce` <1>;
-strict `reduce` `f` <1,2>;
 strict `second_of_minute` <1>;
 strict `seconds` <1>;
 strict `tic_of_second` <1>;

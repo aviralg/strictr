@@ -6,7 +6,6 @@ strict `cleanup.Globals` <1,2>;
 strict `envname` <1>;
 strict `findGlobals` <1,2,4,5,6,7,8,9,10>;
 strict `find_globals_ordered` <1,2,3,5,6,7>;
-strict `find_globals_ordered` `enter_global` <1,2,3,4>;
 strict `[.Globals` <1>;
 strict `globalsByName` <1,2,3>;
 strict `globalsOf` <1,2,4,5,6,7,8,9,10>;

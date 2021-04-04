@@ -1,7 +1,5 @@
 strict `add_attributes` <2>;
 strict `AES` <1,2,3>;
-strict `AES` `decrypt` <>;
-strict `AES` `encrypt` <1>;
 strict `algo_int` <1>;
 strict `attr_sha1` <1,2,3,4>;
 strict `check_file` <1>;

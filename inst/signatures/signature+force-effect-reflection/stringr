@@ -3,7 +3,6 @@ strict `boundary` <1,2>;
 strict `coll` <1,2>;
 strict `eval_interp_matches` <1,2>;
 strict `extract_expressions` <1>;
-strict `extract_expressions` `parse_text` <1>;
 strict `extract_formats` <1>;
 strict `fixed` <1>;
 strict `fix_replacement` <1>;

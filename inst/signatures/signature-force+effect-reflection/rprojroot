@@ -6,7 +6,6 @@ strict `find_root` <1,2>;
 strict `format.root_criterion` <1>;
 strict `get_start_path` <1,2>;
 strict `has_file` <1,2,3,4>;
-strict `has_file` `testfun` <1>;
 strict `is_absolute_path` <1>;
 strict `is_root` <1>;
 strict `make_find_root_file` <1>;
