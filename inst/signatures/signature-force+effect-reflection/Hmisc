@@ -1,4 +1,4 @@
-strict `smean.cl.boot` <0,1,2,3,4>;
-strict `smean.cl.normal` <0,2,3>;
-strict `smean.sdl` <0,1,2>;
-strict `smedian.hilow` <0,1,2>;
+strict `smean.cl.boot` <1,2,3,4,5>;
+strict `smean.cl.normal` <1,3,4>;
+strict `smean.sdl` <1,2,3>;
+strict `smedian.hilow` <1,2,3>;

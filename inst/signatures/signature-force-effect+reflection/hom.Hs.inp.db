@@ -1,2 +1,2 @@
-strict `.onAttach` <0,1>;
-strict `.onLoad` <0,1>;
+strict `.onAttach` <1,2>;
+strict `.onLoad` <1,2>;

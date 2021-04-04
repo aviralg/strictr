@@ -1,9 +1,9 @@
 strict `%<>%` <>;
 strict `%>%` <>;
 strict `%$%` <>;
-strict `as_pipe_fn` <0,1>;
-strict `freduce` <0,1>;
-strict `new_lambda` <0,1>;
+strict `as_pipe_fn` <1,2>;
+strict `freduce` <1,2>;
+strict `new_lambda` <1,2>;
 strict `.onLoad` <>;
 strict `pipe_eager_lexical` <>;
 strict `pipe_nested` <>;

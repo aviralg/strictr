@@ -1,7 +1,7 @@
-strict `comp` <0>;
-strict `doParallelMC` <0,1,2,3>;
-strict `doParallelSNOW` <0,1,2,3>;
-strict `mcinfo` <0,1>;
-strict `registerDoParallel` <1>;
-strict `snowinfo` <0,1>;
-strict `workers` <0>;
+strict `comp` <1>;
+strict `doParallelMC` <1,2,3,4>;
+strict `doParallelSNOW` <1,2,3,4>;
+strict `mcinfo` <1,2>;
+strict `registerDoParallel` <2>;
+strict `snowinfo` <1,2>;
+strict `workers` <1>;

@@ -1,3 +1,3 @@
-strict `agg_png` <0,1,2,3,4,5,6,7,8>;
-strict `get_dims` <0,1,2>;
-strict `validate_path` <0>;
+strict `agg_png` <1,2,3,4,5,6,7,8,9>;
+strict `get_dims` <1,2,3>;
+strict `validate_path` <1>;

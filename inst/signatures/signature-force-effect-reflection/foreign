@@ -1,2 +1,2 @@
-strict `.onLoad` <0,1>;
-strict `read.dbf` <0,1>;
+strict `.onLoad` <1,2>;
+strict `read.dbf` <1,2>;

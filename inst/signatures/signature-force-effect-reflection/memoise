@@ -1,2 +1,2 @@
-strict `forget` <0>;
-strict `is.memoised` <0>;
+strict `forget` <1>;
+strict `is.memoised` <1>;

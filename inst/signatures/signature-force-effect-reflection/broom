@@ -1,4 +1,4 @@
-strict `glance.lm` <0>;
-strict `.onLoad` <0,1>;
-strict `tidy.lm` <0,1,2>;
-strict `warn_on_subclass` <0>;
+strict `glance.lm` <1>;
+strict `.onLoad` <1,2>;
+strict `tidy.lm` <1,2,3>;
+strict `warn_on_subclass` <1>;

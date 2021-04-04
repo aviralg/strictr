@@ -1,6 +1,6 @@
-strict `gefp` <1,2,3,4,5,6,7,8>;
-strict `plot.gefp` <0,1,2>;
-strict `pvalue.efp` <0,1,2,3,4,5>;
-strict `pvalue.efp` `summand` <0,1>;
-strict `root.matrix` <0>;
-strict `time.gefp` <0>;
+strict `gefp` <2,3,4,5,6,7,8,9>;
+strict `plot.gefp` <1,2,3>;
+strict `pvalue.efp` <1,2,3,4,5,6>;
+strict `pvalue.efp` `summand` <1,2>;
+strict `root.matrix` <1>;
+strict `time.gefp` <1>;

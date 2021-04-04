@@ -1,8 +1,8 @@
-strict `.coverage` <0,1,2,3>;
-strict `.coverage.max` <0,1,2>;
-strict `.density` <0,1,2,3,4,5>;
-strict `.density.max` <0,1>;
-strict `extended` <0,1,2,3,4,5>;
-strict `.legibility` <0,1,2>;
-strict `.simplicity` <0,1,2,3,4,5>;
-strict `.simplicity.max` <0,1,2>;
+strict `.coverage` <1,2,3,4>;
+strict `.coverage.max` <1,2,3>;
+strict `.density` <1,2,3,4,5,6>;
+strict `.density.max` <1,2>;
+strict `extended` <1,2,3,4,5,6>;
+strict `.legibility` <1,2,3>;
+strict `.simplicity` <1,2,3,4,5,6>;
+strict `.simplicity.max` <1,2,3>;

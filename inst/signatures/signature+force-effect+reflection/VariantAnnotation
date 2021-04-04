@@ -1,7 +1,7 @@
-strict `naToZero` <0>;
-strict `.rleRecycleVector` <0,1>;
-strict `.valid.VRanges.depth` <0>;
-strict `.valid.VRanges.depth` `checkDepth` <0>;
-strict `.valid.VRanges.ref` <0>;
-strict `.valid.VRanges.strand` <0>;
-strict `VRanges` <0,1,2,3,4,5,6,8,9,10>;
+strict `naToZero` <1>;
+strict `.rleRecycleVector` <1,2>;
+strict `.valid.VRanges.depth` <1>;
+strict `.valid.VRanges.depth` `checkDepth` <1>;
+strict `.valid.VRanges.ref` <1>;
+strict `.valid.VRanges.strand` <1>;
+strict `VRanges` <1,2,3,4,5,6,7,9,10,11>;

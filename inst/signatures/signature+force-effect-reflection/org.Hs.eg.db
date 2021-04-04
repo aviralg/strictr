@@ -1,2 +1,2 @@
-strict `.onLoad` <0,1>;
-strict `org.Hs.eg_dbschema` <1>;
+strict `.onLoad` <1,2>;
+strict `org.Hs.eg_dbschema` <2>;

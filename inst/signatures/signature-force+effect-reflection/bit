@@ -1,2 +1,2 @@
-strict `.onLoad` <0,1>;
-strict `setattr` <0,1,2>;
+strict `.onLoad` <1,2>;
+strict `setattr` <1,2,3>;

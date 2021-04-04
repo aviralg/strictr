@@ -1,5 +1,5 @@
-strict `backsolvet` <0,1>;
-strict `lars` <0,1,2,3,4,5,7,9>;
+strict `backsolvet` <1,2>;
+strict `lars` <1,2,3,4,5,6,8,10>;
 strict `.onAttach` <>;
-strict `predict.lars` <0,3,4>;
-strict `updateR` <0,1,4>;
+strict `predict.lars` <1,4,5>;
+strict `updateR` <1,2,5>;

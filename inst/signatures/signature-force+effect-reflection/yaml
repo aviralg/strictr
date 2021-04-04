@@ -1,2 +1,2 @@
-strict `as.yaml` <0,1,2,3,4,5,6,7,8>;
-strict `yaml.load` <0,1,2,3,5,6>;
+strict `as.yaml` <1,2,3,4,5,6,7,8,9>;
+strict `yaml.load` <1,2,3,4,6,7>;

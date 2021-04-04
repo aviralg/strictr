@@ -1,2 +1,2 @@
-strict `get_extensions` <0>;
-strict `markdown_html` <0,1,2,3,4,5>;
+strict `get_extensions` <1>;
+strict `markdown_html` <1,2,3,4,5,6>;

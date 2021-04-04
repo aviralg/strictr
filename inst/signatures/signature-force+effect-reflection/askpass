@@ -1,2 +1,2 @@
-strict `.onLoad` <0,1>;
-strict `var_exists` <0>;
+strict `.onLoad` <1,2>;
+strict `var_exists` <1>;

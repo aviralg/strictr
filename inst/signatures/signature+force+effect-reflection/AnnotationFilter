@@ -1,8 +1,8 @@
-strict `.aflvalue` <0>;
+strict `.aflvalue` <1>;
 strict `.AnnotationFilterList` <>;
-strict `AnnotationFilterList` <1,3,4>;
+strict `AnnotationFilterList` <2,4,5>;
 strict `.condition` <>;
-strict `.logOp` <0>;
-strict `.not` <0>;
+strict `.logOp` <1>;
+strict `.not` <1>;
 strict `.valid_condition` <>;
 strict `.value` <>;
