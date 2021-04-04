@@ -4,8 +4,9 @@
 NULL
 
 #' @export
-initialize_strictr <- function(log_filepath = file.path(getwd(), "siglog.txt"),
-                               cache_dir = system.file("strictsig", package = "strictr")) {
+initialize_strictr <- function(logdir = getwd(), sigtype = "signature+force+effect+reflection") {
+    log_filepath <- file.path(logdir, sigtype, "strictr-log")
+    cache_dir <- system.file(file.path("strictsig", sigtype), package = "strictr")
     .Call(r_strictr_initialize_strictr, log_filepath, cache_dir)
     attach_callbacks()
     ## to not get anything printed by default on console
@@ -13,8 +14,11 @@ initialize_strictr <- function(log_filepath = file.path(getwd(), "siglog.txt"),
 }
 
 #' @export
-finalize_strictr <- function() {
-    .Call(r_strictr_finalize_strictr)
+finalize_strictr <- function(dir, sigtype, writer) {
+    df <- .Call(r_strictr_finalize_strictr)
+    filepath <- file.path(dir, sigtype, "application.fst")
+    writer(df, filepath)
+    invisible(df)
 }
 
 #' @importFrom utils installed.packages
