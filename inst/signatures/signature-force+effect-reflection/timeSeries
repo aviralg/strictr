@@ -1,0 +1,8 @@
+strict `.as.matrix.timeSeries` <0>;
+strict `as.matrix.timeSeries` <0>;
+strict `as.timeSeries` <0>;
+strict `as.timeSeries.zoo` <0>;
+strict `.onLoad` <0,1>;
+strict `.timeSeries` <0,1,2,4,5,6,7,8>;
+strict `.time.timeSeries` <0>;
+strict `.validity_timeSeries` <0>;

@@ -1,0 +1,16 @@
+strict `as.list.iter` <0,1>;
+strict `getIterVal` <0,1>;
+strict `getIterVal.containeriter` <0,1>;
+strict `getIterVal.dataframeiter` <0,1,2>;
+strict `getIterVal.matrixiter` <0,1>;
+strict `icount` <>;
+strict `iter` <0>;
+strict `iter.data.frame` <0,1,2,3>;
+strict `iter.default` <0,1,2>;
+strict `iter.iter` <0>;
+strict `iter.matrix` <0,1,2,3,4>;
+strict `nextElem` <0>;
+strict `nextElem.abstractiter` <0>;
+strict `nextElem.containeriter` <0>;
+strict `nextElem.dataframeiter` <0>;
+strict `nextElem.matrixiter` <0>;

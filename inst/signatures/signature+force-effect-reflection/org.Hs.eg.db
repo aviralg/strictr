@@ -1,0 +1,2 @@
+strict `.onLoad` <0,1>;
+strict `org.Hs.eg_dbschema` <1>;

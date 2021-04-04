@@ -1,0 +1,4 @@
+strict `isobands` <0,1,2,3,4>;
+strict `isobands_impl` <0,1,2,3,4>;
+strict `isolines` <0,1,2,3>;
+strict `isolines_impl` <0,1,2,3>;

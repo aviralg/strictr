@@ -1,0 +1,12 @@
+strict `closed.polygon` <0>;
+strict `fix_exceptions` <0>;
+strict `insert` <0,1,2>;
+strict `makepoly` <0,1,2>;
+strict `map` <0,1,2,8,10,12,13,14,15,22>;
+strict `mapenvir` <0>;
+strict `mapgetg` <0,1,2,3,4>;
+strict `mapgetl` <0,1,2,3,4>;
+strict `mapname` <0,1,2>;
+strict `map.poly` <0,1,2,3,4,7,8>;
+strict `maptype` <0>;
+strict `.onLoad` <0,1>;

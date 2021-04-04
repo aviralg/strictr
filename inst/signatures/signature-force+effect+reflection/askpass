@@ -1,0 +1,2 @@
+strict `.onLoad` <0,1>;
+strict `var_exists` <0>;

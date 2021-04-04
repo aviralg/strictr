@@ -1,0 +1,3 @@
+strict `object_size` <1>;
+strict `object_sizes` <0,1>;
+strict `show_bytes` <0>;

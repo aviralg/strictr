@@ -1,0 +1,9 @@
+strict `check_mnsl` <0>;
+strict `complement` <0>;
+strict `fix_mnsl` <0>;
+strict `fix_mnsl` `max.chroma` <0>;
+strict `hvc2mnsl` <0,1,2>;
+strict `in_gamut` <0>;
+strict `mnsl` <0>;
+strict `mnsl2hvc` <0>;
+strict `na_handle` <0,1>;

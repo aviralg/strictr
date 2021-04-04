@@ -1,0 +1,9 @@
+strict `format.R6` <0>;
+strict `format.R6ClassGenerator` <0>;
+strict `indent` <0>;
+strict `is.R6` <0>;
+strict `is.R6Class` <0>;
+strict `object_summaries` <1>;
+strict `print.R6` <0>;
+strict `print.R6ClassGenerator` <0>;
+strict `trim` <0,1>;

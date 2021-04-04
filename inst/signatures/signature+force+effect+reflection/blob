@@ -1,0 +1,11 @@
+strict `as_blob` <>;
+strict `blob` <>;
+strict `check_raw_list` <0>;
+strict `is_blob` <0>;
+strict `is_raw_list` <0>;
+strict `new_blob` <0>;
+strict `.onLoad` <>;
+strict `validate_blob` <>;
+strict `vec_cast.blob.list` <0>;
+strict `vec_cast.blob.raw` <0>;
+strict `vec_ptype_abbr.blob` <0>;

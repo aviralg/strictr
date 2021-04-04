@@ -1,0 +1,11 @@
+strict `%==%` <0,1>;
+strict `all_true` <0>;
+strict `assert` <>;
+strict `assert2` <0,1,2,3>;
+strict `available_dir` <0>;
+strict `deparse_key` <0>;
+strict `has_error` <0>;
+strict `one_expression` <0>;
+strict `.onLoad` <>;
+strict `sys.source2` <0,1,2>;
+strict `test_pkg` <1>;

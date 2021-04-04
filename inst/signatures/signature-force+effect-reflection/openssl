@@ -1,0 +1,6 @@
+strict `as.character.hash` <0,1>;
+strict `base64_encode` <0,1>;
+strict `md5` <0,1>;
+strict `rawhash` <0,1,2>;
+strict `rawstringhash` <0,1,2>;
+strict `stopifnot` <>;

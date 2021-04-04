@@ -1,0 +1,7 @@
+strict `c.factor` <>;
+strict `diff_myers` <0,1,2,3>;
+strict `is.int.1L` <>;
+strict `is.TF` <0>;
+strict `.onLoad` <>;
+strict `ses` <0,1,2,3>;
+strict `ses_prep` <0,1,2,3>;

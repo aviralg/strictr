@@ -1,0 +1,17 @@
+strict `calcistrat` <0>;
+strict `calibCharToInt` <0>;
+strict `equalOrZero` <0,1>;
+strict `isSmall` <0,1>;
+strict `.onLoad` <0,1>;
+strict `pstartHeuristic` <0,1,2>;
+strict `scalingFactorTransformation` <0>;
+strict `validLogical` <0,1>;
+strict `validScalarDoubleListElt` <0,2,3>;
+strict `validScalarIntListElt` <0,2,3>;
+strict `validScalarNumericSlot` <0,1,2,3>;
+strict `vsn2trsf` <0,1,2,3,4>;
+strict `vsnLTS` <0>;
+strict `vsnMatrix` <0,1,2,3,4,5,6,7,8,9,10,11>;
+strict `vsnML` <0>;
+strict `vsnSample` <0>;
+strict `vsnStrata` <0>;

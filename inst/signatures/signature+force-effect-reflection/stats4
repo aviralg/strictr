@@ -1,0 +1,4 @@
+strict `mle` <0,2,3,4>;
+strict `mle` `f` <0>;
+strict `mle` `l2v` <0,1>;
+strict `mle` `v2l` <0>;

@@ -1,0 +1,17 @@
+strict `.checkAttrLength` <0>;
+strict `checkValidNodeName` <0>;
+strict `ftM2graphNEL` <0,1,2,3>;
+strict `.ftM2other` <0,1,2,4>;
+strict `.getAllEdges` <0>;
+strict `.getEdgeKeys` <0,1,2>;
+strict `getObjectSlots` <0>;
+strict `graphNEL` <0>;
+strict `graphNEL_init_edgeL_weights` <0>;
+strict `graphNEL_init_edges_nested` <1>;
+strict `isUpToDate` <0,1>;
+strict `.makeEdgeKeys` <0,1>;
+strict `.normalizeEdges` <0,1>;
+strict `validGraph` <0,1>;
+strict `.verifyAttrName` <0,1>;
+strict `.verifyEdges` <0,1,2>;
+strict `.verifyNodes` <0,1>;

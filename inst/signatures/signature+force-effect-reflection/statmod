@@ -1,0 +1,5 @@
+strict `gauss.quad.prob` <0,1,2,3>;
+strict `glmgam.fit` <0,1,2,3,5>;
+strict `glmgam.fit` `deviance.gamma` <1>;
+strict `mixedModel2Fit` <0,1,2,3,4,5,7>;
+strict `vecmat` <0,1>;

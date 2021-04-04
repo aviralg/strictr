@@ -1,0 +1,10 @@
+strict `.addREADME` <0>;
+strict `getCacheRootPath` <>;
+strict `getCacheRootPath.default` <>;
+strict `getDefaultCacheRootPath` <0>;
+strict `.onLoad` <1>;
+strict `queryRCmdCheck` <>;
+strict `setCacheRootPath` <>;
+strict `setCacheRootPath.default` <0>;
+strict `setupCacheRootPath` <>;
+strict `setupCacheRootPath.default` <0>;

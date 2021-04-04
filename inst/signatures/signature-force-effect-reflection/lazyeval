@@ -1,0 +1,14 @@
+strict `%||%` <0,1>;
+strict `all_dots` <2>;
+strict `as.lazy` <0,1>;
+strict `as.lazy_dots` <0,1>;
+strict `as.lazy_dots.lazy_dots` <0,1>;
+strict `as.lazy_dots.list` <0,1>;
+strict `as.lazy.lazy` <0,1>;
+strict `auto_name` <0,1>;
+strict `auto_names` <0,1>;
+strict `c.lazy_dots` <1>;
+strict `is.lazy_dots` <0>;
+strict `[.lazy_dots` <0,1>;
+strict `lazy_dots` <1,2>;
+strict `lazy_eval` <0,1>;

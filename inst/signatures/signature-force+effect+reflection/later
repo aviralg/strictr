@@ -1,0 +1,12 @@
+strict `createCallbackRegistry` <0,1>;
+strict `create_canceller` <0,1>;
+strict `create_loop` <0,1>;
+strict `execCallbacks` <0,1>;
+strict `execLater` <0,1>;
+strict `idle` <>;
+strict `later` <0,1>;
+strict `loop_empty` <>;
+strict `next_op_secs` <>;
+strict `nextOpSecs` <>;
+strict `.onLoad` <>;
+strict `run_now` <0,1>;

@@ -1,0 +1,11 @@
+strict `getObjectFields` <0>;
+strict `getObjectSlots` <0>;
+strict `isTRUEorFALSE` <0>;
+strict `replaceSlots` <0,2>;
+strict `testPackage` <1,2>;
+strict `testPackage` `.failure_details` <0>;
+strict `unsafe_replaceSlots` <0>;
+strict `unstrand` <0>;
+strict `updateObjectFrom_errf` <>;
+strict `updateObjectFromFields` <0,3>;
+strict `updateObjectFromSlots` <0,3>;

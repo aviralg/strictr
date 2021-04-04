@@ -1,0 +1,9 @@
+strict `.abc_BStringSet` <0>;
+strict `.file_names` <0,1,3>;
+strict `.qa_adapterContamination` <>;
+strict `.qa_alphabetFrequency` <0,2,3>;
+strict `.qa_perCycleBaseCall` <1>;
+strict `.qa_perCycleQuality` <1,2>;
+strict `.qa_qdensity` <0>;
+strict `.qualityTypeAuto` <0>;
+strict `.ShortReadQQA` <0>;

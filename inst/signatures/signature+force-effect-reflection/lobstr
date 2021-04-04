@@ -1,0 +1,16 @@
+strict `grey` <>;
+strict `has_references` <0>;
+strict `name_subtree` <0>;
+strict `new_raw` <0>;
+strict `obj_addr_` <0,1>;
+strict `obj_addr` <>;
+strict `obj_addrs_` <0>;
+strict `obj_addrs` <0>;
+strict `obj_desc` <0,2,3>;
+strict `obj_id` <0,1>;
+strict `ref` <1>;
+strict `ref_tree` <0,1,2>;
+strict `str_dup` <0,1>;
+strict `str_indent` <0,1>;
+strict `test_addr_get` <0>;
+strict `type_sum` <0>;

@@ -1,0 +1,5 @@
+strict `getOptionOrEnvVar` <0,1>;
+strict `.onLoad` <>;
+strict `queryRCmdCheck` <>;
+strict `stop_if_not` <>;
+strict `trim` <0>;

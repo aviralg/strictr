@@ -1,0 +1,4 @@
+strict `filtered_p` <0,1,2,3,4>;
+strict `.onLoad` <0,1>;
+strict `rowVars` <0>;
+strict `rowVars` `sqr` <0>;

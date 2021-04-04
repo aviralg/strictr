@@ -1,0 +1,5 @@
+strict `bs_dependency_defer` <0>;
+strict `is_available` <0,1>;
+strict `is_bs_theme` <0>;
+strict `.onLoad` <>;
+strict `register_upgrade_message` <0,1>;

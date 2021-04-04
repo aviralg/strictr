@@ -1,0 +1,15 @@
+strict `as_html` <0,1>;
+strict `as_sass_` <0>;
+strict `as_sass` <0>;
+strict `as_sass_.character` <0>;
+strict `compile_data` <0,1>;
+strict `extract_layer` <0>;
+strict `has_any_name` <0>;
+strict `is_sass_bundle` <0>;
+strict `is_sass_layer` <0>;
+strict `.onLoad` <>;
+strict `registerMethods` <0>;
+strict `sass` <0,1,2,3,4,5>;
+strict `sass_file` <0>;
+strict `sass_import` <0,1>;
+strict `sass_options` <0,1,2,3,4,5,6,7,8,9,10,11,12,13>;

@@ -1,0 +1,10 @@
+strict `.inet_readLines` <>;
+strict `.package_version` <0>;
+strict `.repositories` <0,1>;
+strict `repositories` <0,1>;
+strict `.repositories_bioc` <0>;
+strict `.version_map_get` <0>;
+strict `.version_map_get_online` <0>;
+strict `.version_map_get_online_config` <0>;
+strict `.version_validate` <0>;
+strict `.version_validity` <0>;

@@ -1,0 +1,9 @@
+strict `nchar_ctl` <0,1,2,3,4,5>;
+strict `.onLoad` <>;
+strict `strip_ctl` <0,1,2>;
+strict `strip_sgr` <0,1>;
+strict `strwrap_ctl` <0,1,2,3,4,5,6,7,8,9>;
+strict `substr2_ctl` <0,1,2,3,4,5,6,7,8,9>;
+strict `substr_ctl` <0,1,2,3,4,5>;
+strict `substr_ctl_internal` <0,1,2,5,11>;
+strict `unique_chr` <0>;

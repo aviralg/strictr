@@ -1,0 +1,7 @@
+strict `comp` <0>;
+strict `doParallelMC` <0,1,2,3>;
+strict `doParallelSNOW` <0,1,2,3>;
+strict `mcinfo` <0,1>;
+strict `registerDoParallel` <1>;
+strict `snowinfo` <0,1>;
+strict `workers` <0>;

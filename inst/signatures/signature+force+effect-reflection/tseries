@@ -1,0 +1,4 @@
+strict `as.irts` <0>;
+strict `as.irts.zoo` <0>;
+strict `irts` <0,1>;
+strict `.onAttach` <>;

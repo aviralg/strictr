@@ -1,0 +1,14 @@
+strict `as_root_criterion` <0>;
+strict `as_root_criterion.character` <0>;
+strict `check_relative` <0>;
+strict `check_testfun` <0>;
+strict `find_root` <0,1>;
+strict `format.root_criterion` <0>;
+strict `get_start_path` <0,1>;
+strict `has_file` <0,1,2,3>;
+strict `has_file` `testfun` <0>;
+strict `is_absolute_path` <0>;
+strict `is_root` <0>;
+strict `make_find_root_file` <0>;
+strict `make_fix_root_file` <0,1>;
+strict `root_criterion` <0,1,2>;

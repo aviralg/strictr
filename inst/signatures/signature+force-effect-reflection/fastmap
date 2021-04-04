@@ -1,0 +1,11 @@
+strict `fastmap` <0>;
+strict `fastmap` `as_list` <0>;
+strict `fastmap` `get` <0>;
+strict `fastmap` `has` <0>;
+strict `fastmap` `has_one` <0>;
+strict `fastmap` `keys` <0>;
+strict `fastmap` `mget` <0>;
+strict `fastmap` `remove` <0>;
+strict `fastmap` `remove_one` <0>;
+strict `fastmap` `set` <0,1>;
+strict `is.key_missing` <0>;

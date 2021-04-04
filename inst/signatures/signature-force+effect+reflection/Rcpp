@@ -1,0 +1,16 @@
+strict `binding_maker` <0,1>;
+strict `cpp_fields` <0,1>;
+strict `cpp_hasDefaultConstructor` <0>;
+strict `cpp_object_initializer` <0,1,3>;
+strict `cpp_refMethods` <0,1>;
+strict `.get_Module_Class` <0,1,2>;
+strict `getRcppVersion` <0>;
+strict `loadModule` <0,1,3>;
+strict `method_wrapper` <0,1>;
+strict `Module` <0,2,3>;
+strict `.moduleMetaName` <0>;
+strict `.moduleNames` <0>;
+strict `new_CppObject_xp` <0,1>;
+strict `new_dummyObject` <>;
+strict `.onLoad` <0,1>;
+strict `.setModulePointer` <0,1>;

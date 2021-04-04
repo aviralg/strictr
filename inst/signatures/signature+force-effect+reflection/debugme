@@ -1,0 +1,6 @@
+strict `debugme` <0,1>;
+strict `get_debug_levels` <0>;
+strict `initialize_colors` <0>;
+strict `initialize_debug_levels` <0,1>;
+strict `is_debugged` <0>;
+strict `.onLoad` <>;

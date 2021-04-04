@@ -1,0 +1,6 @@
+strict `coalesce` <>;
+strict `coalesce` `isnotnull` <0>;
+strict `convert_to_unit` <0,1>;
+strict `microbenchmark` <1,4,5>;
+strict `.onLoad` <0,1>;
+strict `summary.microbenchmark` <>;

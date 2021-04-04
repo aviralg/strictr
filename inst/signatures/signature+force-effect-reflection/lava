@@ -1,0 +1,3 @@
+strict `addhook` <0,1>;
+strict `gethook` <0>;
+strict `.onLoad` <>;

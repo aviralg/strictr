@@ -1,0 +1,7 @@
+strict `.csr.coo` <0>;
+strict `is.matrix.coo` <0>;
+strict `is.matrix.csc` <0>;
+strict `is.matrix.csr` <0>;
+strict `read.matrix.hb` <0>;
+strict `read.matrix.hb` `readmany` <0,1,2,3,4>;
+strict `read.matrix.hb` `readone` <0,2,3>;

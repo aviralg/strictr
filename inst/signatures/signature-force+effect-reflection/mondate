@@ -1,0 +1,3 @@
+strict `as.Date.mondate` <0>;
+strict `.daysinmonth` <0,1>;
+strict `.is.leapyear` <0>;

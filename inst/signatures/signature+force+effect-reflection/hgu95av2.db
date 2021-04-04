@@ -1,0 +1,2 @@
+strict `hgu95av2_dbschema` <1>;
+strict `.onLoad` <0,1>;

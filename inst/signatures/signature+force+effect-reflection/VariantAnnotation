@@ -1,0 +1,7 @@
+strict `naToZero` <0>;
+strict `.rleRecycleVector` <0>;
+strict `.valid.VRanges.depth` <0>;
+strict `.valid.VRanges.depth` `checkDepth` <0>;
+strict `.valid.VRanges.ref` <0>;
+strict `.valid.VRanges.strand` <0>;
+strict `VRanges` <2,3,4,5,6,8>;

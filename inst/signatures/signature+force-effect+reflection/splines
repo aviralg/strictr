@@ -1,0 +1,5 @@
+strict `makepredictcall.ns` <0,1>;
+strict `ns` <0,1,2,3>;
+strict `predict.ns` <0>;
+strict `spline.des` <0,1,2,3,4,5>;
+strict `splineDesign` <0,1,2,3,4,5>;

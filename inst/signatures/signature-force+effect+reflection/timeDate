@@ -1,0 +1,16 @@
+strict `as.character.timeDate` <0>;
+strict `as.Date.timeDate` <0,1>;
+strict `as.double.timeDate` <0,1>;
+strict `as.POSIXct.timeDate` <0,1>;
+strict `as.POSIXlt.timeDate` <0,1>;
+strict `c.timeDate` <1>;
+strict `.formatFinCenterNum` <0,1,2>;
+strict `format.timeDate` <0,1,2,3>;
+strict `getRmetricsOption` <0,1>;
+strict `getRmetricsOptions` <0,1>;
+strict `length.timeDate` <0>;
+strict `midnightStandard2` <0>;
+strict `.onLoad` <0,1>;
+strict `setRmetricsOptions` <>;
+strict `trunc.timeDate` <0,1>;
+strict `whichFormat` <0,1>;

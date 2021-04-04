@@ -1,0 +1,10 @@
+strict `%<>%` <>;
+strict `%>%` <>;
+strict `%$%` <>;
+strict `as_pipe_fn` <0,1>;
+strict `freduce` <0,1>;
+strict `new_lambda` <0,1>;
+strict `.onLoad` <0,1>;
+strict `pipe_eager_lexical` <>;
+strict `pipe_nested` <>;
+strict `%T>%` <>;

@@ -1,0 +1,3 @@
+strict `hexbin` <2,3,6,7,8>;
+strict `hexbin` `ch0` <0>;
+strict `hexcoords` <0,1,2,3>;

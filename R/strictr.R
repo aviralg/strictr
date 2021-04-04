@@ -6,7 +6,7 @@ NULL
 #' @export
 initialize_strictr <- function(logdir = getwd(), sigtype = "signature+force+effect+reflection") {
     log_filepath <- file.path(logdir, sigtype, "strictr-log")
-    cache_dir <- system.file(file.path("strictsig", sigtype), package = "strictr")
+    cache_dir <- system.file(file.path("signatures", sigtype), package = "strictr")
     .Call(r_strictr_initialize_strictr, log_filepath, cache_dir)
     attach_callbacks()
     ## to not get anything printed by default on console

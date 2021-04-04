@@ -1,0 +1,2 @@
+strict `.onLoad` <0,1>;
+strict `setattr` <0,1,2>;

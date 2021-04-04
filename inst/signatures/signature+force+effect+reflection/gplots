@@ -1,0 +1,10 @@
+strict `colorpanel` <0,1>;
+strict `heatmap.2` <0,1,2,5,7,8,13,20,21,23,28,33,34,35,36,37,38,39,40,41,42,43,44,45,47,49,50,51,52,54,55,56,57,61>;
+strict `heatmap.2` `scale01` <0,1,2>;
+strict `.memberDend` <0>;
+strict `.midDend` <0>;
+strict `plot.dendrogram` <0,1,2,4,5,6,7,8,9,10,11,12,13>;
+strict `plotNode` <0,1,2,3,4,5,7,8,9>;
+strict `plotNodeLimit` <0,1,2,3>;
+strict `plotNode` `segmentsHV` <0,1>;
+strict `plotNode` `Xtract` <0,1,2>;

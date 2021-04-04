@@ -1,0 +1,2 @@
+strict `.onAttach` <1>;
+strict `.onLoad` <0,1>;
