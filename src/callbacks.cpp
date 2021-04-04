@@ -29,6 +29,10 @@ void handle_package(const std::string& package_name) {
 }
 
 SEXP r_strictr_package_load_callback(SEXP r_pkgname, SEXP r_lib) {
+    if (tracing_state == nullptr) {
+        Rf_error("tracing state not initialized");
+    }
+
     std::string package_name = CHAR(STRING_ELT(r_pkgname, 0));
     handle_package(package_name);
     return R_NilValue;
@@ -58,7 +62,12 @@ SEXP r_strictr_initialize_strictr(SEXP r_log_filepath, SEXP r_cache_dir) {
 
 SEXP r_strictr_finalize_strictr() {
     SEXP r_df = tracing_state->get_status();
+
     delete tracing_state;
+    tracing_state = nullptr;
+
     fclose(log_file);
+    log_file = NULL;
+
     return r_df;
 }
