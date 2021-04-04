@@ -32,10 +32,12 @@ class Package: public Scope {
                 Rf_findVarInFrame(r_namespace, Rf_install(fun_name.c_str()));
 
             if (r_closure == R_UnboundValue) {
-                Rf_error(
-                    "cannot find function '%s' in namespace of package '%s'",
-                    fun_name.c_str(),
-                    name_.c_str());
+                continue;
+                // NOTE: ignore functions not found
+                // Rf_error(
+                //     "cannot find function '%s' in namespace of package '%s'",
+                //     fun_name.c_str(),
+                //     name_.c_str());
             }
 
             if (TYPEOF(r_closure) == PROMSXP) {
