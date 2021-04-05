@@ -7,7 +7,14 @@ NULL
 
 #' @export
 initialize_strictr <- function(logdir = getwd(), sigtype = "signature+force+effect+reflection") {
-    log_filepath <- file.path(logdir, sigtype, "strictr-log")
+
+    logdir <- file.path(logdir, sigtype)
+
+    if(!dir.exists(logdir)) {
+        dir.create(logdir, recursive = TRUE, showWarnings = FALSE)
+    }
+
+    log_filepath <- file.path(logdir, "strictr-log")
 
     cache_dir <- system.file(file.path("signatures", sigtype), package = "strictr")
 
