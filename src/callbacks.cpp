@@ -46,16 +46,18 @@ SEXP r_strictr_initialize_strictr(SEXP r_log_filepath, SEXP r_cache_dir) {
         Rf_error("cannot opent file %s for writing logs", log_filepath);
     }
 
-    const std::string cache_dir = CHAR(STRING_ELT(r_cache_dir, 0));
+    const char* cache_dir = CHAR(STRING_ELT(r_cache_dir, 0));
     tracing_state = new TracingState(cache_dir);
 
-    SEXP package_names = R_lsInternal(R_NamespaceRegistry, TRUE);
+    SEXP package_names = PROTECT(R_lsInternal(R_NamespaceRegistry, TRUE));
 
     for (int i = 0; i < Rf_length(package_names); ++i) {
         const std::string package_name = CHAR(STRING_ELT(package_names, i));
 
         handle_package(package_name);
     }
+
+    UNPROTECT(1);
 
     return R_NilValue;
 }
