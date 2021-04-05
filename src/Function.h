@@ -5,6 +5,7 @@
 #include <vector>
 #include "Rincludes.h"
 #include "Scope.h"
+#include "utilities.h"
 
 class Function: public Scope {
   public:
@@ -111,16 +112,16 @@ class Function: public Scope {
     }
 
     SEXP build_force_expr_(SEXP r_name) {
-        SEXP r_missing = PROTECT(Rf_lang2(Rf_install("missing"), r_name));
-        SEXP r_negate = PROTECT(Rf_lang2(Rf_install("!"), r_missing));
-        SEXP r_force = PROTECT(Rf_lang3(Rf_install("<-"), r_name, r_name));
+        SEXP r_missing = PROTECT(Rf_lang2(R_MISSING_SYMBOL, r_name));
+        SEXP r_negate = PROTECT(Rf_lang2(R_NOT_SYMBOL, r_missing));
+        SEXP r_force = PROTECT(Rf_lang3(R_LEFT_ASSIGN_SYMBOL, r_name, r_name));
         bool vararg = is_vararg_(r_name);
 
         if (vararg) {
-            r_force = PROTECT(Rf_lang2(Rf_install("list"), r_name));
+            r_force = PROTECT(Rf_lang2(R_LIST_SYMBOL, r_name));
         }
 
-        SEXP r_result = Rf_lang3(Rf_install("if"), r_negate, r_force);
+        SEXP r_result = Rf_lang3(R_IF_SYMBOL, r_negate, r_force);
 
         UNPROTECT(3 + vararg);
 
@@ -189,7 +190,7 @@ class Function: public Scope {
             r_new_body = PROTECT(LCONS(r_force_expr, r_new_body));
         }
 
-        r_new_body = PROTECT(LCONS(Rf_install("{"), r_new_body));
+        r_new_body = PROTECT(LCONS(R_LEFT_BRACE_SYMBOL, r_new_body));
 
         UNPROTECT(2 + 2 * r_names.size());
 

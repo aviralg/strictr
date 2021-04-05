@@ -2,6 +2,13 @@
 #include <fstream>
 #include <streambuf>
 
+SEXP R_MISSING_SYMBOL = R_NilValue;
+SEXP R_NOT_SYMBOL = R_NilValue;
+SEXP R_LEFT_ASSIGN_SYMBOL = R_NilValue;
+SEXP R_LIST_SYMBOL = R_NilValue;
+SEXP R_IF_SYMBOL = R_NilValue;
+SEXP R_LEFT_BRACE_SYMBOL = R_NilValue;
+
 const std::string STRICTR_NA_STRING("***STRICTR_NA_STRING***");
 
 std::string read_file(const std::string& filepath) {

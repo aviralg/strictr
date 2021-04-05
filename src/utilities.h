@@ -6,6 +6,13 @@
 #include <string>
 #include "Rincludes.h"
 
+extern SEXP R_MISSING_SYMBOL;
+extern SEXP R_NOT_SYMBOL;
+extern SEXP R_LEFT_ASSIGN_SYMBOL;
+extern SEXP R_LIST_SYMBOL;
+extern SEXP R_IF_SYMBOL;
+extern SEXP R_LEFT_BRACE_SYMBOL;
+
 std::string read_file(const std::string& filepath);
 
 bool file_exists(const std::string& filepath);
