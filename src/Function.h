@@ -143,7 +143,7 @@ class Function: public Scope {
     SEXP build_force_expr_(SEXP r_name) {
         SEXP r_missing = PROTECT(Rf_lang2(R_MISSING_SYMBOL, r_name));
         SEXP r_negate = PROTECT(Rf_lang2(R_NOT_SYMBOL, r_missing));
-        SEXP r_force = PROTECT(Rf_lang3(R_LEFT_ASSIGN_SYMBOL, r_name, r_name));
+        SEXP r_force = r_name; //PROTECT(Rf_lang3(R_LEFT_ASSIGN_SYMBOL, r_name, r_name));
         bool vararg = is_vararg_(r_name);
 
         if (vararg) {
@@ -152,7 +152,7 @@ class Function: public Scope {
 
         SEXP r_result = Rf_lang3(R_IF_SYMBOL, r_negate, r_force);
 
-        UNPROTECT(3 + vararg);
+        UNPROTECT(2 + vararg);
 
         return r_result;
     }
