@@ -21,6 +21,8 @@ void R_init_strictr(DllInfo* dll) {
     R_LIST_SYMBOL = Rf_install("list");
     R_IF_SYMBOL = Rf_install("if");
     R_LEFT_BRACE_SYMBOL = Rf_install("{");
+    R_FUNCTION_SYMBOL = Rf_install("function");
+    R_SRCREF_SYMBOL = Rf_install("srcref");
 
     R_PreserveObject(R_MISSING_SYMBOL);
     R_PreserveObject(R_NOT_SYMBOL);
@@ -28,6 +30,8 @@ void R_init_strictr(DllInfo* dll) {
     R_PreserveObject(R_LIST_SYMBOL);
     R_PreserveObject(R_IF_SYMBOL);
     R_PreserveObject(R_LEFT_BRACE_SYMBOL);
+    R_PreserveObject(R_FUNCTION_SYMBOL);
+    R_PreserveObject(R_SRCREF_SYMBOL);
 }
 
 }

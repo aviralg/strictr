@@ -28,10 +28,13 @@ class Package: public Scope {
             Function* function = iter.second;
             const std::string& fun_name = function->get_name();
 
-            SEXP r_closure =
-                Rf_findVarInFrame(r_namespace, Rf_install(fun_name.c_str()));
+            SEXP r_name = PROTECT(Rf_install(fun_name.c_str()));
+
+            SEXP r_closure = PROTECT(Rf_findVarInFrame(r_namespace, r_name));
 
             if (r_closure == R_UnboundValue) {
+                UNPROTECT(2);
+
                 continue;
                 // NOTE: ignore functions not found
                 // Rf_error(
@@ -45,14 +48,20 @@ class Package: public Scope {
             }
 
             if (TYPEOF(r_closure) == CLOSXP) {
-                function->apply(log_file, r_closure, 0, index == size - 1);
+                function->apply(log_file,
+                                r_name,
+                                r_namespace,
+                                r_closure,
+                                0,
+                                index == size - 1);
             } else {
                 // NOTE: ignore functions not found
-                //Rf_error(
-                //    "'%s' not bound to a closure in namespace of package '%s'",
-                //    fun_name.c_str(),
-                //    name_.c_str());
+                // Rf_error(
+                //    "'%s' not bound to a closure in namespace of package
+                //    '%s'", fun_name.c_str(), name_.c_str());
             }
+
+            UNPROTECT(2);
 
             ++index;
         }

@@ -12,6 +12,8 @@ extern SEXP R_LEFT_ASSIGN_SYMBOL;
 extern SEXP R_LIST_SYMBOL;
 extern SEXP R_IF_SYMBOL;
 extern SEXP R_LEFT_BRACE_SYMBOL;
+extern SEXP R_FUNCTION_SYMBOL;
+extern SEXP R_SRCREF_SYMBOL;
 
 std::string read_file(const std::string& filepath);
 

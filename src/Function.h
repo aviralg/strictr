@@ -34,13 +34,42 @@ class Function: public Scope {
         signature_ = signature;
     }
 
-    void apply(FILE* log_file, SEXP r_expr, int level, bool last) {
+    void apply(FILE* log_file,
+               SEXP r_name,
+               SEXP r_namespace,
+               SEXP r_expr,
+               int level,
+               bool last) {
         print_message(log_file, level, last);
 
         SEXP r_body = R_NilValue;
         if (TYPEOF(r_expr) == CLOSXP) {
-            r_body = apply_signature_(FORMALS(r_expr), BODY(r_expr));
-            SET_BODY(r_expr, r_body);
+            r_body = PROTECT(apply_signature_(FORMALS(r_expr), BODY(r_expr)));
+            SEXP r_srcref = PROTECT(Rf_getAttrib(r_expr, R_SRCREF_SYMBOL));
+
+            // SET_BODY(r_expr, r_body);
+            SEXP r_result = PROTECT(
+                Rf_eval(Rf_lang3(R_FUNCTION_SYMBOL, FORMALS(r_expr), r_body),
+                        r_namespace));
+
+            if (r_srcref != R_NilValue) {
+                Rf_setAttrib(r_result, R_SRCREF_SYMBOL, r_srcref);
+            }
+
+            int locked = R_BindingIsLocked(r_name, r_namespace);
+
+            if (locked) {
+                R_unLockBinding(r_name, r_namespace);
+            }
+
+            Rf_setVar(r_name, r_result, r_namespace);
+
+            if (locked) {
+                R_LockBinding(r_name, r_namespace);
+            }
+
+            UNPROTECT(3);
+
         } else {
             r_body = apply_signature_(CADR(r_expr), CADDR(r_expr));
             SETCAR(CDDR(r_expr), r_body);
@@ -51,18 +80,18 @@ class Function: public Scope {
 
         applied_ = true;
 
-        for (auto& iter: functions_) {
-            Function* inner_function = iter.second;
-            SEXP r_inner_expr =
-                find_function_(r_body, inner_function->get_name());
-
-            if (r_inner_expr != NULL) {
-                inner_function->apply(
-                    log_file, r_inner_expr, level + 1, index == size - 1);
-            }
-
-            ++index;
-        }
+        // for (auto& iter: functions_) {
+        //    Function* inner_function = iter.second;
+        //    SEXP r_inner_expr =
+        //        find_function_(r_body, inner_function->get_name());
+        //
+        //    if (r_inner_expr != NULL) {
+        //        inner_function->apply(
+        //            log_file, r_inner_expr, level + 1, index == size - 1);
+        //    }
+        //
+        //    ++index;
+        //}
     }
 
     void get_status(int level,
