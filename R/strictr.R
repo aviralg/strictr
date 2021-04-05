@@ -18,6 +18,10 @@ initialize_strictr <- function(logdir = getwd(), sigtype = "signature+force+effe
 
     cache_dir <- system.file(file.path("signatures", sigtype), package = "strictr")
 
+    if(cache_dir == "") {
+        cache_dir <- "this-does-not-exist"
+    }
+
     .Call(r_strictr_initialize_strictr, log_filepath, cache_dir)
 
     attach_callbacks()
