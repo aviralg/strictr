@@ -1,0 +1,8 @@
+strict `genD` <1,2>;
+strict `genD.default` <1,2,3,4>;
+strict `grad` <1,2>;
+strict `grad.default` <1,2,3,4>;
+strict `hessian` <1,2>;
+strict `hessian.default` <1,2,3,4>;
+strict `jacobian` <1,2>;
+strict `jacobian.default` <1,2,3,4>;

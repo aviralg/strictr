@@ -25,7 +25,7 @@ strict `probeRangeMapper` <1>;
 strict `.rbind.SummarizedExperiment` <1>;
 strict `.replace_Assays_subset` <1,4>;
 strict `.ShallowSimpleListAssays0` <>;
-strict `SummarizedExperiment` <2>;
+strict `SummarizedExperiment` <>;
 strict `.SummarizedExperiment.charbound` <1>;
 strict `.valid.Assays` <>;
 strict `.valid.RangedSummarizedExperiment` <>;

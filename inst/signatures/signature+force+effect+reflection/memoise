@@ -1,2 +1,11 @@
+strict `cache_filesystem` <1,2,3>;
+strict `drop_cache` <1>;
 strict `forget` <1>;
+strict `has_cache` <1>;
 strict `is.memoised` <1>;
+strict `is_old_cache` <>;
+strict `memoise` <1>;
+strict `print.memoised` <1>;
+strict `timeout` <1,2>;
+strict `validate_formulas` <>;
+strict `wrap_old_cache` <1>;

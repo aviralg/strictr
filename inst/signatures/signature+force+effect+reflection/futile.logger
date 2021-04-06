@@ -1,0 +1,16 @@
+strict `appender.file` <>;
+strict `flog.appender` <>;
+strict `flog.carp` <>;
+strict `flog.debug` <>;
+strict `flog.info` <>;
+strict `flog.layout` <>;
+strict `flog.logger` <>;
+strict `flog.namespace` <1>;
+strict `flog.remove` <>;
+strict `flog.threshold` <>;
+strict `flog.trace` <3>;
+strict `flog.warn` <1,4>;
+strict `ftry` <1,3>;
+strict `layout.format` <>;
+strict `.log_level` <3>;
+strict `scat` <1,3>;

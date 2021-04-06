@@ -1,0 +1,4 @@
+strict `bobyqa` <1,2,3,4,5>;
+strict `commonArgs` <1,2,3,4>;
+strict `newuoa` <1,2,3>;
+strict `uobyqa` <1,2,3>;

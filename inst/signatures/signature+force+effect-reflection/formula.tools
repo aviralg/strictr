@@ -1,0 +1,15 @@
+strict `as.character.formula` <1>;
+strict `env` <1>;
+strict `env.formula` <1>;
+strict `.onAttach` <>;
+strict `split_terms.(` <1,2>;
+strict `split_terms` <1>;
+strict `split_terms.call` <1>;
+strict `split_terms.default` <1>;
+strict `split_terms.name` <1>;
+strict `terms.call` <1>;
+strict `toggle.sign` <1>;
+strict `toggle.sign.call` <1>;
+strict `toggle.sign.default` <1>;
+strict `toggle.sign.expression` <1>;
+strict `toggle.sign.name` <1>;

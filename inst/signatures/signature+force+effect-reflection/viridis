@@ -1,0 +1,3 @@
+strict `scale_color_viridis` <6>;
+strict `scale_fill_viridis` <6>;
+strict `viridis_pal` <>;

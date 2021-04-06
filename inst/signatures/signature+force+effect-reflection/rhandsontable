@@ -1,0 +1,14 @@
+strict `get_col_types` <1>;
+strict `hot_cell` <2,3,4,5>;
+strict `hot_col` <2,3,4,5,6,7,8,9,10,11,12,13,14,15,16>;
+strict `hot_cols` <2,3,4,5,6>;
+strict `hot_context_menu` <2,3,4,5,6,7>;
+strict `hot_heatmap` <1,3,4>;
+strict `hot_row` <1,2,3>;
+strict `hot_rows` <1,2,3>;
+strict `hot_table` <2,3,4,5,6,7,8,9>;
+strict `hot_validate_character` <2,3,4>;
+strict `hot_validate_numeric` <1,2,3,4,5,6,7>;
+strict `.onLoad` <>;
+strict `renderer_heatmap` <1>;
+strict `rhandsontable` <1,4,5,6,7,8,9,11,12>;

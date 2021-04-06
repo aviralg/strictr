@@ -661,6 +661,7 @@ strict `stop_defunct` <1>;
 strict `string` <1,2>;
 strict `strip_style` <1>;
 strict `strip_trailing_newline` <1>;
+strict `str.quosure` <1>;
 strict `str.rlang_data_pronoun` <1>;
 strict `structure2` <1>;
 strict `summary.rlang_error` <1>;

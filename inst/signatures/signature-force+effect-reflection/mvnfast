@@ -1,0 +1,10 @@
+strict `dmixn` <1,2,3,4,5,6,7,8>;
+strict `dmixt` <1,2,3,4,5,6,7,8,9>;
+strict `dmvn` <1,2,3,4,5,6>;
+strict `dmvt` <1,2,3,4,5,6,7>;
+strict `maha` <1,2,3,4,5>;
+strict `ms` <1,2,3,4,5,6>;
+strict `rmixn` <2,3,4,5,6,7,8,9>;
+strict `rmixt` <2,3,5,6,7,8,9,10>;
+strict `rmvn` <1,2,3,4,5,6,7>;
+strict `rmvt` <1,2,3,4,5,6,7,8>;

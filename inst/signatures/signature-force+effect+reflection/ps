@@ -1,4 +1,0 @@
-strict `format_unix_time` <1>;
-strict `memoize` <>;
-strict `.onLoad` <1,2>;
-strict `ps_handle` <1,2>;

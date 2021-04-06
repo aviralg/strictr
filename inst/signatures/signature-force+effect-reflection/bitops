@@ -1,0 +1,7 @@
+strict `bitAnd` <1,2>;
+strict `bitFlip` <1,2>;
+strict `bitOr` <1,2>;
+strict `bitShiftL` <1>;
+strict `bitShiftR` <1>;
+strict `bitXor` <1,2>;
+strict `cksum` <1>;

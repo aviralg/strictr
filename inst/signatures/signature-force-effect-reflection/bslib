@@ -1,5 +1,0 @@
-strict `bs_dependency_defer` <1>;
-strict `is_available` <1,2>;
-strict `is_bs_theme` <1>;
-strict `.onLoad` <1,2>;
-strict `register_upgrade_message` <1,2>;

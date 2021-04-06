@@ -1,8 +1,0 @@
-strict `as_colour_code` <1>;
-strict `as_white_ref` <1,2>;
-strict `colourspace_match` <1>;
-strict `decode_c` <1,2,3,4,5>;
-strict `decode_colour` <1,2,4,5>;
-strict `encode_c` <1,2,3,4>;
-strict `encode_colour` <1,2,3,4>;
-strict `.onLoad` <>;

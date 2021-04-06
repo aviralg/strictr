@@ -1,6 +1,16 @@
+strict `as.difftime` <1>;
+strict `as.difftime.default` <1,2,3>;
+strict `as.factor` <1>;
+strict `as.factor.default` <1>;
+strict `as.ordered` <1>;
+strict `as.ordered.default` <1>;
+strict `augment` <1>;
+strict `fit` <1>;
 strict `glance` <1>;
 strict `intersect` <1,2>;
 strict `intersect.default` <1,2>;
+strict `methods_find` <>;
+strict `methods_rd` <>;
 strict `setdiff` <1,2>;
 strict `setdiff.default` <1,2>;
 strict `setequal` <1,2>;

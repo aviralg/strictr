@@ -1,1 +1,2 @@
 strict `.onLoad` <1,2>;
+strict `pkgconfig` <1>;

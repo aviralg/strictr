@@ -1,0 +1,6 @@
+strict `clipr_available` <>;
+strict `clipr_available_handler` <>;
+strict `clipr_results_check` <1>;
+strict `dr_clipr` <>;
+strict `.onAttach` <1,2>;
+strict `write_clip` <1,2,3,4,5,6>;

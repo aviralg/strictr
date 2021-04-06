@@ -1,0 +1,17 @@
+strict `batchSOM` <1,2,3>;
+strict `condense` <1,2,4>;
+strict `knn` <1,2,3,4,5,6,7>;
+strict `knn1` <1,2,3>;
+strict `knn.cv` <1,2,3,4,5,6>;
+strict `lvq1` <1,2,3,5>;
+strict `lvq2` <1,2,3,5,6>;
+strict `lvq3` <1,2,3,5,6,7>;
+strict `lvqinit` <1,2,5>;
+strict `lvqtest` <1,2>;
+strict `multiedit` <1,2,3,4,5,6>;
+strict `olvq1` <1,2,3,5>;
+strict `plot.SOM` <1>;
+strict `plot.somgrid` <1,2>;
+strict `reduce.nn` <1,2,3>;
+strict `SOM` <1,2,4,5>;
+strict `somgrid` <1,2,3>;

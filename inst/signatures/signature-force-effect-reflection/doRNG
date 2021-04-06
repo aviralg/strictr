@@ -1,0 +1,9 @@
+strict `%||%` <1,2>;
+strict `checkRNGversion` <1>;
+strict `%dorng%` <1>;
+strict `doRNG` <1,2,3,4>;
+strict `doRNGseq` <1,2>;
+strict `infoDoRNG` <1,2>;
+strict `ns_get` <1,2>;
+strict `registerDoRNG` <1,2>;
+strict `setDoBackend` <1>;

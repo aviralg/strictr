@@ -1,0 +1,17 @@
+strict `classIntervals` <1,3,6,7>;
+strict `findColours` <1,2,7>;
+strict `findCols` <1>;
+strict `fish` <1,2>;
+strict `getBclustClassIntervals` <1>;
+strict `getHclustClassIntervals` <1>;
+strict `gvf` <1,2>;
+strict `jenks.tests` <1>;
+strict `logLik.classIntervals` <1>;
+strict `nPartitions` <1>;
+strict `oai` <1,2,3>;
+strict `plot.classIntervals` <1,2>;
+strict `print.classIntervals` <1,2,7,8>;
+strict `.rbrks` <1>;
+strict `roundEndpoint` <1,2,3>;
+strict `tableClassIntervals` <1,2,7,8,9,10>;
+strict `tai` <1,2>;

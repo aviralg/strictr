@@ -1,0 +1,13 @@
+strict `addAttribs` <1>;
+strict `addClass` <1,2>;
+strict `bsAlert` <1>;
+strict `bsButton` <1,2,3,5,6,7,8,9>;
+strict `bsCollapse` <2,3,4>;
+strict `bsCollapsePanel` <1,4>;
+strict `bsModal` <1,2,3>;
+strict `bsTooltip` <1,2,3,4,5>;
+strict `buildTooltipOrPopoverOptionsList` <1,2,3,4>;
+strict `createTooltipOrPopoverOnUI` <1,2,3>;
+strict `getAttribs` <1>;
+strict `.onAttach` <>;
+strict `removeClass` <1,2>;

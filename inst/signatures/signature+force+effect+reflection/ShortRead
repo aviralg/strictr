@@ -1,9 +1,0 @@
-strict `.abc_BStringSet` <1>;
-strict `.file_names` <1,2,4>;
-strict `.qa_adapterContamination` <>;
-strict `.qa_alphabetFrequency` <1,3,4>;
-strict `.qa_perCycleBaseCall` <2>;
-strict `.qa_perCycleQuality` <2,3>;
-strict `.qa_qdensity` <1>;
-strict `.qualityTypeAuto` <1>;
-strict `.ShortReadQQA` <1>;

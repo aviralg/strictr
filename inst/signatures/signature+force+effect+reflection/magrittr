@@ -2,7 +2,7 @@ strict `%<>%` <>;
 strict `%>%` <>;
 strict `%$%` <>;
 strict `as_pipe_fn` <1,2>;
-strict `freduce` <1,2>;
+strict `freduce` <2>;
 strict `new_lambda` <1,2>;
 strict `.onLoad` <>;
 strict `pipe_eager_lexical` <>;

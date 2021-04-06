@@ -1,8 +1,0 @@
-strict `check_mnsl` <1>;
-strict `complement` <1>;
-strict `fix_mnsl` <1>;
-strict `hvc2mnsl` <1,2,3>;
-strict `in_gamut` <1,2>;
-strict `mnsl` <1>;
-strict `mnsl2hvc` <1>;
-strict `na_handle` <1,2>;

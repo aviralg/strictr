@@ -1,5 +1,0 @@
-strict `coalesce` <>;
-strict `convert_to_unit` <1,2>;
-strict `microbenchmark` <2,5,6>;
-strict `.onLoad` <>;
-strict `summary.microbenchmark` <>;

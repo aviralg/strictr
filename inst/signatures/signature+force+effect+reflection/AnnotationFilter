@@ -1,8 +1,0 @@
-strict `.aflvalue` <1>;
-strict `.AnnotationFilterList` <>;
-strict `AnnotationFilterList` <2,4,5>;
-strict `.condition` <>;
-strict `.logOp` <1>;
-strict `.not` <1>;
-strict `.valid_condition` <>;
-strict `.value` <>;

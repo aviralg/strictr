@@ -1,0 +1,17 @@
+strict `assert_values2` <1,3>;
+strict `future_apply` <1,3,5,6,7,8,9,10,11,12,13,14>;
+strict `future_by` <1,3>;
+strict `future_by.data.frame` <1,3,5>;
+strict `future_by_internal` <1,2,3,5,6,7,8,9>;
+strict `future_lapply` <1,2,4,5,6,7,8,9,10,11,12>;
+strict `future_mapply` <1,3,4,5,6,7,8,9,10,11,12,13,14>;
+strict `future_sapply` <1,2,4,5,6>;
+strict `future_vapply` <1,2,3,5,6>;
+strict `future_xapply` <1,2,3,4,6,7,8,9,10,11,12,13,14,15,16,17,21>;
+strict `getGlobalsAndPackagesXApply` <2,5,6,7>;
+strict `import_from` <1,3>;
+strict `import_future` <1>;
+strict `isFALSE` <1>;
+strict `makeChunks` <1,2,3,4>;
+strict `make_rng_seeds` <2>;
+strict `stop_if_not` <>;

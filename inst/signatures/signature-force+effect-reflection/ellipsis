@@ -7,3 +7,6 @@ strict `dots` <1,2>;
 strict `eval_bare` <1,2>;
 strict `exit_handler` <1>;
 strict `paste_line` <>;
+strict `promise_forced` <1>;
+strict `safe_median` <1>;
+strict `safe_median.numeric` <1,3>;

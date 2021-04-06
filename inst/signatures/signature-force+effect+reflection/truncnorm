@@ -1,0 +1,6 @@
+strict `dtruncnorm` <1,2,3,4,5>;
+strict `etruncnorm` <1,2,3,4>;
+strict `ptruncnorm` <1,2,3,4,5>;
+strict `qtruncnorm` <1,2,3,4,5>;
+strict `rtruncnorm` <1,2,3,4,5>;
+strict `vtruncnorm` <1,2,3,4>;

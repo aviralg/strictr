@@ -58,6 +58,7 @@ strict `product` <1,2,3>;
 strict `.psortKM` <1,2,3>;
 strict `rowAlls` <1,2,3,4,5,6>;
 strict `rowAnyMissings` <1,2,3>;
+strict `rowAnyNAs` <1,2,3>;
 strict `rowAnys` <1,2,3,4,5,6>;
 strict `rowAvgsPerColSet` <1,2,4,5,7,8>;
 strict `rowCollapse` <1,2,3,4>;

@@ -1,0 +1,7 @@
+strict `BBoptim` <1,2,3,4,5,6,7,9,10>;
+strict `BBsolve` <1,2,3,4,5>;
+strict `dfsane` <1,2,4,5>;
+strict `multiStart` <1,2,4,5,10,11,12>;
+strict `projectLinear` <1,2,3,4>;
+strict `sane` <1,2,3,4,5,6>;
+strict `spg` <2,3,5,6,7,9,10,11>;

@@ -1,0 +1,8 @@
+strict `as.data.frame.xl_object` <1>;
+strict `dubquote` <1>;
+strict `normalize_df` <1>;
+strict `.onLoad` <>;
+strict `rep.xl_object` <1>;
+strict `write_xlsx` <1,2,3,4,5>;
+strict `xl_formula` <1>;
+strict `xl_hyperlink` <1,2>;

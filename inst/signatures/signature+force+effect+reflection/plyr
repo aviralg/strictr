@@ -60,7 +60,7 @@ strict `length.indexed_array` <1>;
 strict `list_to_array` <1>;
 strict `list_to_dataframe` <1>;
 strict `list_to_vector` <1>;
-strict `llply` <1>;
+strict `llply` <>;
 strict `loop_apply` <1,2,3>;
 strict `l_ply` <1,2,4,5,7>;
 strict `make_assignment_call` <1>;

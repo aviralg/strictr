@@ -1,0 +1,10 @@
+strict `fromJSON` <2,3,4,5>;
+strict `.fromJSON_R` <1>;
+strict `newJSONParser` <1>;
+strict `.onLoad` <1,2>;
+strict `.parseArray` <1>;
+strict `.parseNumber` <1>;
+strict `.parseObj` <1>;
+strict `.parseString` <1>;
+strict `.parseValue` <1>;
+strict `toJSON` <1,2,3>;

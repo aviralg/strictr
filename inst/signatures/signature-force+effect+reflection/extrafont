@@ -1,0 +1,4 @@
+strict `choose_font` <1,2>;
+strict `font_import` <1,2,3,4>;
+strict `loadfonts` <1,2>;
+strict `.onAttach` <1,2>;

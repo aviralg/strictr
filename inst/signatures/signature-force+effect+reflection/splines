@@ -1,5 +1,0 @@
-strict `makepredictcall.ns` <1,2>;
-strict `ns` <1,2,3,4>;
-strict `predict.ns` <1>;
-strict `spline.des` <1,2,3,5,6>;
-strict `splineDesign` <1,2,3,4,5,6>;

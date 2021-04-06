@@ -1,6 +1,0 @@
-strict `%||%` <1>;
-strict `check_named_args` <>;
-strict `get_config` <>;
-strict `get_from_session` <>;
-strict `set_config_in` <2>;
-strict `set_config_session` <>;

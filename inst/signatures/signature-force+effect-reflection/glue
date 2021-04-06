@@ -31,7 +31,7 @@ strict `print.glue` <1,3>;
 strict `recycle_columns` <1>;
 strict `register_s3_method` <1,2,3,4>;
 strict `single_quote` <1>;
-strict `sql_quote_transformer` <1>;
+strict `sql_quote_transformer` <>;
 strict `style_na` <1>;
 strict `trim` <1>;
 strict `vec_cast.character.glue` <1,2>;

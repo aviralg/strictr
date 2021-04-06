@@ -1,5 +1,5 @@
 strict `align_2` <1,2,4>;
-strict `arrangeGrob` <2,4,5,6,7,8,11,12,13,14,15,16>;
+strict `arrangeGrob` <4,5,6,7,8,11,12,13,14,15,16>;
 strict `cbind_2` <1,2,3>;
 strict `col_widths` <1>;
 strict `combine_2` <1,2,4>;

@@ -3,7 +3,7 @@ strict `acast` <1,2,3,5,6,7,8,9>;
 strict `add_margins` <1,2,3>;
 strict `all_identical` <1>;
 strict `array_names` <1>;
-strict `cast` <1,2,3,5,6,7,8>;
+strict `cast` <1,2,3,5,6,7>;
 strict `colsplit` <1,2,3>;
 strict `dcast` <1,2,3,5,6,7,8,9>;
 strict `downto` <1,2>;

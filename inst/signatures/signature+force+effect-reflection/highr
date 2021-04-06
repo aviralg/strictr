@@ -1,8 +1,0 @@
-strict `escape_html` <1>;
-strict `escape_latex` <1>;
-strict `hilight` <1,2,4,5>;
-strict `hilight_one` <1,3,4>;
-strict `merge_cmd` <1,2>;
-strict `parse_source` <1>;
-strict `spaces` <>;
-strict `try_parse` <1>;

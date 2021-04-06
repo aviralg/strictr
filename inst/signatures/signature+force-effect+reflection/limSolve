@@ -1,0 +1,14 @@
+strict `ldei` <1,2,3,5>;
+strict `ldp` <1,2,3,4>;
+strict `linp` <1,2,3,4,5,6>;
+strict `lsei` <1,2,3,4,5,6,7,8,9,10,12,13>;
+strict `nnls` <1,2,3>;
+strict `resolution` <1,2>;
+strict `Solve` <1,2,3>;
+strict `Solve.banded` <1,2,3,4,5>;
+strict `Solve.block` <1,2,3,4,5>;
+strict `Solve.tridiag` <1,2,3,4>;
+strict `varranges` <1,2,3,5,6,7>;
+strict `varsample` <1,2,3>;
+strict `xranges` <1,2,3,5,7,8>;
+strict `xsample` <1,2,3,4,5,6,9,10,11,12,13,14,15,16,17>;

@@ -1,0 +1,12 @@
+strict `coef.regsubsets` <1,3>;
+strict `leaps` <1,2,3,4,5,6,7,8,9>;
+strict `leaps.backward` <1,2>;
+strict `leaps.exhaustive` <1,2>;
+strict `leaps.setup` <1,2,3,6,7,8,9>;
+strict `plot.regsubsets` <1,2,3,4,5>;
+strict `regsubsets` <1>;
+strict `regsubsets.default` <1,2,3,4,5,8,9,10,11>;
+strict `regsubsets.formula` <1,2,3,4,5,8,9,10,11>;
+strict `summary.regsubsets` <1,2,3,4,5>;
+strict `vcov.regsubsets` <1>;
+strict `warn.extra` <1>;

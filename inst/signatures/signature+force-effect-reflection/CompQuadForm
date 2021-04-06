@@ -1,0 +1,5 @@
+strict `davies` <1,2,3,4,5,6,7>;
+strict `farebrother` <1,2,3,4,5,6,7>;
+strict `imhof` <1,2,3,4,5,6,7>;
+strict `liu` <1,2,3,4>;
+strict `.onLoad` <1,2>;

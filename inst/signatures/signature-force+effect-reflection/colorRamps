@@ -1,0 +1,8 @@
+strict `blue2green` <1>;
+strict `blue2red` <1>;
+strict `blue2yellow` <1>;
+strict `green2red` <1>;
+strict `primary.colors` <3>;
+strict `rgb.tables` <1,2,3,4>;
+strict `table.ramp` <2,3,4,5>;
+strict `ygobb` <1>;

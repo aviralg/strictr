@@ -1,0 +1,5 @@
+strict `.onLoad` <1,2>;
+strict `setLanguage` <1>;
+strict `tk2font.get` <1,2>;
+strict `tk2font.set` <1,2>;
+strict `tk2theme` <1>;

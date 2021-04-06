@@ -1,0 +1,11 @@
+strict `build_tooltip_fields` <1>;
+strict `get_arg_help` <2>;
+strict `get_desc_help` <>;
+strict `get_help_file` <>;
+strict `get_usage_help` <>;
+strict `is.empty` <1>;
+strict `r_completions_function_call_metadata` <1,2>;
+strict `r_completions_general_metadata` <1>;
+strict `r_completions_metadata` <1>;
+strict `rd_2_html` <>;
+strict `re_capture` <1,2>;

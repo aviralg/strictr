@@ -1,1 +1,3 @@
+strict `base64decode` <1,2>;
+strict `base64encode` <1>;
 strict `dataURI` <3>;

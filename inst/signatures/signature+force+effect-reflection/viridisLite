@@ -1,1 +1,5 @@
+strict `cividis` <3,4,5>;
+strict `inferno` <3,4,5>;
+strict `magma` <3,4,5>;
+strict `plasma` <3,4,5>;
 strict `viridis` <3,5,6>;

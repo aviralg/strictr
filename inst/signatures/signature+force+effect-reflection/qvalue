@@ -1,0 +1,9 @@
+strict `empPvals` <1,2,3>;
+strict `hist.qvalue` <1>;
+strict `lfdr` <1,2,3,4,5,6,7>;
+strict `multiplot` <2,4,5>;
+strict `pi0est` <1,3>;
+strict `plot.qvalue` <1,2>;
+strict `qvalue` <1,2,3,4,5>;
+strict `summary.qvalue` <1,2,3>;
+strict `write.qvalue` <1,2,3,4,5,6,7>;

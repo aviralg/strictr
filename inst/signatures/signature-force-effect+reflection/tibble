@@ -147,7 +147,7 @@ strict `repair_names` <1,2,3>;
 strict `result_vectbl_wrap_rhs` <1>;
 strict `rowid_to_column` <1,2>;
 strict `row.names<-.tbl_df` <1,2>;
-strict `rownames_to_column` <1,2>;
+strict `rownames_to_column` <2>;
 strict `safe_match_default` <1,2>;
 strict `scoped_lifecycle_errors` <1>;
 strict `scoped_lifecycle_silence` <1>;

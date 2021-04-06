@@ -1,1 +1,2 @@
-strict `mapproject` <1,2,3,4,5>;
+strict `map.grid` <2,3,4,5,7,8>;
+strict `mapproject` <1,3,4,5>;

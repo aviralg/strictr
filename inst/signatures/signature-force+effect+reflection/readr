@@ -31,6 +31,7 @@ strict `col_spec` <1,2>;
 strict `col_spec_standardise` <1,3,4,7,9,10,11>;
 strict `col_time` <1>;
 strict `col_to_short` <1>;
+strict `compare.tbl_df` <1,2>;
 strict `count_fields_` <1,2,3>;
 strict `count_fields` <1,2,3,4>;
 strict `datasource` <1,3,5>;

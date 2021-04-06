@@ -24,6 +24,7 @@ strict `is.scalarlist` <1>;
 strict `list_to_vec` <1>;
 strict `loadpkg` <1>;
 strict `load_s4_class` <1,2>;
+strict `makeCodeWalker` <2,3,4>;
 strict `makesymbol` <>;
 strict `minify` <1>;
 strict `null_to_na` <1>;

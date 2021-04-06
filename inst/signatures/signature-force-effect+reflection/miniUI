@@ -1,0 +1,9 @@
+strict `buildTabset` <2,3,4,5>;
+strict `miniButtonBlock` <2>;
+strict `miniContentPanel` <2,3>;
+strict `miniTabPanel` <1,3,4>;
+strict `miniTabstripPanel` <2,3,4>;
+strict `miniTitleBar` <1,2,3>;
+strict `miniTitleBarButton` <1,2,3>;
+strict `paddingToPos` <1>;
+strict `scrollPanel` <>;

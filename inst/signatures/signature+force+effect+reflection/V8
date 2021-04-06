@@ -1,0 +1,14 @@
+strict `$.V8` <1,2>;
+strict `context_enable_typed_arrays` <1>;
+strict `context_eval` <>;
+strict `context_validate` <1,2>;
+strict `get_json_output` <>;
+strict `get_str_output` <>;
+strict `join` <>;
+strict `JS` <>;
+strict `make_context` <1>;
+strict `.onAttach` <>;
+strict `.onLoad` <>;
+strict `v8` <1,2,3>;
+strict `wasm` <1>;
+strict `write_array_buffer` <1,2,3>;

@@ -1,0 +1,11 @@
+strict `ani.options` <>;
+strict `ani.pause` <>;
+strict `ani.record` <1,2>;
+strict `ani.replay` <>;
+strict `.check.opts` <1>;
+strict `ecol.death.sim` <4,5,6,7,8>;
+strict `g.brownian.motion` <2,4,5,6>;
+strict `kfcv` <2>;
+strict `.onLoad` <>;
+strict `saveHTML` <2,3,4,5,6>;
+strict `vi.grid.illusion` <3,5,6>;

@@ -1,0 +1,2 @@
+strict `doSNOW` <1,2,3,4>;
+strict `registerDoSNOW` <1>;

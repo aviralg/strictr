@@ -1,0 +1,12 @@
+strict `confirm_conflict` <1,2>;
+strict `invert` <1>;
+strict `is_attached` <1>;
+strict `ls_env` <1>;
+strict `msg` <2>;
+strict `.onAttach` <>;
+strict `package_version` <1>;
+strict `same_library` <1>;
+strict `text_col` <>;
+strict `tidyverse_conflict_message` <1>;
+strict `tidyverse_logo` <1>;
+strict `tidyverse_packages` <1>;

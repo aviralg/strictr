@@ -1,0 +1,16 @@
+strict `%||%` <1,2>;
+strict `euclid` <1,2>;
+strict `geom_label_repel` <1,2,3,4,5,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28>;
+strict `geom_text_repel` <1,2,3,4,5,7,8,9,10,11,12,13,14,15,17,18,19,20,21,22,23,24,25>;
+strict `ggname` <1,2>;
+strict `intersect_line_circle` <1,2,3>;
+strict `makeContent.labelrepeltree` <1>;
+strict `makeContent.textrepeltree` <1>;
+strict `makeLabelRepelGrobs` <1,2,3,4,5,6,7,8,9,10,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31>;
+strict `makeTextRepelGrobs` <1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31>;
+strict `not_empty` <1>;
+strict `position_nudge_repel` <1,2>;
+strict `repel_boxes2` <1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16>;
+strict `select_line_connection` <1,2>;
+strict `shadowtextGrob` <1,2,3,4,5,6,7,8,9,10,11,12,13>;
+strict `to_unit` <1>;

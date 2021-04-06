@@ -1,6 +1,5 @@
 strict `as_table` <1,2,3>;
 strict `check_raw_list` <1>;
-strict `fetch_ggproto` <1,2>;
 strict `findDriver` <1>;
 strict `get2` <1,2>;
 strict `guessColName` <1,2>;

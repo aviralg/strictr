@@ -1,1 +1,2 @@
 strict `readJPEG` <1,2>;
+strict `writeJPEG` <1,2,3,4>;

@@ -1,0 +1,6 @@
+strict `fastLm` <1>;
+strict `fastLm.default` <1,2>;
+strict `fastLm.formula` <1>;
+strict `fastLmPure` <1,2>;
+strict `inlineCxxPlugin` <>;
+strict `summary.fastLm` <1>;

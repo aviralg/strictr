@@ -1,0 +1,9 @@
+strict `asJSVars` <2,3,4>;
+strict `basicJSONHandler` <1,2>;
+strict `dQuote` <1>;
+strict `getStringRoutineType` <1>;
+strict `isContainer` <1,2,3>;
+strict `isContent` <1>;
+strict `jsonPretty` <1>;
+strict `mapEncoding` <1>;
+strict `oldFromJSON` <1,2,3,4,5,6,7,8,9,10,11,12>;

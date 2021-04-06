@@ -1,0 +1,8 @@
+strict `condentropy` <1,2,3>;
+strict `condinformation` <1,2,3,4>;
+strict `discretize` <1,2>;
+strict `entropy` <1,2>;
+strict `interinformation` <1,2>;
+strict `multiinformation` <1,2>;
+strict `mutinformation` <1,2,3>;
+strict `natstobits` <1>;

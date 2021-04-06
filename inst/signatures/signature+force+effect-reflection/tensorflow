@@ -1,0 +1,3 @@
+strict `%||%` <1>;
+strict `.onLoad` <>;
+strict `parse_arguments` <1>;

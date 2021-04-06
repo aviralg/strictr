@@ -1,2 +1,14 @@
 strict `ellipse` <1>;
+strict `ellipse.arima0` <1,3>;
 strict `ellipse.default` <1,2,3,4,6>;
+strict `ellipse.glm` <1,3,4,6>;
+strict `ellipse.lm` <1,3>;
+strict `ellipse.nls` <1,3>;
+strict `ellipse.profile` <1,3,5>;
+strict `ellipse.profile.glm` <1,2,3,4,5,6>;
+strict `ellipse.profile.nls` <1,2,3,5>;
+strict `pairs` <1>;
+strict `.pairs_default` <1>;
+strict `.pairs_formula` <1,2,4,5>;
+strict `pairs.profile` <1,3,4,5,6,7,8,9>;
+strict `plotcorr` <1,2,3,4,5,7,8,9,10,11,12,13,14>;

@@ -1,0 +1,4 @@
+strict `coalesce` <1>;
+strict `ctapply` <1,2,3,5>;
+strict `%fin%` <1,2>;
+strict `fmatch` <1,2,3,4>;

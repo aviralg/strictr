@@ -1,5 +1,0 @@
-strict `getOptionOrEnvVar` <1,2>;
-strict `.onLoad` <>;
-strict `queryRCmdCheck` <>;
-strict `stop_if_not` <>;
-strict `trim` <1>;

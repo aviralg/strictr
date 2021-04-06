@@ -1,9 +1,9 @@
 strict `getObjectFields` <1>;
 strict `getObjectSlots` <1>;
 strict `isTRUEorFALSE` <1>;
-strict `replaceSlots` <1,3>;
+strict `replaceSlots` <3>;
 strict `testPackage` <2,3>;
-strict `unsafe_replaceSlots` <1>;
+strict `unsafe_replaceSlots` <>;
 strict `unstrand` <1>;
 strict `updateObjectFrom_errf` <>;
 strict `updateObjectFromFields` <1,4>;

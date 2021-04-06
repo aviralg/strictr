@@ -1,3 +1,0 @@
-strict `as.Date.mondate` <1>;
-strict `.daysinmonth` <1,2>;
-strict `.is.leapyear` <1>;

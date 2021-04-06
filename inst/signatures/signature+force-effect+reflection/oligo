@@ -1,0 +1,4 @@
+strict `basicPLM` <1,4,6>;
+strict `fitProbeLevelModel` <1,2,6>;
+strict `getProbeInfo` <1,3,5>;
+strict `.onAttach` <>;
