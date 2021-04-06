@@ -1,3 +1,0 @@
-strict `annPkgName` <1,2>;
-strict `.onLoad` <>;
-strict `setRepository` <2,4>;

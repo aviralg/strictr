@@ -1,2 +1,0 @@
-strict `get_backports` <1>;
-strict `import` <2>;

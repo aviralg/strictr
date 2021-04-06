@@ -1,4 +1,0 @@
-strict `as.irts` <1>;
-strict `as.irts.zoo` <1>;
-strict `irts` <1,2>;
-strict `.onAttach` <>;

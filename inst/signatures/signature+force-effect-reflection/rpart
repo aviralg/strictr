@@ -1,8 +1,0 @@
-strict `importance` <1>;
-strict `na.rpart` <1>;
-strict `prune.rpart` <1,2>;
-strict `rpart` <5,7,8,9>;
-strict `rpart.anova` <1,2>;
-strict `rpart.control` <1,2,3,4,5,6,7,8,9>;
-strict `rpart.matrix` <>;
-strict `snip.rpart` <1>;

@@ -1,7 +1,0 @@
-strict `checkrglFont` <1>;
-strict `.onAttach` <>;
-strict `.onLoad` <1,2>;
-strict `rglFonts` <>;
-strict `rgl.init` <1,2,3>;
-strict `setGraphicsDelay` <1,2>;
-strict `setrglFonts` <1,2>;

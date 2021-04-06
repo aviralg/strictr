@@ -1,6 +1,0 @@
-strict `latex` <3,4,6,7>;
-strict `loadBioconductorStyleFile` <1,2>;
-strict `markdown` <3>;
-strict `.onLoad` <>;
-strict `.print.file` <1>;
-strict `.width` <1,2,3>;

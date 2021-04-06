@@ -1,7 +1,0 @@
-strict `.initBackgroundCorrect` <1,2>;
-strict `.initExpression` <1,2>;
-strict `.initNormalize` <1,2>;
-strict `.initPmCorrect` <1,2>;
-strict `.onLoad` <>;
-strict `.setAffyOptions` <1>;
-strict `upDate.normalize.AffyBatch.methods` <1>;

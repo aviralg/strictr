@@ -1,9 +1,0 @@
-strict `glance` <1>;
-strict `intersect` <1,2>;
-strict `intersect.default` <1,2>;
-strict `setdiff` <1>;
-strict `setdiff.default` <1,2>;
-strict `setequal` <1,2>;
-strict `tidy` <1>;
-strict `union` <1,2>;
-strict `union.default` <1,2>;

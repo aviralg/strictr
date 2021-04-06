@@ -1,6 +1,0 @@
-strict `predict.rq` <1,4>;
-strict `predict.rqs` <1,3,4>;
-strict `rq` <1,2,7,8,9>;
-strict `rq.fit` <1,2,3,4>;
-strict `rq.fit.br` <1,2,3,5>;
-strict `rq.wfit` <1,2,3,4,5>;

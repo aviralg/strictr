@@ -1,5 +1,0 @@
-strict `gefp` <2,3,4,5,7,8,9>;
-strict `plot.gefp` <1,2,3>;
-strict `pvalue.efp` <1,2,3,4>;
-strict `root.matrix` <1>;
-strict `time.gefp` <1>;

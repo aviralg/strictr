@@ -1,3 +1,0 @@
-strict `.onAttach` <2>;
-strict `pkgStartupMessage` <>;
-strict `pkgStartupMessage.default` <2>;

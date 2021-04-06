@@ -1,3 +1,0 @@
-strict `addhook` <1,2>;
-strict `gethook` <1>;
-strict `.onLoad` <>;

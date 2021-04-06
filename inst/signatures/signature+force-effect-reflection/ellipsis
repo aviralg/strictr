@@ -1,9 +1,0 @@
-strict `action_dots` <1,2,3,4,5>;
-strict `check_dots` <1>;
-strict `check_dots_empty` <1>;
-strict `check_dots_unnamed` <1>;
-strict `check_dots_used` <1,2>;
-strict `dots` <1,2>;
-strict `eval_bare` <1,2>;
-strict `exit_handler` <1>;
-strict `paste_line` <>;
