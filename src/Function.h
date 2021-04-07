@@ -51,7 +51,7 @@ class Function: public Scope {
 
         if (TYPEOF(r_expr) == CLOSXP) {
             /* if this happens, it means the signature is wrong */
-            if (!signature_.empty() && Rf_length(FORMALS(r_expr)) > signature_.back()) {
+            if (!signature_.empty() && Rf_length(FORMALS(r_expr)) < signature_.back()) {
                 fprintf(log_file,
                         "incorrect signature for function %s\n",
                         name_.c_str());
