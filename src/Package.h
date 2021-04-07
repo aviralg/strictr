@@ -18,7 +18,7 @@ class Package: public Scope {
 
         fprintf(log_file, "%s %s\n", prefix.c_str(), name_.c_str());
 
-        SEXP r_namespace = get_namespace_();
+        SEXP r_namespace = PROTECT(get_namespace_());
 
         int index = 0;
 
@@ -65,6 +65,8 @@ class Package: public Scope {
 
             ++index;
         }
+
+        UNPROTECT(1);
     }
 
     void get_status(std::vector<std::string>& packages,
