@@ -48,7 +48,16 @@ class Function: public Scope {
         }
 
         SEXP r_body = R_NilValue;
+
         if (TYPEOF(r_expr) == CLOSXP) {
+            /* if this happens, it means the signature is wrong */
+            if (Rf_length(FORMALS(r_expr)) > signature_.back()) {
+                fprintf(log_file,
+                        "incorrect signature for function %s",
+                        name_.c_str());
+                return;
+            }
+
             r_body = PROTECT(apply_signature_(FORMALS(r_expr), BODY(r_expr)));
             SEXP r_srcref = PROTECT(Rf_getAttrib(r_expr, R_SRCREF_SYMBOL));
 
@@ -148,7 +157,8 @@ class Function: public Scope {
     SEXP build_force_expr_(SEXP r_name) {
         SEXP r_missing = PROTECT(Rf_lang2(R_MISSING_SYMBOL, r_name));
         SEXP r_negate = PROTECT(Rf_lang2(R_NOT_SYMBOL, r_missing));
-        SEXP r_force = r_name; //PROTECT(Rf_lang3(R_LEFT_ASSIGN_SYMBOL, r_name, r_name));
+        SEXP r_force =
+            r_name; // PROTECT(Rf_lang3(R_LEFT_ASSIGN_SYMBOL, r_name, r_name));
         bool vararg = is_vararg_(r_name);
 
         if (vararg) {
