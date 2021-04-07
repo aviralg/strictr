@@ -53,7 +53,7 @@ class Function: public Scope {
             /* if this happens, it means the signature is wrong */
             if (Rf_length(FORMALS(r_expr)) > signature_.back()) {
                 fprintf(log_file,
-                        "incorrect signature for function %s",
+                        "incorrect signature for function %s\n",
                         name_.c_str());
                 return;
             }
