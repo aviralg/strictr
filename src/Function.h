@@ -42,6 +42,11 @@ class Function: public Scope {
                bool last) {
         print_message(log_file, level, last);
 
+        /* TODO: clean up, this is also checked when inserting signature. */
+        if (signature_.size() == 0) {
+            return;
+        }
+
         SEXP r_body = R_NilValue;
         if (TYPEOF(r_expr) == CLOSXP) {
             r_body = PROTECT(apply_signature_(FORMALS(r_expr), BODY(r_expr)));
