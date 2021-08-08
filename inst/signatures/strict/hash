@@ -1,0 +1,9 @@
+strict `.onAttach` <1,2>;
+strict `.set` <1>;
+strict `as.list.hash` <1,2>;
+strict `hash` <>;
+strict `inverted.hash` <>;
+strict `is.empty` <1>;
+strict `is.hash` <1>;
+strict `make.keys` <1>;
+strict `names.hash` <1>;

@@ -1,0 +1,5 @@
+strict `alabama` <1,2,3,4,5,6,7,8,9>;
+strict `auglag` <1,2,3,4,5,6,7,8,9>;
+strict `auglag2` <1,2,3,4,5,6,7>;
+strict `auglag3` <1,2,3,4,5,6,7,8,9>;
+strict `constrOptim.nl` <1,2,3,4,5,6,7,8,9>;

@@ -1,0 +1,5 @@
+strict `Compose` <>;
+strict `Curry` <1>;
+strict `CurryL` <1>;
+strict `Identity` <>;
+strict `multi.argument.Compose` <>;

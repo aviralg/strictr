@@ -1,0 +1,15 @@
+strict `.onAttach` <>;
+strict `colorlegend` <3,8>;
+strict `cor.mtest` <1>;
+strict `corrMatOrder` <1,2,3>;
+strict `corrplot.mixed` <1,2,3,4,5,8,9,10,11>;
+strict `corrplot` <2,3,16,17,35,40,44,49>;
+strict `corrRect.hclust` <1,2,3,4,5>;
+strict `corrRect` <2,3,4>;
+strict `draw_grid` <1,2>;
+strict `draw_method_color` <1,2,3>;
+strict `draw_method_square` <1,2,3,4,5>;
+strict `getCharXY` <1,2>;
+strict `reorder_using_aoe` <1>;
+strict `reorder_using_fpc` <1>;
+strict `reorder_using_hclust` <1,2>;

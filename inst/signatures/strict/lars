@@ -1,0 +1,16 @@
+strict `.onAttach` <>;
+strict `backsolvet` <1,2,3>;
+strict `betabreaker` <1>;
+strict `coef.lars` <1>;
+strict `cv.folds` <1,2>;
+strict `cv.lars` <1,2,3,5,6,7,8>;
+strict `delcol` <1,2,3>;
+strict `downdateR` <1,2>;
+strict `error.bars` <1,2,3,4>;
+strict `lars` <1,2,3,4,5,6,8,9,10>;
+strict `nnls.lars` <1,2,3,4,5,7,8>;
+strict `plot.lars` <1,2,3,4,5,6>;
+strict `plotCVLars` <1,2>;
+strict `predict.lars` <1,2,3,4,5>;
+strict `summary.lars` <1>;
+strict `updateR` <1,2,5>;

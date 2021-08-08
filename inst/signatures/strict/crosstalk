@@ -1,0 +1,10 @@
+strict `bootstrapLib` <1>;
+strict `columnize` <1,2>;
+strict `createUniqueId` <1,2,3>;
+strict `filter_checkbox` <1,2,3,4,6,7>;
+strict `inlineCheckbox` <1,2,3>;
+strict `is.reactive` <>;
+strict `is.SharedData` <>;
+strict `makeGroupOptions` <1,2>;
+strict `reactiveValues` <>;
+strict `stopIfNotShiny` <>;

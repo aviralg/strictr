@@ -1,0 +1,12 @@
+strict `%+%` <1,2>;
+strict `%s%` <1,2>;
+strict `assert_diff_time` <1>;
+strict `assert_string` <1>;
+strict `first_positive` <1>;
+strict `parse_ms` <1>;
+strict `pretty_dt` <1,2>;
+strict `pretty_ms` <1,2>;
+strict `pretty_sec` <1,2>;
+strict `time_ago` <1,2>;
+strict `trim` <1>;
+strict `vague_dt` <1,2>;

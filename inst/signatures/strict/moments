@@ -1,0 +1,12 @@
+strict `agostino.test` <1,2>;
+strict `all.cumulants` <1>;
+strict `all.moments` <1,2,3,4,5>;
+strict `anscombe.test` <1,2>;
+strict `bonett.test` <1,2>;
+strict `central2raw` <1,2>;
+strict `geary` <1,2>;
+strict `jarque.test` <1>;
+strict `kurtosis` <1,2>;
+strict `moment` <1,2,3,4,5>;
+strict `raw2central` <1>;
+strict `skewness` <1,2>;
