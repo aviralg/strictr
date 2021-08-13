@@ -1,0 +1,13 @@
+strict `roll_max_impl` <1,2,3,4,5,6,7,8,9>;
+strict `roll_max` <1,2,3,4,5,6,7,8,9>;
+strict `roll_mean_impl` <1,2,3,4,5,6,7,8,9>;
+strict `roll_mean` <1,2,3,4,5,6,7,8,9>;
+strict `roll_meanr` <1,2,3,4,5,6,7,8,9>;
+strict `roll_median_impl` <1,2,3,4,5,6,7,8,9>;
+strict `roll_median` <1,2,3,4,5,6,7,8,9>;
+strict `roll_min_impl` <1,2,3,4,5,6,7,8,9>;
+strict `roll_min` <1,2,3,4,5,6,7,8,9>;
+strict `roll_prod_impl` <1,2,3,4,5,6,7,8,9>;
+strict `roll_prod` <1,2,3,4,5,6,7,8,9>;
+strict `roll_sum_impl` <1,2,3,4,5,6,7,8,9>;
+strict `roll_sum` <1,2,3,4,5,6,7,8,9>;

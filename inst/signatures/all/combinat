@@ -1,0 +1,8 @@
+strict `combn` <1,2,3,4>;
+strict `dmnom` <1,3>;
+strict `logfact` <1>;
+strict `nCm` <1,2,3>;
+strict `nsimplex` <1,2>;
+strict `permn` <1,2>;
+strict `rmultinomial` <1,2,3>;
+strict `xsimplex` <1,2,3,4>;

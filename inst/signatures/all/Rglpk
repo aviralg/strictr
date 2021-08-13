@@ -1,0 +1,16 @@
+strict `.check_control_parameters` <1>;
+strict `.onAttach` <2>;
+strict `.onLoad` <2>;
+strict `as.glp_bounds.list` <1,2>;
+strict `as.glp_bounds` <1>;
+strict `glp_bounds_check_sanity` <1,2>;
+strict `glp_bounds` <1,2>;
+strict `glp_call_interface` <1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23>;
+strict `glp_fix_bound_type` <1>;
+strict `glp_get_meta_data_from_file` <1,2>;
+strict `glp_merge_MP_data` <1,2>;
+strict `glp_retrieve_MP_from_file` <1,2,3>;
+strict `MILP` <1,2,3,4,5>;
+strict `Rglpk_call` <1,2,3,4,5,6,7,8,9,10,11,12,13,14>;
+strict `Rglpk_read_file` <1,2,3,4>;
+strict `Rglpk_solve_LP` <1,2,3,4,5,6,7,8>;

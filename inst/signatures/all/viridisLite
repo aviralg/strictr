@@ -1,0 +1,9 @@
+strict `cividis` <1,2,3,4,5>;
+strict `inferno` <1,2,3,4,5>;
+strict `magma` <1,2,3,4,5>;
+strict `mako` <1,3,4,5>;
+strict `plasma` <1,2,3,4,5>;
+strict `rocket` <1,2,3,4,5>;
+strict `turbo` <1,2,3,4,5>;
+strict `viridis` <3,4>;
+strict `viridisMap` <1,3,4,5>;

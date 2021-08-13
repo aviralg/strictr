@@ -1,0 +1,12 @@
+strict `checkData` <1,2>;
+strict `complete.cases.ModelEnv` <1>;
+strict `model.matrix.glinearModel` <1>;
+strict `model.matrix.linearModel` <1>;
+strict `ModelEnvFormula` <1,2,3,4,5,6,7,8,10>;
+strict `ModelEnvMatrix` <1,2,3,4,5>;
+strict `ParseFormula` <1,2>;
+strict `predict.glinearModel` <1,2>;
+strict `predict.linearModel` <1,2>;
+strict `Predict` <1>;
+strict `print.linearModel` <1,2>;
+strict `weights.linearModel` <1>;

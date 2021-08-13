@@ -1,0 +1,3 @@
+strict `eigs_sym` <1,2,3,4,5,6>;
+strict `eigs` <1,2,3,4,5>;
+strict `svds` <1,2,3,4,5>;

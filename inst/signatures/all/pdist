@@ -1,0 +1,2 @@
+strict `as.matrix.pdist` <1>;
+strict `pdist` <1,2,3,4>;

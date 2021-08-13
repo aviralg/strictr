@@ -1,0 +1,4 @@
+strict `.onLoad` <1,2>;
+strict `loadTbbLibrary` <1>;
+strict `setThreadOptions` <1,2>;
+strict `tbbLibraryPath` <1>;

@@ -1,0 +1,5 @@
+strict `.onLoad` <1,2>;
+strict `coef.nnls` <1>;
+strict `coef.nnnpls` <1>;
+strict `nnls` <1,2>;
+strict `nnnpls` <1,2,3>;

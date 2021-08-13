@@ -1,0 +1,14 @@
+strict `.checkeq` <1,2,3,4>;
+strict `.checkfun` <1,2,3>;
+strict `.checkineq` <1,2,3,4,5>;
+strict `.checkpars` <1,2,3,4>;
+strict `.emptyfun` <>;
+strict `.ones` <1,2>;
+strict `.report` <1,2,3>;
+strict `.safefunx` <1,2,3>;
+strict `.solnpctrl` <1>;
+strict `.solvecond` <1>;
+strict `.subnp` <1,2,3,4,5,6,7,8>;
+strict `.vnorm` <1>;
+strict `.zeros` <1,2>;
+strict `solnp` <1,2,3,5,8,9,10>;

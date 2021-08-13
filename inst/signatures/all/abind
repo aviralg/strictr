@@ -1,0 +1,9 @@
+strict `abind` <9>;
+strict `acorn.default` <1,2,3,4,6>;
+strict `acorn` <1>;
+strict `adrop.default` <1,2>;
+strict `adrop` <1>;
+strict `afill<-.default` <5>;
+strict `afill<-` <5>;
+strict `asub.default` <1,2,3,4>;
+strict `asub` <1,2>;

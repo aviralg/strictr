@@ -1,0 +1,8 @@
+strict `comp` <1>;
+strict `doParallelMC` <1,2,3,4>;
+strict `doParallelSNOW` <1,2,3,4>;
+strict `makeDotsEnv` <>;
+strict `mcinfo` <2>;
+strict `registerDoParallel` <1>;
+strict `snowinfo` <2>;
+strict `workers` <1>;

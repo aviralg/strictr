@@ -1,0 +1,8 @@
+strict `.onLoad` <>;
+strict `read.dbf` <1,2>;
+strict `read.dta` <1,2,3,4,5>;
+strict `read.spss` <1,2,3,4,5,6,7,8,9,10,11>;
+strict `read.systat` <1,2>;
+strict `write.arff` <1,2,3,4>;
+strict `write.dbf` <1,2,3>;
+strict `write.dta` <1,2,3,4,6>;

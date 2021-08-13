@@ -1,0 +1,9 @@
+strict `checkCredMass` <1>;
+strict `hdi.data.frame` <1,2>;
+strict `hdi.default` <1>;
+strict `hdi.density` <1,2>;
+strict `hdi.function` <1,2>;
+strict `hdi.matrix` <1,2>;
+strict `hdi` <1>;
+strict `hdiVector` <1>;
+strict `inverseCDF` <1>;

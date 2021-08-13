@@ -1,0 +1,3 @@
+strict `check.objfun.output` <1,2>;
+strict `norm` <1>;
+strict `trust` <1,2,3,5,9>;

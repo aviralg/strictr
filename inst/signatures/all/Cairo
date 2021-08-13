@@ -1,0 +1,3 @@
+strict `.onLoad` <1,2>;
+strict `Cairo` <1,2,3,4,5,6,7,8>;
+strict `CairoPNG` <1,2,3,4,5,6>;

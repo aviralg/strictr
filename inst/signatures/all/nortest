@@ -1,0 +1,5 @@
+strict `ad.test` <1>;
+strict `cvm.test` <1>;
+strict `lillie.test` <1>;
+strict `pearson.test` <1,3>;
+strict `sf.test` <1>;

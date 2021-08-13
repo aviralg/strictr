@@ -1,0 +1,5 @@
+strict `.onLoad` <>;
+strict `get_keras_implementation` <1>;
+strict `get_keras_option` <1,2,3>;
+strict `get_keras_python` <1>;
+strict `is_keras_available` <>;

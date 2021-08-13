@@ -1,0 +1,12 @@
+strict `.b64EncodeFile` <1>;
+strict `.b64EncodeImages` <1>;
+strict `.onLoad` <>;
+strict `.requiresHighlighting` <1>;
+strict `.requiresMathJax` <1>;
+strict `markdownHTMLOptions` <1>;
+strict `markdownToHTML` <1,2,3,4,10>;
+strict `option2char` <1>;
+strict `rendererExists` <1>;
+strict `rendererOutputType` <1>;
+strict `renderMarkdown` <2,3,4,5>;
+strict `smartypants` <3>;

@@ -1,0 +1,12 @@
+strict `%&%` <1,2>;
+strict `%^%` <1,2>;
+strict `%<<%` <1,2>;
+strict `%>>%` <1,2>;
+strict `%|%` <1,2>;
+strict `bitAnd` <1,2>;
+strict `bitFlip` <1,2>;
+strict `bitOr` <1,2>;
+strict `bitShiftL` <1,2>;
+strict `bitShiftR` <1,2>;
+strict `bitXor` <1,2>;
+strict `cksum` <1>;
